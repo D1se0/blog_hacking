@@ -24,13 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-/*const REMOTE_MACHINES = "https://tu-dominio-cloudflare.com/machines";*/
-
-/*
-MODIFICAR LINEA DE CODIGO:
-ESTO: <img src="machines/${m.id.toLowerCase()}/images/logo.png" alt="${m.title}">
-POR ESTO: <img src="${REMOTE_MACHINES}/${m.id.toLowerCase()}/images/logo.png" alt="${m.title}">
-*/
+const REMOTE_MACHINES = "https://tu-dominio-cloudflare.com/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
@@ -105,7 +99,7 @@ function createMachineCard(m) {
 
     <!-- Imagen superior -->
     <div class="post-image-container">
-      <img src="machines/${m.id.toLowerCase()}/images/logo.png" alt="${m.title}">
+      <img src="${REMOTE_MACHINES}/${m.id.toLowerCase()}/images/logo.png" alt="${m.title}">
     </div>
 
     <!-- Contenido -->
