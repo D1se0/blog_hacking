@@ -84,7 +84,7 @@
 
   <script type="module">
 
-    const REMOTE_BASE = "https://imports-particularly-springer-stuffed.trycloudflare.com";
+    const REMOTE_BASE = "https://between-garden-count-term.trycloudflare.com";
     const REMOTE_BASE_MACHINES = `${REMOTE_BASE}/machines`;
     
     import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
@@ -123,8 +123,7 @@
       try {
         const passwordHash = await fetch(`${REMOTE_BASE}/password.json`)
   .then(res => res.json())
-  .then(data => data.password)
-  .catch(() => "");
+  .then(data => data.password);
 
 const mdRes = await fetch(mdFile, {
   headers: {
