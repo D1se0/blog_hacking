@@ -121,7 +121,16 @@
     // Load markdown and tags
     async function loadMachine() {
       try {
-        const mdRes = await fetch(mdFile);
+        const passwordHash = await fetch(`${REMOTE_BASE}/password.json`)
+  .then(res => res.json())
+  .then(data => data.password)
+  .catch(() => "");
+
+const mdRes = await fetch(mdFile, {
+  headers: {
+    "X-BLOG-AUTH": passwordHash
+  }
+});
         loadMachineImage(folder);
         if (!mdRes.ok) throw new Error("Markdown no encontrado");
         const mdText = await mdRes.text();
