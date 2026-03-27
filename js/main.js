@@ -24,7 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-const REMOTE_MACHINES = "https://sees-plasma-submitting-carriers.trycloudflare.com/machines";
+const REMOTE_MACHINES = "https://greene-alot-gig-everything.trycloudflare.com/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
