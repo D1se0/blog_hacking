@@ -24,7 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-const REMOTE_MACHINES = "https://imports-particularly-springer-stuffed.trycloudflare.com/machines";
+const REMOTE_MACHINES = "https://between-garden-count-term.trycloudflare.com/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
