@@ -24,7 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-const REMOTE_MACHINES = "https://shirt-richards-bright-drill.trycloudflare.com/machines";
+const REMOTE_MACHINES = "https://imports-particularly-springer-stuffed.trycloudflare.com/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
