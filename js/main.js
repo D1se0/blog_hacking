@@ -24,7 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-const REMOTE_MACHINES = "https://mouth-recorders-estates-nails.trycloudflare.com/machines";
+const REMOTE_MACHINES = "https://shot-reliable-invest-examinations.trycloudflare.com/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
