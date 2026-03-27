@@ -24,7 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-const REMOTE_MACHINES = "https://colored-glenn-bedding-tourism.trycloudflare.com/machines";
+const REMOTE_MACHINES = "https://kruger-assurance-signal-polyester.trycloudflare.com/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
