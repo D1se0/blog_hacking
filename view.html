@@ -94,17 +94,11 @@
 
     const folder = machineParam || reflectionParam || cheatsheetParam || enviromentParam;
 
-    /*const basePath = machineParam ? REMOTE_BASE_MACHINES
+    const basePath = machineParam ? REMOTE_BASE_MACHINES
   : reflectionParam ? "reflections"
   : cheatsheetParam ? "cheatsheet"
   : enviromentParam ? "enviroments"
-  : "";*/
-
-    const basePath = machineParam ? "machines"
-      : reflectionParam ? "reflections"
-        : cheatsheetParam ? "cheatsheet"
-          : enviromentParam ? "enviroments"
-            : "";
+  : "";
 
     const contentDiv = document.getElementById('content');
     const sidebar = document.getElementById('sidebar');
@@ -112,8 +106,8 @@
     const toggleBtn = document.getElementById('toggleSidebar');
     const mainContent = document.getElementById('mainContent');
 
-    /*const REMOTE_BASE_MACHINES = "https://tu-subdominio.cloudflareaccess.com/machines";*/
-    /*const REMOTE_BASE = "https://tu-subdominio.cloudflareaccess.com";*/
+    const REMOTE_BASE_MACHINES = "https://tu-subdominio.cloudflareaccess.com/machines";
+    const REMOTE_BASE = "https://tu-subdominio.cloudflareaccess.com";
     const mdFile = `${basePath}/${folder}/index.md`;
     const tagsFile = `${basePath}/${folder}/tags.json`;
 
@@ -436,7 +430,6 @@
       });
     });
 
-    /*
     async function checkActiveMachine(tags) {
       const isActive = tags.active === true || tags.active === "true";
       if (!isActive) return;
@@ -457,33 +450,6 @@
         contentDiv.innerHTML = "<p style='color:red'>Error cargando protección</p>";
         return;
       }
-
-      const firstHeader = contentDiv.querySelector("h1");
-      const title = firstHeader ? firstHeader.textContent : "Protected Writeup";
-
-      const tagsArray = [];
-      if (tags.difficulty) tagsArray.push(tags.difficulty);
-      if (tags.os) tagsArray.push(tags.os);
-      if (tags.skills) tags.skills.forEach(s => tagsArray.push(s));
-
-      const dateStr = tags.date || "";
-
-      showPasswordModal(title, tagsArray, () => {
-        contentDiv.style.display = "block";
-      }, hashPassword, dateStr);
-    }
-    */
-
-    function checkActiveMachine(tags) {
-      // Convierte estrictamente a booleano
-      const isActive = tags.active === true || tags.active === "true";
-
-      // Solo mostrar modal si la máquina está marcada como activa
-      if (!isActive) return; // Si no está activa, termina aquí
-
-      contentDiv.style.display = "none";
-
-      const hashPassword = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"; // SHA1 de "password"
 
       const firstHeader = contentDiv.querySelector("h1");
       const title = firstHeader ? firstHeader.textContent : "Protected Writeup";
