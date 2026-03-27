@@ -83,6 +83,10 @@
   </div>
 
   <script type="module">
+
+    const REMOTE_BASE = "https://colored-glenn-bedding-tourism.trycloudflare.com";
+    const REMOTE_BASE_MACHINES = `${REMOTE_BASE}/machines`;
+    
     import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
     // Query param
@@ -106,8 +110,6 @@
     const toggleBtn = document.getElementById('toggleSidebar');
     const mainContent = document.getElementById('mainContent');
 
-    const REMOTE_BASE_MACHINES = "https://colored-glenn-bedding-tourism.trycloudflare.com/machines";
-    const REMOTE_BASE = "https://colored-glenn-bedding-tourism.trycloudflare.com";
     const mdFile = `${basePath}/${folder}/index.md`;
     const tagsFile = `${basePath}/${folder}/tags.json`;
 
