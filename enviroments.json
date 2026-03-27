@@ -1,0 +1,18 @@
+[
+  {
+    "id": "archlinux",
+    "title": "Arch Linux Hacking Environment",
+    "description": "Configuración de Arch Linux optimizada para hacking.",
+    "date": "2026-02-05",
+    "tags": ["linux","setup","arch","entorno"],
+    "category": "linux"
+  },
+  {
+    "id": "kalilinux",
+    "title": "Kali Linux Hacking Environment",
+    "description": "Configuración de Kali Linux optimizada para hacking.",
+    "date": "2026-01-10",
+    "tags": ["linux","setup","kalilinux","entorno"],
+    "category": "linux"
+  }
+]

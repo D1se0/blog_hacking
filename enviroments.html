@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enviroments | diseo</title>
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+
+<body>
+
+    <div id="header-container"></div>
+
+    <main class="mx-auto w-full max-w-4xl px-4 py-8">
+
+        <section class="py-8">
+
+            <h1 class="mb-2 text-3xl font-bold">Enviroments</h1>
+
+            <p class="mb-8" style="color: var(--color-text-muted)">
+                Configuraciones de entornos de hacking, sistemas y laboratorios.
+            </p>
+
+            <div class="mb-6">
+                <input type="text" id="search-input" placeholder="Search enviroments..."
+                    class="w-full rounded-lg px-4 py-3 text-sm" style="background-color: var(--color-surface);
+border:1px solid var(--color-border);
+color:var(--color-text);
+outline:none;">
+            </div>
+
+            <div id="tags-container" class="mb-8 flex flex-wrap gap-2"></div>
+
+            <div id="posts-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div style="color: var(--color-text-muted);">Loading...</div>
+            </div>
+
+            <div id="pagination-container" class="mt-8 flex justify-center gap-2"></div>
+
+        </section>
+
+    </main>
+
+    <script src="js/enviroments.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            initEnviroments();
+        });
+    </script>
+
+</body>
+
+</html>

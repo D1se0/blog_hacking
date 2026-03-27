@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "airtouch",
+    "title": "AirTouch HackTheBox (Intermediate)",
+    "description": "Writeup de Airtouch",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "wifi",
+      "htb",
+      "red",
+      "crack"
+    ],
+    "date": "2026-01-17",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "artificial",
+    "title": "Artificial HackTheBox (Easy)",
+    "description": "Writeup de Artificial",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "htb",
+      "shell",
+      "crack"
+    ],
+    "date": "2025-06-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "aws",
+    "title": "AWS Fortress HackTheBox",
+    "description": "Writeup de AWS Fortiness",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "aws",
+      "fortress",
+      "htb"
+    ],
+    "date": "2025-10-12",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Bizness",
+    "title": "Bizness HackTheBox (Easy)",
+    "description": "Writeup de Bizness",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "privileges",
+      "crack"
+    ],
+    "date": "2024-01-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "browsed",
+    "title": "Browsed HackTheBox (Intermediate)",
+    "description": "Writeup de Browsed",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "extensiones",
+      "htb",
+      "navegador"
+    ],
+    "date": "2026-01-10",
+    "active": true,
+    "active_to_retire": true
+  },
+  {
+    "id": "Boardlight",
+    "title": "Boardlight HackTheBox (Easy)",
+    "description": "Writeup de Boardlight",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "subdominios",
+      "crack",
+      "file"
+    ],
+    "date": "2024-05-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Builder",
+    "title": "Builder HackTheBox (Intermediate)",
+    "description": "Writeup de Builder",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "supply",
+      "htb",
+      "web",
+      "crack"
+    ],
+    "date": "2024-02-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Cap",
+    "title": "Cap HackTheBox (Easy)",
+    "description": "Writeup de Cap",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "network",
+      "crack"
+    ],
+    "date": "2021-06-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Certificate",
+    "title": "Certificate HackTheBox (Hard)",
+    "description": "Writeup de Certificate",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "network",
+      "file",
+      "sqli",
+      "adcs"
+    ],
+    "date": "2025-05-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cobblestone",
+    "title": "Cobblestone HackTheBox (Insane)",
+    "description": "Writeup de cobblestone",
+    "difficulty": "Insane",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "htb",
+      "rce"
+    ],
+    "date": "2025-08-09",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "CodePartTwo",
+    "title": "CodePartTwo HackTheBox (Easy)",
+    "description": "Writeup de CodePartTwo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "python3",
+      "htb",
+      "web",
+      "crack",
+      "file"
+    ],
+    "date": "2025-08-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "context",
+    "title": "Context Fortress HackTheBox",
+    "description": "Writeup de context Fortiness",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fortress",
+      "htb",
+      "web"
+    ],
+    "date": "2025-11-24",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "conversor",
+    "title": "Conversor HackTheBox (Easy)",
+    "description": "Writeup de conversor",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xlm",
+      "htb",
+      "injection"
+    ],
+    "date": "2025-10-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Chemistry",
+    "title": "Chemistry HackTheBox (Easy)",
+    "description": "Writeup de Chemistry",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "password",
+      "htb",
+      "pivoting",
+      "crack"
+    ],
+    "date": "2024-10-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "darkcorp",
+    "title": "DarkCorp HackTheBox (Insane)",
+    "description": "Writeup de darkcorp",
+    "difficulty": "Insane",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "tgt",
+      "socket"
+    ],
+    "date": "2025-02-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "darkzero",
+    "title": "DarkZero HackTheBox (Hard)",
+    "description": "Writeup de darkzero",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "tgt"
+    ],
+    "date": "2025-10-04",
+    "active": true,
+    "active_to_retire": true
+  },
+  {
+    "id": "Editor",
+    "title": "Editor HackTheBox (Easy)",
+    "description": "Writeup de Editor",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "subdominios",
+      "pivoting",
+      "file"
+    ],
+    "date": "2025-08-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Editorial",
+    "title": "Editorial HackTheBox (Easy)",
+    "description": "Writeup de Editorial",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "proxy",
+      "htb",
+      "web",
+      "python3"
+    ],
+    "date": "2024-06-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "eighteen",
+    "title": "Eighteen HackTheBox (Easy)",
+    "description": "Writeup de eighteen",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql",
+      "htb",
+      "tgt"
+    ],
+    "date": "2025-11-15",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Era",
+    "title": "Era HackTheBox (Intermediate)",
+    "description": "Writeup de Era",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "file",
+      "crack"
+    ],
+    "date": "2025-07-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "eloquia",
+    "title": "Eloquia HackTheBox (Insane)",
+    "description": "Writeup de eloquia",
+    "difficulty": "Insane",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "dpapi"
+    ],
+    "date": "2025-12-13",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "expressway",
+    "title": "Expressway HackTheBox (Easy)",
+    "description": "Writeup de expressway",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "crack",
+      "htb",
+      "sudo"
+    ],
+    "date": "2025-09-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "facts",
+    "title": "Facts HackTheBox (Easy)",
+    "description": "Writeup de facts",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "cve",
+      "htb",
+      "rsa"
+    ],
+    "date": "2026-01-31",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "fries",
+    "title": "Fries HackTheBox (Hard)",
+    "description": "Writeup de fries",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql",
+      "htb",
+      "ldap"
+    ],
+    "date": "2025-11-22",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "gavel",
+    "title": "Gavel HackTheBox (Intermediate)",
+    "description": "Writeup de gavel",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "htb",
+      "bcrypt",
+      "crack"
+    ],
+    "date": "2025-11-29",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Giveback",
+    "title": "Giveback HackTheBox (Intermediate)",
+    "description": "Writeup de Giveback",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "wordpress",
+      "htb",
+      "pivoting",
+      "file",
+      "web"
+    ],
+    "date": "2025-11-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "guardian",
+    "title": "Guardian HackTheBox (Hard)",
+    "description": "Writeup de guardian",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "subdominios",
+      "htb",
+      "lfi",
+      "php"
+    ],
+    "date": "2025-08-30",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Headless",
+    "title": "Headless HackTheBox (Easy)",
+    "description": "Writeup de Headless",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "htb",
+      "web",
+      "bash scripting"
+    ],
+    "date": "2024-03-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hercules",
+    "title": "Hercules HackTheBox (Insane)",
+    "description": "Writeup de hercules",
+    "difficulty": "Insane",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "cookie",
+      "tgt",
+      "kerberos"
+    ],
+    "date": "2025-10-18",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Hacknet",
+    "title": "Hacknet HackTheBox (Intermediate)",
+    "description": "Writeup de Hacknet",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "python3",
+      "proxy"
+    ],
+    "date": "2025-09-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Imagery",
+    "title": "Imagery HackTheBox (Intermediate)",
+    "description": "Writeup de Imagery",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "htb",
+      "web",
+      "python3",
+      "crack"
+    ],
+    "date": "2025-09-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Internal",
+    "title": "Internal Dockerlabs (Easy)",
+    "description": "Writeup de Internal",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "waf",
+      "dockerlabs",
+      "web",
+      "suid",
+      "injection"
+    ],
+    "date": "2026-02-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "interpreter",
+    "title": "Interpreter HackTheBox (Intermediate)",
+    "description": "Writeup de interpreter",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "cve",
+      "htb",
+      "sql"
+    ],
+    "date": "2026-02-21",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Mirage",
+    "title": "Mirage HackTheBox (Hard)",
+    "description": "Writeup de Mirage",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "network",
+      "kerberos",
+      "dacl",
+      "pivoting"
+    ],
+    "date": "2025-07-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "monitorsfour",
+    "title": "MonitorsFour HackTheBox (Easy)",
+    "description": "Writeup de monitorsfour",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "subdominios",
+      "htb",
+      "crack"
+    ],
+    "date": "2025-12-06",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "nanocorp",
+    "title": "NanoCorp HackTheBox (Hard)",
+    "description": "Writeup de nanocorp",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "subdominios",
+      "htb",
+      "cve",
+      "crack"
+    ],
+    "date": "2025-11-08",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Outbound",
+    "title": "Outbound HackTheBox (Easy)",
+    "description": "Writeup de Outbound",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "htb",
+      "web",
+      "crack"
+    ],
+    "date": "2025-07-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "overwatch",
+    "title": "Overwatch HackTheBox (Intermediate)",
+    "description": "Writeup de overwatch",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "smb",
+      "htb",
+      "subdominios",
+      "sql"
+    ],
+    "date": "2026-01-24",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Perfection",
+    "title": "Perfection HackTheBox (Easy)",
+    "description": "Writeup de Perfection",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "proxy",
+      "crack"
+    ],
+    "date": "2024-03-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Planning",
+    "title": "Planning HackTheBox (Easy)",
+    "description": "Writeup de Planning",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "subdominios",
+      "pivoting"
+    ],
+    "date": "2025-05-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Previous",
+    "title": "Previous HackTheBox (Intermediate)",
+    "description": "Writeup de Previous",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "proxy",
+      "file"
+    ],
+    "date": "2025-08-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pterodactyl",
+    "title": "Pterodactyl HackTheBox (Intermediate)",
+    "description": "Writeup de pterodactyl",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "subdominios",
+      "htb",
+      "cve",
+      "sql",
+      "bcrypt",
+      "crack"
+    ],
+    "date": "2026-02-07",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Rustykey",
+    "title": "Rustykey HackTheBox (Hard)",
+    "description": "Writeup de Rustykey",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "kerberos",
+      "dacl",
+      "crack"
+    ],
+    "date": "2025-06-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Signed",
+    "title": "Signed HackTheBox (Intermediate)",
+    "description": "Writeup de Signed",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "mssql",
+      "htb",
+      "ntlm",
+      "crack",
+      "kerberos"
+    ],
+    "date": "2025-10-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Soulmate",
+    "title": "Soulmate HackTheBox (Easy)",
+    "description": "Writeup de Soulmate",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "subdominios",
+      "pivoting"
+    ],
+    "date": "2025-09-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Strutted",
+    "title": "Strutted HackTheBox (Intermediate)",
+    "description": "Writeup de Strutted",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "proxy",
+      "file"
+    ],
+    "date": "2025-01-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sorcery",
+    "title": "Sorcery HackTheBox (Insane)",
+    "description": "Writeup de sorcery",
+    "difficulty": "Insane",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "subdominios",
+      "htb",
+      "git",
+      "bypass",
+      "web"
+    ],
+    "date": "2025-06-14",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "Titanic",
+    "title": "Titanic HackTheBox (Easy)",
+    "description": "Writeup de Titanic",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "proxy",
+      "subdominios",
+      "crack"
+    ],
+    "date": "2025-02-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Tombwatcher",
+    "title": "Tombwatcher HackTheBox (Intermediate)",
+    "description": "Writeup de Tombwatcher",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "dacl",
+      "adcs",
+      "crack"
+    ],
+    "date": "2025-06-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "TwoMillion",
+    "title": "TwoMillion HackTheBox (Easy)",
+    "description": "Writeup de TwoMillion",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "js",
+      "htb",
+      "web",
+      "network"
+    ],
+    "date": "2023-06-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Usage",
+    "title": "Usage HackTheBox (Easy)",
+    "description": "Writeup de Usage",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "htb",
+      "web",
+      "crack",
+      "proxy"
+    ],
+    "date": "2024-04-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "Voleur",
+    "title": "Voleur HackTheBox (Intermediate)",
+    "description": "Writeup de Voleur",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "htb",
+      "dacl",
+      "crack",
+      "kerberos"
+    ],
+    "date": "2025-07-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "wingdata",
+    "title": "WingData HackTheBox (Easy)",
+    "description": "Writeup de wingdata",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "subdominios",
+      "htb",
+      "cve",
+      "crack"
+    ],
+    "date": "2026-02-14",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "WhiteRabbit",
+    "title": "WhiteRabbit HackTheBox (Insane)",
+    "description": "Writeup de WhiteRabbit",
+    "difficulty": "Insane",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "htb",
+      "sqli",
+      "subdominios",
+      "python3",
+      "proxy"
+    ],
+    "date": "2025-04-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pirate",
+    "title": "Pirate HackTheBox (Hard)",
+    "description": "Writeup de Pirate",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "active directory",
+      "impersonate",
+      "smb",
+      "ntlm"
+    ],
+    "date": "2026-02-28",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "profetas",
+    "title": "Profetas Dockerlabs (Intermediate)",
+    "description": "Writeup de Profetas",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "python",
+      "sudo",
+      "xxe"
+    ],
+    "date": "2026-02-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "talent",
+    "title": "Talent Dockerlabs (Intermediate)",
+    "description": "Writeup de Talent",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "wordpress",
+      "cve",
+      "sudo",
+      "python3",
+      "docker"
+    ],
+    "date": "2026-02-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cctv",
+    "title": "CCTV HackTheBox (Easy)",
+    "description": "Writeup de CCTV",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "cctv",
+      "crack",
+      "cve",
+      "network",
+      "tcpdump"
+    ],
+    "date": "2026-03-07",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "byp4ss3d",
+    "title": "Byp4ss3d PicoCTF (Intermediate)",
+    "description": "Writeup de Byp4ss3d",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "bypass",
+      "waf",
+      "injection"
+    ],
+    "date": "2026-02-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "variatype",
+    "title": "VariaType HackTheBox (Intermediate)",
+    "description": "Writeup de VariaType",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fonts",
+      "xml",
+      "zip",
+      "sudo",
+      "cve"
+    ],
+    "date": "2026-03-14",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "principal",
+    "title": "Principal HackTheBox (Intermediate)",
+    "description": "Writeup de Principal",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "cookie",
+      "certificate",
+      "rsa"
+    ],
+    "date": "2026-03-12",
+    "active": false,
+    "active_to_retire": false
+  }
+,
+{
+  "id": "kobold",
+  "title": "Kobold HackTheBox (Easy)",
+  "description": "Writeup de Kobold",
+  "difficulty": "Easy",
+  "os": "Linux",
+  "type": "HTB",
+  "skills": [
+    "ctf", "writeup", "web", "docker", "cve", "web", "rce"
+  ],
+  "date": "2026-03-21",
+  "active": true,
+  "active_to_retire": false
+}
+,
+{
+  "id": "support",
+  "title": "Support HackTheBox (Easy)",
+  "description": "Writeup de Support",
+  "difficulty": "Easy",
+  "os": "Windows",
+  "type": "HTB",
+  "skills": [
+    "ctf", "writeup", "web", "ad", "smb", "binary"
+  ],
+  "date": "2022-07-30",
+  "active": false,
+  "active_to_retire": false
+}
+]

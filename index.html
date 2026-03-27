@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | diseo</title>
+  <link rel="stylesheet" href="css/blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header-container"></div>
+
+  <main id="main-content" class="mx-auto w-full max-w-4xl px-4 py-8" style="margin-top: -50px;">
+    <section class="py-16 sm:py-24">
+      <div class="space-y-6">
+        <div class="font-mono text-sm" style="color: var(--color-text-muted); font-size: 1.2rem;">
+          <span style="color: var(--color-accent)">$</span> whoami
+        </div>
+        <section id="statsSection" class="stats-section">
+          <div class="stats-card">
+            <canvas id="statsCanvas" width="280" height="280"></canvas>
+
+            <!-- Etiquetas flotantes -->
+            <div id="difficultyLabels" class="difficulty-labels"></div>
+
+            <div id="statsTooltip" class="stats-tooltip"></div>
+          </div>
+        </section>
+        <div style="display:flex; align-items:center; gap:15px;">
+          <h1 class="font-bold tracking-tight sm:text-5xl" style="font-size: 2.5rem;"> diseo </h1>
+
+          <button id="toggleStats" class="stats-btn">
+            Stats
+          </button>
+        </div>
+        <p class="max-w-2xl text-lg leading-relaxed" style="color: var(--color-text-muted)">
+          Profesional en ciberseguridad especializado en pentesting, automatización de seguridad y desafíos
+          CTF.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <!-- Botón principal -->
+          <a href="ctf.html"
+            class="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white transition-colors"
+            style="background-color: var(--color-accent)">
+            Read the CTFs
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+
+          <!-- Botón grisáceo nuevo -->
+          <a href="https://github.com/D1se0"
+            class="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white transition-colors"
+            style="background-color: #1C2128">
+            My GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-16">
+      <div class="mb-6 flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Latest Posts</h2>
+        <a href="ctf.html" class="text-sm font-medium transition-colors" style="color: var(--color-accent-light)">
+          View all &rarr;
+        </a>
+      </div>
+      <div id="latest-posts-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div style="color: var(--color-text-muted);">Loading...</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadHeader('index.html');
+      loadLatestPosts();
+    });
+  </script>
+</body>
+
+</html>

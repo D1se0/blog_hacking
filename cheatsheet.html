@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CheatSheet | diseo</title>
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="css/cheatsheet.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main class="mx-auto w-full max-w-4xl px-4 py-8">
+        <section class="mb-8">
+            <br><br>
+            <h1 class="mb-2 text-3xl font-bold">CheatSheets</h1>
+            <p class="mb-4" style="color: var(--color-text-muted);">
+                Cheatsheets de Linux y Windows organizados por categoría.
+            </p>
+
+            <div class="mb-8 flex flex-wrap gap-3 filter-row" id="filter-container">
+
+                <button id="filter-all" class="cs-filter-btn">All</button>
+                <button id="filter-linux" class="cs-filter-btn">Linux</button>
+                <button id="filter-windows" class="cs-filter-btn">Windows</button>
+
+                <a href="view.html?cheatsheet=exercises" class="practice-btn">
+                    🧪 Practicar Bash
+                </a>
+
+            </div>
+            <input type="text" id="search-input" placeholder="Search cheatsheets..."
+                class="w-full rounded-lg px-4 py-3 text-sm"
+                style="background-color: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); outline: none;">
+
+            <div id="tags-container" class="mb-6"></div>
+            <div id="cheatsheet-grid" class="cs-grid"></div>
+            <br>
+            <div id="pagination-container" class="mt-6 flex justify-center"></div>
+
+        </section>
+    </main>
+
+    <script src="js/cheatsheet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => { initCheatSheet(); });
+    </script>
+</body>
+
+</html>

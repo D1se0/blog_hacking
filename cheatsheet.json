@@ -1,0 +1,237 @@
+[
+  {
+    "id": "sql",
+    "title": "CheatSheet SQL",
+    "description": "Resumen de comandos y conceptos de SQL.",
+    "category": "sql",
+    "tags": [
+      "sql",
+      "ddbb",
+      "datos",
+      "programacion"
+    ],
+    "os": "N/A",
+    "date": "2026-03-17"
+  },
+  {
+    "id": "networking",
+    "title": "Networking Basics",
+    "description": "Resumen de comandos y conceptos de networking.",
+    "category": "Networking",
+    "tags": [
+      "tcp",
+      "udp",
+      "ports",
+      "firewall"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "compression",
+    "title": "Compression Commands",
+    "description": "Comandos básicos para comprimir y descomprimir archivos en Linux.",
+    "category": "Compression",
+    "tags": [
+      "tar",
+      "gzip",
+      "bzip2",
+      "zip",
+      "unzip",
+      "xz"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "crontabs",
+    "title": "Crontabs & Task Scheduling",
+    "description": "Comandos para programar tareas automáticas en Linux usando cron.",
+    "category": "Crontabs",
+    "tags": [
+      "cron",
+      "crontab",
+      "schedule",
+      "automation",
+      "jobs"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "disk",
+    "title": "Disk Management",
+    "description": "Comandos para gestionar discos, particiones y espacio en Linux.",
+    "category": "Disk",
+    "tags": [
+      "df",
+      "du",
+      "mount",
+      "umount",
+      "lsblk",
+      "fdisk",
+      "partitions"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "files-directories",
+    "title": "Files and Directories",
+    "description": "Comandos esenciales para gestionar archivos y directorios en Linux.",
+    "category": "Files & Directories",
+    "tags": [
+      "ls",
+      "cp",
+      "mv",
+      "rm",
+      "mkdir",
+      "touch",
+      "tree"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "packages",
+    "title": "Package Management",
+    "description": "Comandos para instalar, actualizar y eliminar paquetes en Linux.",
+    "category": "Packages",
+    "tags": [
+      "apt",
+      "apt-get",
+      "dpkg",
+      "yum",
+      "dnf",
+      "snap"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "permissions",
+    "title": "Permissions & Ownership",
+    "description": "Comandos para gestionar permisos y propietarios de archivos en Linux.",
+    "category": "Permissions",
+    "tags": [
+      "chmod",
+      "chown",
+      "chgrp",
+      "umask",
+      "permissions"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "processes",
+    "title": "Process Management",
+    "description": "Comandos para monitorizar y gestionar procesos en Linux.",
+    "category": "Processes",
+    "tags": [
+      "ps",
+      "top",
+      "htop",
+      "kill",
+      "killall",
+      "nice",
+      "jobs"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "search-text-processing",
+    "title": "Search & Text Processing",
+    "description": "Comandos para buscar archivos y procesar texto en Linux.",
+    "category": "Search & Text Processing",
+    "tags": [
+      "grep",
+      "find",
+      "awk",
+      "sed",
+      "cut",
+      "sort",
+      "uniq"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "security",
+    "title": "Security Commands",
+    "description": "Comandos relacionados con seguridad y control de acceso en Linux.",
+    "category": "Security",
+    "tags": [
+      "sudo",
+      "passwd",
+      "ssh",
+      "iptables",
+      "fail2ban"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "sesion-comunication",
+    "title": "Session & Communication",
+    "description": "Comandos para gestionar sesiones y comunicación entre usuarios.",
+    "category": "Session & Communication",
+    "tags": [
+      "ssh",
+      "scp",
+      "screen",
+      "tmux",
+      "wall",
+      "write"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "system",
+    "title": "System Information & Control",
+    "description": "Comandos para obtener información y controlar el sistema Linux.",
+    "category": "System",
+    "tags": [
+      "uname",
+      "uptime",
+      "hostname",
+      "shutdown",
+      "reboot",
+      "date"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "users-groups",
+    "title": "Users & Groups",
+    "description": "Comandos para gestionar usuarios y grupos en Linux.",
+    "category": "Users & Groups",
+    "tags": [
+      "useradd",
+      "userdel",
+      "usermod",
+      "groupadd",
+      "groups",
+      "id"
+    ],
+    "os": "Linux",
+    "date": "2026-03-04"
+  },
+  {
+    "id": "active-directory",
+    "title": "Active Directory",
+    "description": "Cheatsheet de comandos útiles de Active Directory.",
+    "category": "AD",
+    "tags": [
+      "ad",
+      "windows",
+      "active directory",
+      "server"
+    ],
+    "os": "Windows",
+    "date": "2026-03-03"
+  }
+]

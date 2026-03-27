@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTB Writeup | diseo</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- GitHub Markdown -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css">
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/view.css">
+</head>
+
+<body>
+
+  <!-- Cargar header.html -->
+  <div id="header-container"></div>
+
+  <!-- Toggle sidebar -->
+  <button id="toggleSidebar" title="Abrir/Cerrar menú">
+    <svg viewBox="0 0 24 24">
+      <line x1="4" y1="6" x2="20" y2="6" class="line top" />
+      <line x1="4" y1="12" x2="20" y2="12" class="line middle" />
+      <line x1="4" y1="18" x2="20" y2="18" class="line bottom" />
+    </svg>
+  </button>
+
+  <!-- Contenedor de botones top-right con más separación lateral -->
+  <div style="position: fixed; top: 20px; right: 60px; display: flex; align-items: center; gap: 16px; z-index:1000;">
+
+    <!-- Botón de idioma -->
+    <div class="dropdown">
+      <button id="translateBtn" class="btn btn-sm btn-outline-primary dropdown-toggle" type="button"
+        data-bs-toggle="dropdown" aria-expanded="false">
+        <!-- Icono de idioma SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10
+                 10-4.486 10-10S17.514 2 12 2zm0 2c1.93 0 3.68.784 4.95
+                 2.05L12 12 7.05 6.05A6.963 6.963 0 0 1 12 4zm-6 8c0-1.93.784-3.68
+                 2.05-4.95L12 12l-5.95 5.95A6.963 6.963 0 0 1 6 12zm6 6c-1.93
+                 0-3.68-.784-4.95-2.05L12 12l5.95 5.95A6.963 6.963 0 0 1 12 18z" />
+        </svg>
+      </button>
+      <ul id="langDropdown" class="dropdown-menu">
+        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="de">Deutsch</a></li>
+        <li><a class="dropdown-item" href="#" data-lang="it">Italiano</a></li>
+      </ul>
+    </div>
+
+    <!-- Botón de modo (light/dark) -->
+    <button id="modeToggle" aria-label="Toggle theme" class="btn btn-sm btn-outline-secondary"
+      style="visibility: hidden;">
+      <svg id="themeIcon" viewBox="0 0 24 24" width="18" height="18"></svg>
+    </button>
+  </div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar"></aside>
+
+    <!-- Main content -->
+    <main id="mainContent" class="main">
+      <div class="content-wrapper">
+        <div id="machineImage" class="machine-image"></div>
+        <div id="tags" class="mb-4"></div>
+        <div id="content" class="markdown-body">Cargando...</div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module">
+    import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
+
+    // Query param
+    function getQueryParam(param) { return new URLSearchParams(window.location.search).get(param); }
+    const machineParam = getQueryParam('machine');
+    const reflectionParam = getQueryParam('reflection');
+    const cheatsheetParam = getQueryParam('cheatsheet');
+    const enviromentParam = getQueryParam('enviroment');
+
+    const folder = machineParam || reflectionParam || cheatsheetParam || enviromentParam;
+
+    /*const basePath = machineParam ? REMOTE_BASE_MACHINES
+  : reflectionParam ? "reflections"
+  : cheatsheetParam ? "cheatsheet"
+  : enviromentParam ? "enviroments"
+  : "";*/
+
+    const basePath = machineParam ? "machines"
+      : reflectionParam ? "reflections"
+        : cheatsheetParam ? "cheatsheet"
+          : enviromentParam ? "enviroments"
+            : "";
+
+    const contentDiv = document.getElementById('content');
+    const sidebar = document.getElementById('sidebar');
+    const tagsDiv = document.getElementById('tags');
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const mainContent = document.getElementById('mainContent');
+
+    /*const REMOTE_BASE_MACHINES = "https://tu-subdominio.cloudflareaccess.com/machines";*/
+    /*const REMOTE_BASE = "https://tu-subdominio.cloudflareaccess.com";*/
+    const mdFile = `${basePath}/${folder}/index.md`;
+    const tagsFile = `${basePath}/${folder}/tags.json`;
+
+    if (!folder) {
+      contentDiv.innerHTML = "No se indicó máquina o cheatsheet.";
+      throw new Error("Param missing");
+    }
+
+    // Load markdown and tags
+    async function loadMachine() {
+      try {
+        const mdRes = await fetch(mdFile);
+        loadMachineImage(folder);
+        if (!mdRes.ok) throw new Error("Markdown no encontrado");
+        const mdText = await mdRes.text();
+        if (cheatsheetParam === "exercises") {
+          renderExercises(mdText);
+        } else {
+          contentDiv.innerHTML = marked.parse(mdText);
+        }
+        fixImagePaths(folder);
+        enableImageModal();
+        document.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+        generateTOC();
+
+        /*
+        FUNCION ANTERIOR DE LA IMAGEN CON FONDO NEGRO DIFUMINADO
+
+        function loadMachineImage(folder) {
+          const imageContainer = document.getElementById("machineImage");
+          if (!folder) return;
+
+          const img = document.createElement("img");
+          img.src = `machines/${folder}/images/logo.png`;
+          img.alt = folder + " logo";
+
+          // Si la imagen no existe, ocultamos el contenedor
+          img.onerror = () => {
+            imageContainer.style.display = "none";
+          };
+
+          imageContainer.innerHTML = "";
+          imageContainer.appendChild(img);
+        }
+        */
+
+        function renderExercises(mdText) {
+
+          const solutionIndex = mdText.toLowerCase().indexOf("# solución");
+
+          if (solutionIndex === -1) {
+            contentDiv.innerHTML = marked.parse(mdText);
+            return;
+          }
+
+          const publicPart = mdText.substring(0, solutionIndex);
+          const solutionPart = mdText.substring(solutionIndex);
+
+          const publicHTML = marked.parse(publicPart);
+          const solutionHTML = marked.parse(solutionPart);
+
+          const hashPassword = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8";
+
+          contentDiv.innerHTML = `
+  
+  ${publicHTML}
+
+  <div class="solution-locked">
+
+      <div class="solution-lock-box">
+
+        <h2>🔒 Solución protegida</h2>
+
+        <p>Introduce la contraseña para ver la solución.</p>
+
+        <input id="solutionPass" type="password" placeholder="Password">
+
+        <button id="unlockSolution">Desbloquear</button>
+
+        <p id="solutionError">Incorrect password</p>
+
+      </div>
+
+  </div>
+
+  <div id="solutionContent" style="display:none;">
+      ${solutionHTML}
+  </div>
+  
+  `;
+
+          const input = document.getElementById("solutionPass");
+          const button = document.getElementById("unlockSolution");
+          const error = document.getElementById("solutionError");
+
+          button.addEventListener("click", () => {
+
+            const value = input.value.trim();
+            const valueHash = sha1(value);
+
+            if (valueHash === hashPassword) {
+
+              document.querySelector(".solution-locked").remove();
+
+              const solutionDiv = document.getElementById("solutionContent");
+              solutionDiv.style.display = "block";
+
+              document.querySelectorAll('pre code').forEach(block => {
+                hljs.highlightElement(block);
+              });
+
+            } else {
+
+              error.style.display = "block";
+
+            }
+
+          });
+
+        }
+
+        function loadMachineImage(folder) {
+          const imageContainer = document.getElementById("machineImage");
+          if (!folder) return;
+
+          const imagePath = `${basePath}/${folder}/images/logo.png`;
+
+          // Limpiamos el contenedor
+          imageContainer.innerHTML = "";
+
+          // Crear fondo blur
+          const bgBlur = document.createElement("div");
+          bgBlur.classList.add("bg-blur");
+          bgBlur.style.backgroundImage = `url('${imagePath}')`;
+
+          // Crear logo limpio
+          const img = document.createElement("img");
+          img.src = imagePath;
+          img.alt = folder + " logo";
+
+          // Si la imagen no existe, ocultamos todo
+          img.onerror = () => {
+            imageContainer.style.display = "none";
+          };
+
+          imageContainer.appendChild(bgBlur);
+          imageContainer.appendChild(img);
+        }
+
+        const tagRes = await fetch(tagsFile);
+        if (tagRes.ok) {
+          const tags = await tagRes.json();
+          renderTags(tags);
+          // Validar si esta activa o no
+          if (tags.active !== undefined) checkActiveMachine(tags);
+        }
+
+      } catch (err) {
+        contentDiv.innerHTML = `<p style="color:red;">${err.message}</p>`;
+      }
+    }
+
+    // Tags + fecha
+    function renderTags(tags) {
+      tagsDiv.innerHTML = ""; tagsDiv.classList.add("meta-container");
+      if (tags.date) {
+        const formatted = new Date(tags.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+        tagsDiv.innerHTML += `<span class="meta-date">${formatted}</span>`;
+      }
+      if (tags.difficulty) tagsDiv.innerHTML += `<span class="meta-tag">${tags.difficulty}</span>`;
+      if (tags.os) tagsDiv.innerHTML += `<span class="meta-tag">${tags.os}</span>`;
+      if (tags.skills) tags.skills.forEach(s => tagsDiv.innerHTML += `<span class="meta-tag">${s}</span>`);
+
+      //  Badge visual (Activo/Retirado)
+      if (tags.active !== undefined) {
+        const statusClass = tags.active ? "badge-active" : "badge-retired";
+        const statusText = tags.active ? "Activa" : "Retirada";
+        tagsDiv.innerHTML += `<span class="meta-tag ${statusClass}"><span>${statusText}</span></span>`;
+      }
+    }
+
+    // Sidebar TOC
+    function generateTOC() {
+      const headers = contentDiv.querySelectorAll("h1,h2");
+      sidebar.innerHTML = "";
+      headers.forEach((header, i) => {
+        const id = "section-" + i; header.id = id;
+        const link = document.createElement("a");
+        link.href = "#" + id; link.textContent = header.textContent;
+        if (header.tagName === "H2") { link.style.marginLeft = "15px"; link.style.fontSize = "0.9rem"; }
+        sidebar.appendChild(link);
+      });
+      window.addEventListener("scroll", () => {
+        let current = "";
+        headers.forEach(h => { if (h.getBoundingClientRect().top <= 150) current = h.id; });
+        document.querySelectorAll(".sidebar a").forEach(a => { a.classList.remove("active"); if (a.getAttribute("href") === "#" + current) a.classList.add("active"); });
+      });
+    }
+
+    // Images
+    function fixImagePaths(folder) {
+      contentDiv.querySelectorAll("img").forEach(img => {
+        const src = img.getAttribute("src");
+        if (!src.startsWith("http") && !src.startsWith("data:")) img.src = `${basePath}/${folder}/${src}`;
+        img.classList.add("img-fluid", "rounded", "shadow-sm");
+      });
+    }
+    function enableImageModal() {
+      contentDiv.querySelectorAll("img").forEach(img => {
+        img.addEventListener("click", () => {
+          const modal = document.createElement("div"); modal.classList.add("image-modal");
+          const modalImg = document.createElement("img"); modalImg.src = img.src;
+          modal.appendChild(modalImg); document.body.appendChild(modal);
+          modal.addEventListener("click", (e) => { if (e.target === modal) modal.remove(); });
+        });
+      });
+    }
+
+    // Sidebar toggle
+    if (!sidebar.classList.contains("closed")) {
+      toggleBtn.classList.add("open");
+    }
+
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("closed");
+      mainContent.classList.toggle("full");
+      toggleBtn.classList.toggle("open");
+
+      const header = document.querySelector(".header-wrapper");
+
+      if (sidebar.classList.contains("closed")) {
+        header.classList.remove("shifted");
+        header.classList.add("full");
+      } else {
+        header.classList.remove("full");
+        header.classList.add("shifted");
+      }
+    });
+
+    if (!folder) { contentDiv.innerHTML = "No se indicó máquina."; throw new Error("Machine param missing"); }
+    loadMachine();
+
+    // ===== Dark/Light Mode =====
+    const modeToggle = document.getElementById("modeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setThemeIcon(isDark) {
+      if (isDark) {
+        // Luna minimalista
+        themeIcon.innerHTML = `
+      <path d="M21 12.5A9 9 0 1 1 11.5 3 
+      7 7 0 0 0 21 12.5z"/>
+    `;
+      } else {
+        // Sol minimalista
+        themeIcon.innerHTML = `
+      <circle cx="12" cy="12" r="4"></circle>
+      <line x1="12" y1="2" x2="12" y2="5"></line>
+      <line x1="12" y1="19" x2="12" y2="22"></line>
+      <line x1="2" y1="12" x2="5" y2="12"></line>
+      <line x1="19" y1="12" x2="22" y2="12"></line>
+      <line x1="4.2" y1="4.2" x2="6.5" y2="6.5"></line>
+      <line x1="17.5" y1="17.5" x2="19.8" y2="19.8"></line>
+      <line x1="4.2" y1="19.8" x2="6.5" y2="17.5"></line>
+      <line x1="17.5" y1="6.5" x2="19.8" y2="4.2"></line>
+    `;
+      }
+    }
+
+    // ===== Inicialización del tema =====
+
+    // Forzar modo oscuro al cargar
+    document.body.classList.add("dark");
+
+    // Inicializa el icono según el tema
+    setThemeIcon(document.body.classList.contains("dark"));
+
+    // Toggle del tema
+    modeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      setThemeIcon(isDark);
+    });
+
+    // Guardamos el contenido original para poder volver a traducir múltiples veces
+    let originalText = contentDiv.innerText;
+
+    document.querySelectorAll("#langDropdown .dropdown-item").forEach(item => {
+      item.addEventListener("click", async (e) => {
+        e.preventDefault();
+        const targetLang = item.dataset.lang;
+        if (!targetLang) return;
+
+        try {
+          // Llamada al endpoint público que soporta CORS
+          const res = await fetch("https://translate.argosopentech.com/translate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              q: originalText,
+              source: "auto",
+              target: targetLang,
+              format: "text"
+            })
+          });
+
+          if (!res.ok) throw new Error("Error en la traducción");
+
+          const data = await res.json();
+          contentDiv.innerText = data.translatedText;
+
+          // Cierra el dropdown automáticamente
+          const dropdown = bootstrap.Dropdown.getInstance(document.getElementById("translateBtn"));
+          dropdown.hide();
+
+        } catch (err) {
+          console.error(err);
+          alert("Error traduciendo el contenido. Intenta de nuevo.");
+        }
+      });
+    });
+
+    /*
+    async function checkActiveMachine(tags) {
+      const isActive = tags.active === true || tags.active === "true";
+      if (!isActive) return;
+
+      contentDiv.style.display = "none";
+
+      let hashPassword;
+
+      try {
+        const res = await fetch(`${REMOTE_BASE}/password.json`);
+        if (!res.ok) throw new Error("No se pudo cargar password.json");
+
+        const data = await res.json();
+        hashPassword = data.password;
+
+      } catch (err) {
+        console.error(err);
+        contentDiv.innerHTML = "<p style='color:red'>Error cargando protección</p>";
+        return;
+      }
+
+      const firstHeader = contentDiv.querySelector("h1");
+      const title = firstHeader ? firstHeader.textContent : "Protected Writeup";
+
+      const tagsArray = [];
+      if (tags.difficulty) tagsArray.push(tags.difficulty);
+      if (tags.os) tagsArray.push(tags.os);
+      if (tags.skills) tags.skills.forEach(s => tagsArray.push(s));
+
+      const dateStr = tags.date || "";
+
+      showPasswordModal(title, tagsArray, () => {
+        contentDiv.style.display = "block";
+      }, hashPassword, dateStr);
+    }
+    */
+
+    function checkActiveMachine(tags) {
+      // Convierte estrictamente a booleano
+      const isActive = tags.active === true || tags.active === "true";
+
+      // Solo mostrar modal si la máquina está marcada como activa
+      if (!isActive) return; // Si no está activa, termina aquí
+
+      contentDiv.style.display = "none";
+
+      const hashPassword = "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8"; // SHA1 de "password"
+
+      const firstHeader = contentDiv.querySelector("h1");
+      const title = firstHeader ? firstHeader.textContent : "Protected Writeup";
+
+      const tagsArray = [];
+      if (tags.difficulty) tagsArray.push(tags.difficulty);
+      if (tags.os) tagsArray.push(tags.os);
+      if (tags.skills) tags.skills.forEach(s => tagsArray.push(s));
+
+      const dateStr = tags.date || "";
+
+      showPasswordModal(title, tagsArray, () => {
+        contentDiv.style.display = "block";
+      }, hashPassword, dateStr);
+    }
+
+    function showPasswordModal(title, tagsArray, onSuccess, hashPassword, dateStr) {
+      const modal = document.createElement("div");
+      modal.className = "password-modal";
+
+      const tagsHtml = tagsArray.map(t => `<span class="tag">${t}</span>`).join("");
+
+      // ✅ Formatear la fecha
+      const formattedDate = dateStr
+        ? new Date(dateStr).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })
+        : "";
+
+      modal.innerHTML = `
+    <div class="modal-box">
+      ${formattedDate ? `<p style="font-size:0.8em; color:#ccc; margin-bottom:0.5rem;">${formattedDate}</p>` : ""}
+      <h2 style="font-weight:bold;">${title}</h2>
+  <span class="badge-active" style="
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+      padding:2px 6px;
+      border-radius:6px;
+      background: rgba(200, 200, 200, 0.2);
+      backdrop-filter: blur(4px);
+      color:#FF4060;
+      font-weight:bold;
+      font-size:0.85em;
+    ">
+    <!-- Mini candado SVG -->
+    <svg style="width:14px; height:14px; fill:#FF4060;" 
+         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+    </svg>
+    Protected
+  </span>
+  <br>
+  <br>
+  <div class="tags" style="display:flex; gap:6px; flex-wrap:wrap; justify-content:center;">
+  ${tagsHtml}
+</div>
+  <svg style="width:58px; height:58px; margin-right:8px; vertical-align:middle; fill:#DC143C;" 
+       xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path>
+  </svg>
+  <p style="font-weight:bold;">Contenido protegido</p>
+  <input id="passInput" type="password" placeholder="Password">
+  <button id="submitPass">Desbloquear</button>
+  <p id="passError" class="error" style="font-weight:bold;">Incorrect password</p>
+</div>
+  `;
+      document.body.appendChild(modal);
+
+      const input = modal.querySelector("#passInput");
+      const error = modal.querySelector("#passError");
+      const button = modal.querySelector("#submitPass");
+
+      // Función para actualizar color y estado del botón
+      function updateButtonState() {
+        if (input.value.trim() === "") {
+          button.style.backgroundColor = "#79172F"; // vacío
+          button.disabled = true; // bloqueado
+          button.style.cursor = "not-allowed";
+        } else {
+          button.style.backgroundColor = "#DC143C"; // contenido
+          button.disabled = false; // habilitado
+          button.style.cursor = "pointer";
+        }
+      }
+
+      // Detectar cambios en el input
+      input.addEventListener("input", updateButtonState);
+
+      // Inicializar estado al abrir el modal
+      updateButtonState();
+
+      button.addEventListener("click", () => {
+        const value = input.value.trim();
+        const valueHash = sha1(value);
+        if (valueHash === hashPassword) {
+          onSuccess();
+          modal.remove();
+        } else {
+          error.style.display = "block";
+          error.classList.remove("shake");
+          void error.offsetWidth;
+          error.classList.add("shake");
+          input.value = "";
+          input.focus();
+        }
+      });
+    }
+
+    // Función simple para generar SHA1 usando jsSHA
+    function sha1(str) {
+      const shaObj = new jsSHA("SHA-1", "TEXT");
+      shaObj.update(str);
+      return shaObj.getHash("HEX");
+    }
+
+    // Llamar al header.html en esta pagina
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-container').innerHTML = html;
+
+        const header = document.querySelector('.header-wrapper');
+        const sidebar = document.querySelector('.sidebar');
+
+        // Si existe sidebar y NO está cerrada, mover header
+        if (sidebar && !sidebar.classList.contains('closed')) {
+          header.classList.add('shifted');
+        } else if (header) {
+          header.classList.add('full');
+        }
+
+        // ===== ACTIVAR LINK EN HEADER SEGÚN URL =====
+        const links = document.querySelectorAll('.nav-link');
+        const urlParams = new URLSearchParams(window.location.search);
+        const reflectionParam = urlParams.get('reflection');
+        const machineParam = urlParams.get('machine');
+        const cheatSheetParam = urlParams.get('cheatsheet');
+        const enviromentParam = urlParams.get('enviroment');
+
+        links.forEach(link => {
+          link.classList.remove('nav-accent');
+          link.style.color = 'var(--color-text-muted)';
+
+          const href = link.getAttribute('href') || '';
+
+          if ((reflectionParam && href.includes('reflections')) ||
+            (machineParam && href.includes('ctf')) ||
+            (cheatSheetParam && href.includes('cheatsheet')) ||
+            (enviromentParam && href.includes('enviroments'))) {
+            link.classList.add('nav-accent');
+            link.style.color = 'var(--color-accent-light)';
+          }
+        });
+      });
+  </script>
+  <!-- Bootstrap JS bundle (incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Librería jsSHA para hash SHA1 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha1.min.js"></script>
+</body>
+
+</html>
