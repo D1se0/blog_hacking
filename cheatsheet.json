@@ -14,6 +14,34 @@
     "date": "2026-03-17"
   },
   {
+    "id": "active-directory",
+    "title": "Active Directory",
+    "description": "Cheatsheet de comandos útiles de Active Directory.",
+    "category": "AD",
+    "tags": [
+      "ad",
+      "windows",
+      "active directory",
+      "server"
+    ],
+    "os": "Windows",
+    "date": "2026-03-03"
+  },
+  {
+    "id": "windows-basics",
+    "title": "Windows Basics",
+    "description": "Cheatsheet de comandos útiles de Windows (PowerShell y CMD).",
+    "category": "windows, powershell, cmd",
+    "tags": [
+      "powershell",
+      "windows",
+      "cmd",
+      "comandos"
+    ],
+    "os": "Windows",
+    "date": "2026-03-28"
+  },
+  {
     "id": "networking",
     "title": "Networking Basics",
     "description": "Resumen de comandos y conceptos de networking.",
@@ -219,19 +247,5 @@
     ],
     "os": "Linux",
     "date": "2026-03-04"
-  },
-  {
-    "id": "active-directory",
-    "title": "Active Directory",
-    "description": "Cheatsheet de comandos útiles de Active Directory.",
-    "category": "AD",
-    "tags": [
-      "ad",
-      "windows",
-      "active directory",
-      "server"
-    ],
-    "os": "Windows",
-    "date": "2026-03-03"
   }
 ]
