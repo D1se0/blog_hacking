@@ -1205,4 +1205,19 @@
   "active": false,
   "active_to_retire": false
 }
+,
+{
+  "id": "snapped",
+  "title": "Snapped HackTheBox (Hard)",
+  "description": "Writeup de Snapped",
+  "difficulty": "Hard",
+  "os": "Linux",
+  "type": "HTB",
+  "skills": [
+    "ctf", "writeup", "web", "crack", "snapd", "cve", "race_condition"
+  ],
+  "date": "2026-03-23",
+  "active": false,
+  "active_to_retire": false
+}
 ]
