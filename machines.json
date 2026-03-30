@@ -1174,290 +1174,405 @@
     "date": "2026-03-12",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "kobold",
+    "title": "Kobold HackTheBox (Easy)",
+    "description": "Writeup de Kobold",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "docker",
+      "cve",
+      "web",
+      "rce"
+    ],
+    "date": "2026-03-21",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "support",
+    "title": "Support HackTheBox (Easy)",
+    "description": "Writeup de Support",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ad",
+      "smb",
+      "binary"
+    ],
+    "date": "2022-07-30",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "snapped",
+    "title": "Snapped HackTheBox (Hard)",
+    "description": "Writeup de Snapped",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "crack",
+      "snapd",
+      "cve",
+      "race_condition"
+    ],
+    "date": "2026-03-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cookiemonstersecretrecipe",
+    "title": "CookieMonsterSecretRecipe PicoCTF (Easy)",
+    "description": "Writeup de CookieMonsterSecretRecipe",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "analisis",
+      "base64",
+      "cookies",
+      "cifrado"
+    ],
+    "date": "2026-01-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crackthegate1",
+    "title": "CrackTheGate1 PicoCTF (Easy)",
+    "description": "Writeup de CrackTheGate1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "burpsuite",
+      "analisis",
+      "cifrado",
+      "http"
+    ],
+    "date": "2026-02-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crackthegate2",
+    "title": "CrackTheGate2 PicoCTF (Intermediate)",
+    "description": "Writeup de CrackTheGate2",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "http",
+      "python",
+      "password",
+      "rate_limiting"
+    ],
+    "date": "2025-11-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crackthepower",
+    "title": "CrackThePower PicoCTF (Intermediate)",
+    "description": "Writeup de CrackThePower",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ascii",
+      "python",
+      "rsa",
+      "criptografia"
+    ],
+    "date": "2025-12-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "firstgrep",
+    "title": "FirstGrep PicoCTF (Easy)",
+    "description": "Writeup de FirstGrep",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "grep",
+      "filtrado",
+      "patrones"
+    ],
+    "date": "2026-02-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "flaghunters",
+    "title": "FlagHunters PicoCTF (Easy)",
+    "description": "Writeup de FlagHunters",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "python",
+      "nc",
+      "inyeccion",
+      "flujos"
+    ],
+    "date": "2026-03-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "functionoverwrite",
+    "title": "FunctionOverwrite PicoCTF (Hard)",
+    "description": "Writeup de FunctionOverwrite",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "c",
+      "memoria",
+      "objdump",
+      "variables",
+      "manipulacion"
+    ],
+    "date": "2026-02-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hashcrack",
+    "title": "Hashcrack PicoCTF (Easy)",
+    "description": "Writeup de Hashcrack",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "john",
+      "crack",
+      "hash"
+    ],
+    "date": "2026-01-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "loghunt",
+    "title": "LogHunt PicoCTF (Easy)",
+    "description": "Writeup de LogHunt",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "grep",
+      "sed",
+      "sort",
+      "analisis",
+      "filtrado"
+    ],
+    "date": "2025-12-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pietime",
+    "title": "PieTime PicoCTF (Easy)",
+    "description": "Writeup de PieTime",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "gdb",
+      "nc",
+      "pie",
+      "flow_hijacking",
+      "c",
+      "funciones"
+    ],
+    "date": "2026-01-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pietime2",
+    "title": "PieTime2 PicoCTF (Intermediate)",
+    "description": "Writeup de PieTime2",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "pie",
+      "aslr",
+      "bypass",
+      "flow_hijacking",
+      "ingenieria_inversa"
+    ],
+    "date": "2026-02-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "riddleregistry",
+    "title": "RiddleRegistry PicoCTF (Easy)",
+    "description": "Writeup de RiddleRegistry",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "analisis",
+      "pdf",
+      "base64",
+      "codificacion"
+    ],
+    "date": "2026-01-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ropfu",
+    "title": "Ropfu PicoCTF (Hard)",
+    "description": "Writeup de Ropfu",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "binary",
+      "rop",
+      "buffer_overflow",
+      "gdb",
+      "memoria",
+      "nc",
+      "c"
+    ],
+    "date": "2026-03-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "rsa_oracle",
+    "title": "Rsa_oracle PicoCTF (Intermediate)",
+    "description": "Writeup de Rsa_oracle",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "rsa",
+      "cifrado",
+      "oracle",
+      "cca",
+      "criptografia"
+    ],
+    "date": "2025-11-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stti1",
+    "title": "STTI1 PicoCTF (Easy)",
+    "description": "Writeup de STTI1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "stti",
+      "python"
+    ],
+    "date": "2026-01-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stti2",
+    "title": "STTI2 PicoCTF (Intermediate)",
+    "description": "Writeup de STTI2",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PicoCTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "stti",
+      "bypass",
+      "jinja2",
+      "blacklist",
+      "python"
+    ],
+    "date": "2026-01-19",
+    "active": false,
+    "active_to_retire": false
   }
 ,
 {
-  "id": "kobold",
-  "title": "Kobold HackTheBox (Easy)",
-  "description": "Writeup de Kobold",
-  "difficulty": "Easy",
+  "id": "devarea",
+  "title": "DevArea HackTheBox (Intermediate)",
+  "description": "Writeup de DevArea",
+  "difficulty": "Intermediate",
   "os": "Linux",
   "type": "HTB",
   "skills": [
-    "ctf", "writeup", "web", "docker", "cve", "web", "rce"
+    "ctf", "writeup", "web", "xml", "permisos", "rce", "cve", "sudo"
   ],
-  "date": "2026-03-21",
+  "date": "2026-03-28",
   "active": true,
-  "active_to_retire": false
-}
-,
-{
-  "id": "support",
-  "title": "Support HackTheBox (Easy)",
-  "description": "Writeup de Support",
-  "difficulty": "Easy",
-  "os": "Windows",
-  "type": "HTB",
-  "skills": [
-    "ctf", "writeup", "web", "ad", "smb", "binary"
-  ],
-  "date": "2022-07-30",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "snapped",
-  "title": "Snapped HackTheBox (Hard)",
-  "description": "Writeup de Snapped",
-  "difficulty": "Hard",
-  "os": "Linux",
-  "type": "HTB",
-  "skills": [
-    "ctf", "writeup", "web", "crack", "snapd", "cve", "race_condition"
-  ],
-  "date": "2026-03-23",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "cookiemonstersecretrecipe",
-  "title": "CookieMonsterSecretRecipe PicoCTF (Easy)",
-  "description": "Writeup de CookieMonsterSecretRecipe",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "analisis", "base64", "cookies", "cifrado"
-  ],
-  "date": "2026-01-12",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "crackthegate1",
-  "title": "CrackTheGate1 PicoCTF (Easy)",
-  "description": "Writeup de CrackTheGate1",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "burpsuite", "analisis", "cifrado", "http"
-  ],
-  "date": "2026-02-03",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "crackthegate2",
-  "title": "CrackTheGate2 PicoCTF (Intermediate)",
-  "description": "Writeup de CrackTheGate2",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "http", "python", "password", "rate_limiting"
-  ],
-  "date": "2025-11-22",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "crackthepower",
-  "title": "CrackThePower PicoCTF (Intermediate)",
-  "description": "Writeup de CrackThePower",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "ascii", "python", "rsa", "criptografia"
-  ],
-  "date": "2025-12-05",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "firstgrep",
-  "title": "FirstGrep PicoCTF (Easy)",
-  "description": "Writeup de FirstGrep",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "grep", "filtrado", "patrones"
-  ],
-  "date": "2026-02-16",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "flaghunters",
-  "title": "FlagHunters PicoCTF (Easy)",
-  "description": "Writeup de FlagHunters",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "python", "nc", "inyeccion", "flujos"
-  ],
-  "date": "2026-03-02",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "functionoverwrite",
-  "title": "FunctionOverwrite PicoCTF (Hard)",
-  "description": "Writeup de FunctionOverwrite",
-  "difficulty": "Hard",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "c", "memoria", "objdump", "variables", "manipulacion"
-  ],
-  "date": "2026-02-09",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "hashcrack",
-  "title": "Hashcrack PicoCTF (Easy)",
-  "description": "Writeup de Hashcrack",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "john", "crack", "hash"
-  ],
-  "date": "2026-01-24",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "loghunt",
-  "title": "LogHunt PicoCTF (Easy)",
-  "description": "Writeup de LogHunt",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "grep", "sed", "sort", "analisis", "filtrado"
-  ],
-  "date": "2025-12-10",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "pietime",
-  "title": "PieTime PicoCTF (Easy)",
-  "description": "Writeup de PieTime",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "gdb", "nc", "pie", "flow_hijacking", "c", "funciones"
-  ],
-  "date": "2026-01-02",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "pietime2",
-  "title": "PieTime2 PicoCTF (Intermediate)",
-  "description": "Writeup de PieTime2",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "pie", "aslr", "bypass", "flow_hijacking", "ingenieria_inversa"
-  ],
-  "date": "2026-02-03",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "riddleregistry",
-  "title": "RiddleRegistry PicoCTF (Easy)",
-  "description": "Writeup de RiddleRegistry",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "analisis", "pdf", "base64", "codificacion"
-  ],
-  "date": "2026-01-18",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "ropfu",
-  "title": "Ropfu PicoCTF (Hard)",
-  "description": "Writeup de Ropfu",
-  "difficulty": "Hard",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "binary", "rop", "buffer_overflow", "gdb", "memoria", "nc", "c"
-  ],
-  "date": "2026-03-04",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "rsa_oracle",
-  "title": "Rsa_oracle PicoCTF (Intermediate)",
-  "description": "Writeup de Rsa_oracle",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "rsa", "cifrado", "oracle", "cca", "criptografia"
-  ],
-  "date": "2025-11-21",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "stti1",
-  "title": "STTI1 PicoCTF (Easy)",
-  "description": "Writeup de STTI1",
-  "difficulty": "Easy",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "stti", "python"
-  ],
-  "date": "2026-01-11",
-  "active": false,
-  "active_to_retire": false
-}
-,
-{
-  "id": "stti2",
-  "title": "STTI2 PicoCTF (Intermediate)",
-  "description": "Writeup de STTI2",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "PicoCTF",
-  "skills": [
-    "ctf", "writeup", "web", "stti", "bypass", "jinja2", "blacklist", "python"
-  ],
-  "date": "2026-01-19",
-  "active": false,
   "active_to_retire": false
 }
 ]
