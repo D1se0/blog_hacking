@@ -4,7 +4,7 @@
 >
 > Un entorno **bspwm altamente personalizado**, minimalista y profesional, diseñado para pentesting, desarrollo y uso diario, probado en máquinas virtuales (VMware) y pensado para ser **100% reproducible** mediante scripts automatizados.
 
-Drive Entorno Kali: [Download Entorno Kali Linux](https://drive.google.com/file/d/1GPvlQ2PduPXR3-TT4iXBaQwrxI3NQ4Ia/view?usp=sharing)
+Entorno Kali by Diseo: [Download Entorno Kali Linux](#kali-link)
 
 GitHub Repositorio Original: [Download Entorno Kali Linux (Original)](https://github.com/GalileoQ/Kali_Linux-Auto-Bspwm)
 
