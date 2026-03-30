@@ -89,13 +89,6 @@
     const REMOTE_BASE = "https://between-garden-count-term.trycloudflare.com";
     const REMOTE_BASE_MACHINES = `${REMOTE_BASE}/machines`;
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const link = document.querySelector('a[href="#kali-link"]');
-      if (link) {
-        link.href = `${REMOTE_BASE}/Auto-Bspwm-Kali-v0.1.0.zip`;
-      }
-    });
-    
     import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
 
     // Query param
@@ -122,6 +115,13 @@
     const mdFile = `${basePath}/${folder}/index.md`;
     const tagsFile = `${basePath}/${folder}/tags.json`;
 
+    function fixKaliLink() {
+      const link = document.querySelector('a[href="#kali-link"]');
+      if (link) {
+        link.href = `${REMOTE_BASE}/Auto-Bspwm-Kali-v0.1.0.zip`;
+      }
+    }
+    
     if (!folder) {
       contentDiv.innerHTML = "No se indicó máquina o cheatsheet.";
       throw new Error("Param missing");
@@ -146,6 +146,7 @@ const mdRes = await fetch(mdFile, {
           renderExercises(mdText);
         } else {
           contentDiv.innerHTML = marked.parse(mdText);
+          fixKaliLink();
         }
         fixImagePaths(folder);
         enableImageModal();
