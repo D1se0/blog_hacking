@@ -1575,4 +1575,19 @@
   "active": true,
   "active_to_retire": false
 }
+,
+{
+  "id": "secornotsec",
+  "title": "SECorNOTsec Dockerlabs (Intermediate)",
+  "description": "Writeup de SECorNOTsec",
+  "difficulty": "Intermediate",
+  "os": "Linux",
+  "type": "Dockerlabs",
+  "skills": [
+    "ctf", "writeup", "web", "bypass", "inyection", "command", "sudo", "cookie"
+  ],
+  "date": "2026-03-30",
+  "active": false,
+  "active_to_retire": false
+}
 ]
