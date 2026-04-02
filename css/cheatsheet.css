@@ -207,14 +207,16 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 8px; /* espacio uniforme entre botones */
+    gap: 8px;
+    /* espacio uniforme entre botones */
 }
 
 /* BOTON PRACTICAR */
 .practice-btn {
     display: inline-flex;
     align-items: center;
-    gap: 6px; /* espacio entre icono y texto */
+    gap: 6px;
+    /* espacio entre icono y texto */
     padding: 8px 16px;
     border-radius: 999px;
     font-size: 0.9rem;
@@ -225,7 +227,8 @@
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(8px);
     transition: all 0.2s ease;
-    margin-left: 0; /* eliminamos margen automático */
+    margin-left: 0.5rem;
+    /* eliminamos margen automático */
 }
 
 .practice-btn:hover {
