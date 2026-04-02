@@ -207,32 +207,25 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 8px; /* espacio uniforme entre botones */
 }
 
 /* BOTON PRACTICAR */
 .practice-btn {
-
-    margin-left: auto;
-
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-
+    gap: 6px; /* espacio entre icono y texto */
     padding: 8px 16px;
     border-radius: 999px;
-
     font-size: 0.9rem;
     font-weight: 500;
-
     text-decoration: none;
-
     color: var(--color-text-muted);
     border: 1px solid var(--color-border);
-
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(8px);
-
-    transition: all .2s ease;
+    transition: all 0.2s ease;
+    margin-left: 0; /* eliminamos margen automático */
 }
 
 .practice-btn:hover {
@@ -240,12 +233,9 @@
     color: #FF4060;
 }
 
-@media (max-width:640px) {
-
+@media (max-width: 640px) {
     .practice-btn {
-        margin-left: 0;
         width: 100%;
         justify-content: center;
     }
-
 }
