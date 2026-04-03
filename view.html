@@ -97,6 +97,7 @@
     const reflectionParam = getQueryParam('reflection');
     const cheatsheetParam = getQueryParam('cheatsheet');
     const enviromentParam = getQueryParam('enviroment');
+    const isKaliNordic = enviromentParam === "kalilinux-nordic";
 
     const folder = machineParam || reflectionParam || cheatsheetParam || enviromentParam;
 
@@ -147,6 +148,9 @@ const mdRes = await fetch(mdFile, {
         } else {
           contentDiv.innerHTML = marked.parse(mdText);
           fixKaliLink();
+          if (isKaliNordic) {
+            renderFakeRepo();
+          }
         }
         fixImagePaths(folder);
         enableImageModal();
@@ -344,6 +348,62 @@ const mdRes = await fetch(mdFile, {
           modal.addEventListener("click", (e) => { if (e.target === modal) modal.remove(); });
         });
       });
+    }
+
+    function renderFakeRepo() {
+      const repoHTML = `
+
+        <div class="fake-repo">
+      
+          <div class="repo-header">
+            <span class="repo-author">D1se0</span>
+            <span class="repo-separator">/</span>
+            <span class="repo-name">environment-kali-nordic</span>
+          </div>
+      
+          <div class="repo-box">
+      
+            <div class="repo-row header">
+              <span>Nombre</span>
+              <span>Último commit</span>
+              <span>Tamaño</span>
+            </div>
+      
+            ${generateFile("GTK-XFWM-Theme.zip", "369KB")}
+            ${generateFile("Kvantum-theme.zip", "23KB")}
+            ${generateFile("Nordzy-cyan-dark-MOD.7z", "184KB")}
+            ${generateFile("README.md", "1KB")}
+            ${generateFile("eww-config.zip", "25KB")}
+            ${generateFile("findex-config.zip", "1KB")}
+            ${generateFile("fonts.7z", "136KB")}
+            ${generateFile("gtk-3.0-css.zip", "2KB")}
+            ${generateFile("home-config.zip", "7KB")}
+            ${generateFile("i3lock-color-everblush.zip", "1KB")}
+            ${generateFile("install.sh", "2KB")}
+            ${generateFile("neofetch-custom.zip", "2KB")}
+            ${generateFile("picom-config.zip", "3KB")}
+            ${generateFile("wallpapers.zip", "14MB")}
+            ${generateFile("xfce4-config.zip", "22KB")}
+      
+          </div>
+      
+        </div>
+      
+        <br><br>
+        `;
+
+      const content = document.getElementById("content");
+      content.insertAdjacentHTML("beforebegin", repoHTML);
+    }
+
+    function generateFile(name, size) {
+      return `
+        <div class="repo-row">
+          <span class="file-name">📄 ${name}</span>
+          <span class="file-commit">Initial commit</span>
+          <span class="file-size">${size}</span>
+        </div>
+      `;
     }
 
     // Sidebar toggle
