@@ -4,7 +4,12 @@
     "title": "Arch Linux Hacking Environment",
     "description": "Configuración de Arch Linux optimizada para hacking.",
     "date": "2026-02-05",
-    "tags": ["linux","setup","arch","entorno"],
+    "tags": [
+      "linux",
+      "setup",
+      "arch",
+      "entorno"
+    ],
     "category": "linux"
   },
   {
@@ -12,7 +17,27 @@
     "title": "Kali Linux Hacking Environment",
     "description": "Configuración de Kali Linux optimizada para hacking.",
     "date": "2026-01-10",
-    "tags": ["linux","setup","kalilinux","entorno"],
+    "tags": [
+      "linux",
+      "setup",
+      "kalilinux",
+      "entorno"
+    ],
+    "category": "linux"
+  },
+  {
+    "id": "kalilinux-nordic",
+    "title": "Kali Linux Environment Nordic",
+    "description": "Configuración de Kali Linux estilo Nordico limpio y minimalista.",
+    "date": "2026-04-03",
+    "tags": [
+      "linux",
+      "setup",
+      "kalilinux",
+      "entorno",
+      "kali-nordic",
+      "nordico"
+    ],
     "category": "linux"
   }
 ]
