@@ -1158,3 +1158,73 @@ body.dark .logo-at {
   margin-top: 10px;
   color: #ff4060;
 }
+
+/* ESTILO REPO FAKE NORDIC KALI */
+
+.fake-repo {
+  margin-top: 40px;
+  font-family: 'Fira Mono', monospace;
+}
+
+.repo-header {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.repo-author {
+  color: #58a6ff;
+}
+
+.repo-name {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.repo-separator {
+  margin: 0 5px;
+  color: #8b949e;
+}
+
+.repo-box {
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #0d1117;
+}
+
+.repo-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 80px;
+  padding: 10px 15px;
+  border-top: 1px solid #21262d;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.repo-row:first-child {
+  border-top: none;
+}
+
+.repo-row.header {
+  background-color: #161b22;
+  font-weight: bold;
+  color: #8b949e;
+}
+
+.repo-row:hover {
+  background-color: #161b22;
+}
+
+.file-name {
+  color: #c9d1d9;
+}
+
+.file-commit {
+  color: #8b949e;
+}
+
+.file-size {
+  color: #8b949e;
+  text-align: right;
+}
+
