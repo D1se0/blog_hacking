@@ -1,0 +1,85 @@
+[
+    {
+        "id": "calculadora-subnetting",
+        "title": "Calculadora de Subnetting",
+        "logo": "tools/calc-subnetting.png",
+        "description": "Plataforma para realizar calculos de Subnetting en segundos con precision.",
+        "tags": [
+            "web",
+            "ip",
+            "subnetting",
+            "network"
+        ],
+        "url": "https://d1se0.github.io/calculadora_subnetting/"
+    },
+    {
+        "id": "calculadora-vlsm",
+        "title": "Calculadora de VLSM",
+        "logo": "tools/calc-vlsm.png",
+        "description": "Plataforma para realizar calculos de VLSM en segundos con precision.",
+        "tags": [
+            "network",
+            "ip",
+            "web",
+            "vlsm"
+        ],
+        "url": "https://d1se0.github.io/calculadora_vlsm/"
+    },
+    {
+        "id": "sql-generator",
+        "title": "Generador de SQL",
+        "logo": "tools/sql-generator.png",
+        "description": "Plataforma para generar codigos y diagramas de SQL.",
+        "tags": [
+            "code",
+            "sql",
+            "web",
+            "generator"
+        ],
+        "url": "https://d1se0.github.io/sql-generator/"
+    },
+    {
+        "id": "hackingChef",
+        "title": "HackingChef",
+        "logo": "tools/hackingChef.png",
+        "description": "Plataforma para generar payloads o codigos del tipo que queramos mediante texto.",
+        "tags": [
+            "code",
+            "payloads",
+            "web",
+            "generator",
+            "hacking"
+        ],
+        "url": "https://d1se0.github.io/hackingChef-page/"
+    },
+    {
+        "id": "php-detector",
+        "title": "PHP Detector",
+        "logo": "tools/php-detector.png",
+        "description": "Plataforma para detectar PHP malicioso y explicaciones de la misma.",
+        "tags": [
+            "code",
+            "payloads",
+            "web",
+            "php",
+            "hacking",
+            "detector"
+        ],
+        "url": "https://d1se0.github.io/PHPDetector-page/"
+    },
+    {
+        "id": "rev-shells-generator",
+        "title": "Rev Shell's Generator",
+        "logo": "tools/rev-shells-generator.png",
+        "description": "Plataforma para generar reverse shell's mediante tu IP y puerto de diferentes lenguajes.",
+        "tags": [
+            "code",
+            "payloads",
+            "web",
+            "reverse shell",
+            "hacking",
+            "generate"
+        ],
+        "url": "https://d1se0.github.io/revShellsGenerator-page/"
+    }
+]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools | diseo</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="css/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header-container"></div>
+
+    <main id="main-content" class="mx-auto w-full max-w-4xl px-4 py-8">
+        <section class="py-8">
+            <h1 class="mb-2 text-3xl font-bold">Tools</h1>
+            <p class="mb-8" style="color: var(--color-text-muted)">
+                Herramientas de hacking, ciberseguridad y productividad, con enlace directo a sus páginas oficiales.
+            </p>
+
+            <!-- Search bar -->
+            <div class="mb-6">
+                <input type="text" id="search-input" placeholder="Search tools..."
+                    class="w-full rounded-lg px-4 py-3 text-sm transition-colors"
+                    style="background-color: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); outline: none;">
+            </div>
+
+            <div id="tags-container" class="mb-8 flex flex-wrap gap-2">
+                <!-- Tags will be dynamically loaded -->
+            </div>
+
+            <div id="tools-grid" class="grid gap-4 sm:grid-cols-2">
+                <div style="color: var(--color-text-muted);">Loading tools...</div>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination-container" class="mt-8 flex justify-center gap-2"></div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            loadHeader('tools.html');
+            initTools(); // función específica para tools
+        });
+    </script>
+</body>
+
+</html>
