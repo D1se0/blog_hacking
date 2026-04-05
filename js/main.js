@@ -538,3 +538,146 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+/* CARGA DINAMICA DE LA PESTAÑA "tools" */
+
+function createToolCard(t) {
+  let tagsHtml = '';
+  if (t.tags) {
+    t.tags.forEach(tag => {
+      tagsHtml += `<span class="rounded-full font-medium px-2 py-0.5 text-xs" 
+        style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">
+        #${tag.toLowerCase()}
+      </span>`;
+    });
+  }
+
+  return `
+    <a href="${t.url}" target="_blank"
+       class="group block rounded-lg overflow-hidden transition-colors"
+       style="background-color: var(--color-surface); border: 1px solid var(--color-border);">
+       
+      <div class="post-image-container p-4 flex justify-center items-center">
+        <img src="${t.logo}" alt="${t.title}" class="w-12 h-12 object-contain">
+      </div>
+
+      <div class="p-5">
+        <h3 class="post-title mb-2 text-lg font-semibold transition-colors">${t.title}</h3>
+        <p class="mb-3 text-sm leading-relaxed" style="color: var(--color-text-muted)">${t.description}</p>
+        <div class="flex flex-wrap gap-2">${tagsHtml}</div>
+      </div>
+    </a>
+  `;
+}
+
+let allTools = [];
+let filteredTools = [];
+let currentToolPage = 1;
+const toolsPerPage = 6;
+let currentToolTag = 'All';
+
+async function initTools() {
+  try {
+    const res = await fetch('tools.json');
+    allTools = await res.json();
+    filteredTools = [...allTools];
+
+    // Crear tags únicos
+    const tagsSet = new Set();
+    allTools.forEach(t => {
+      if (t.tags) t.tags.forEach(tag => tagsSet.add(tag.toLowerCase()));
+    });
+
+    renderToolTags(Array.from(tagsSet));
+    renderTools();
+    setupToolSearch();
+  } catch (e) {
+    console.error(e);
+    document.getElementById('tools-grid').innerHTML = '<p style="color:red">Failed to load tools</p>';
+  }
+}
+
+function renderToolTags(tags) {
+  const container = document.getElementById('tags-container');
+  let html = `<button data-tag="All" class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors" style="background-color: var(--color-accent); color: white">All</button>`;
+  tags.forEach(tag => {
+    html += `<button data-tag="${tag}" class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors" 
+      style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">#${tag}</button>`;
+  });
+  container.innerHTML = html;
+
+  // Eventos de filtrado
+  document.querySelectorAll('.tag-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      currentToolTag = e.target.dataset.tag;
+      document.querySelectorAll('.tag-btn').forEach(b => {
+        b.style.backgroundColor = 'var(--color-surface-raised)';
+        b.style.color = 'var(--color-text-muted)';
+        b.style.border = '1px solid var(--color-border)';
+      });
+      e.target.style.backgroundColor = 'var(--color-accent)';
+      e.target.style.color = 'white';
+      e.target.style.border = 'none';
+      filterTools();
+    });
+  });
+}
+
+function setupToolSearch() {
+  const input = document.getElementById('search-input');
+  input.addEventListener('input', () => filterTools());
+}
+
+function filterTools() {
+  const searchQuery = document.getElementById('search-input').value.toLowerCase();
+
+  filteredTools = allTools.filter(t => {
+    const matchesSearch = t.title.toLowerCase().includes(searchQuery) || t.description.toLowerCase().includes(searchQuery);
+    const matchesTag = currentToolTag === 'All' || (t.tags && t.tags.map(tag => tag.toLowerCase()).includes(currentToolTag));
+    return matchesSearch && matchesTag;
+  });
+
+  currentToolPage = 1;
+  renderTools();
+}
+
+function renderTools() {
+  const grid = document.getElementById('tools-grid');
+  if (filteredTools.length === 0) {
+    grid.innerHTML = '<p style="color: var(--color-text-muted)">No tools found.</p>';
+    document.getElementById('pagination-container').innerHTML = '';
+    return;
+  }
+
+  const start = (currentToolPage - 1) * toolsPerPage;
+  const end = start + toolsPerPage;
+  const currentItems = filteredTools.slice(start, end);
+  grid.innerHTML = currentItems.map(createToolCard).join('');
+  renderToolPagination();
+}
+
+function renderToolPagination() {
+  const totalPages = Math.ceil(filteredTools.length / toolsPerPage);
+  const container = document.getElementById('pagination-container');
+
+  if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+  let html = '';
+  for (let i = 1; i <= totalPages; i++) {
+    const isActive = i === currentToolPage;
+    html += `<button class="page-btn rounded-md px-3 py-1 text-sm font-medium transition-colors" 
+      style="background-color: ${isActive ? 'var(--color-accent)' : 'var(--color-surface)'}; 
+             color: ${isActive ? 'white' : 'var(--color-text-muted)'}; border: 1px solid ${isActive ? 'var(--color-accent)' : 'var(--color-border)'}" 
+      data-page="${i}">${i}</button>`;
+  }
+  container.innerHTML = html;
+
+  document.querySelectorAll('.page-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      currentToolPage = parseInt(e.target.dataset.page);
+      renderTools();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+}
+
