@@ -1589,5 +1589,27 @@
   "date": "2026-03-30",
   "active": false,
   "active_to_retire": false
-}
+},
+  {
+    "id": "nightblade",
+    "title": "NightBlade Dockerlabs (Intermediate)",
+    "description": "Writeup de NightBlade",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ip",
+      "pivoting",
+      "wordpress",
+      "crontab",
+      "socks",
+      "proxy"
+    ],
+    "date": "2026-03-25",
+    "active": false,
+    "active_to_retire": false
+  }
 ]
