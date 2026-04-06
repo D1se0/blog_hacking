@@ -356,7 +356,7 @@
     ],
     "date": "2025-11-15",
     "active": true,
-    "active_to_retire": false
+    "active_to_retire": true
   },
   {
     "id": "Era",
