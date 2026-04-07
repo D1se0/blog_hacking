@@ -1611,5 +1611,27 @@
     "date": "2026-03-25",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "garfield",
+    "title": "Garfield HackTheBox (Hard)",
+    "description": "Writeup de Garfield",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ad",
+      "politicas",
+      "rubeus",
+      "mimikatz",
+      "dc",
+      "tgt"
+    ],
+    "date": "2026-04-04",
+    "active": true,
+    "active_to_retire": false
   }
 ]
