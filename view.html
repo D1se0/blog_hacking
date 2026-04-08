@@ -296,12 +296,55 @@ const mdRes = await fetch(mdFile, {
 
     // Tags + fecha
     function renderTags(tags) {
-      tagsDiv.innerHTML = ""; tagsDiv.classList.add("meta-container");
+      tagsDiv.innerHTML = ""; 
+      tagsDiv.classList.add("meta-container");
+
+      // 🎨 Colores dificultad
+      const difficultyColors = {
+        Easy: {
+          bg: "rgba(40,167,69,0.15)",
+          text: "#28A745",
+          border: "rgba(40,167,69,0.4)"
+        },
+        Intermediate: {
+          bg: "rgba(255,140,0,0.15)",
+          text: "#FF8C00",
+          border: "rgba(255,140,0,0.4)"
+        },
+        Hard: {
+          bg: "rgba(220,20,60,0.15)",
+          text: "#DC143C",
+          border: "rgba(220,20,60,0.4)"
+        },
+        Insane: {
+          bg: "rgba(138,43,226,0.15)",
+          text: "#8A2BE2",
+          border: "rgba(138,43,226,0.4)"
+        }
+      };
+      
       if (tags.date) {
         const formatted = new Date(tags.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
         tagsDiv.innerHTML += `<span class="meta-date">${formatted}</span>`;
       }
-      if (tags.difficulty) tagsDiv.innerHTML += `<span class="meta-tag">${tags.difficulty}</span>`;
+      if (tags.difficulty) {
+        const diff = difficultyColors[tags.difficulty] || {
+          bg: "var(--color-surface-raised)",
+          text: "var(--color-text-muted)",
+          border: "var(--color-border)"
+        };
+
+        tagsDiv.innerHTML += `
+      <span class="meta-tag"
+        style="
+          background-color: ${diff.bg};
+          color: ${diff.text};
+          border: 1px solid ${diff.border};
+        ">
+        ${tags.difficulty}
+      </span>
+    `;
+      }
       if (tags.os) tagsDiv.innerHTML += `<span class="meta-tag">${tags.os}</span>`;
       if (tags.skills) tags.skills.forEach(s => tagsDiv.innerHTML += `<span class="meta-tag">${s}</span>`);
 
