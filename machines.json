@@ -1633,5 +1633,393 @@
     "date": "2026-04-04",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "aguademayo",
+    "title": "AguaDeMayo Dockerlabs (Easy)",
+    "description": "Writeup de AguaDeMayo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "criptografia",
+      "sudo",
+      "red",
+      "suid"
+    ],
+    "date": "2024-05-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "amor",
+    "title": "Amor Dockerlabs (Easy)",
+    "description": "Writeup de Amor",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "bruteforce",
+      "stenografia",
+      "codificacion",
+      "sudo"
+    ],
+    "date": "2024-05-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "anonymouspingu",
+    "title": "AnonymousPingu Dockerlabs (Easy)",
+    "description": "Writeup de AnonymousPingu",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "ftp",
+      "php",
+      "sudo"
+    ],
+    "date": "2024-04-29",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "apiroot",
+    "title": "ApiRoot Dockerlabs (Intermediate)",
+    "description": "Writeup de ApiRoot",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "api",
+      "sudo"
+    ],
+    "date": "2025-02-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "apolos",
+    "title": "Apolos Dockerlabs (Intermediate)",
+    "description": "Writeup de Apolos",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "fuzz",
+      "php",
+      "crack"
+    ],
+    "date": "2024-09-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "asucar",
+    "title": "Asucar Dockerlabs (Intermediate)",
+    "description": "Writeup de Asucar",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "wordpress",
+      "lfi",
+      "sudo"
+    ],
+    "date": "2024-05-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "backend",
+    "title": "Backend Dockerlabs (Easy)",
+    "description": "Writeup de Backend",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "bruteforce",
+      "suid"
+    ],
+    "date": "2024-08-29",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "balulero",
+    "title": "Balulero Dockerlabs (Easy)",
+    "description": "Writeup de Balulero",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "sudo",
+      "php"
+    ],
+    "date": "2024-09-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bashpariencias",
+    "title": "Bashpariencias Dockerlabs (Intermediate)",
+    "description": "Writeup de Bashpariencias",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sudo",
+      "fuzz",
+      "bruteforce"
+    ],
+    "date": "2024-06-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "borazuwarahctf",
+    "title": "BorazuwarahCTF Dockerlabs (Easy)",
+    "description": "Writeup de BorazuwarahCTF",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "metadatos",
+      "bruteforce",
+      "sudo"
+    ],
+    "date": "2024-05-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "breakmyssh",
+    "title": "BreakMySSH Dockerlabs (Easy)",
+    "description": "Writeup de BreakMySSH",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ssh",
+      "cve",
+      "fuzz"
+    ],
+    "date": "2024-05-29",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "buscalove",
+    "title": "Buscalove Dockerlabs (Easy)",
+    "description": "Writeup de Buscalove",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "lfi",
+      "wrapper",
+      "bruteforce",
+      "sudo"
+    ],
+    "date": "2024-09-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cachopo",
+    "title": "Cachopo Dockerlabs (Intermediate)",
+    "description": "Writeup de Cachopo",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "crack",
+      "bruteforce"
+    ],
+    "date": "2024-07-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "canario",
+    "title": "Canario Dockerlabs (Hard)",
+    "description": "Writeup de Canario",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "sudo",
+      "reversing",
+      "buffer-overflow"
+    ],
+    "date": "2025-02-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "chatme",
+    "title": "ChatMe Dockerlabs (Intermediate)",
+    "description": "Writeup de ChatMe",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "php",
+      "sudo"
+    ],
+    "date": "2024-09-29",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "chocolatefire",
+    "title": "ChocolateFire Dockerlabs (Intermediate)",
+    "description": "Writeup de ChocolateFire",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "openfire",
+      "cve"
+    ],
+    "date": "2024-06-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "chocolatelovers",
+    "title": "ChocolateLovers Dockerlabs (Easy)",
+    "description": "Writeup de ChocolateLovers",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "cve",
+      "php",
+      "sudo",
+      "procesos"
+    ],
+    "date": "2024-06-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "collections",
+    "title": "Collections Dockerlabs (Intermediate)",
+    "description": "Writeup de Collections",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "wordpress",
+      "bruteforce"
+    ],
+    "date": "2024-06-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "consolelog",
+    "title": "ConsoleLog Dockerlabs (Easy)",
+    "description": "Writeup de ConsoleLog",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "bruteforce",
+      "sudo"
+    ],
+    "date": "2024-07-29",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "database",
+    "title": "Database Dockerlabs (Intermediate)",
+    "description": "Writeup de Database",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "smb",
+      "suid"
+    ],
+    "date": "2024-05-27",
+    "active": false,
+    "active_to_retire": false
   }
 ]
