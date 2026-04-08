@@ -2021,5 +2021,25 @@
     "date": "2024-05-27",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "bigwear",
+    "title": "BigWear Dockerlabs (Intermediate)",
+    "description": "Writeup de BigWear",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "wordpress",
+      "plugin",
+      "cve",
+      "passwords"
+    ],
+    "date": "2026-03-23",
+    "active": false,
+    "active_to_retire": false
   }
 ]
