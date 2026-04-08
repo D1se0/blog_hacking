@@ -29,10 +29,51 @@ const REMOTE_MACHINES = "https://between-garden-count-term.trycloudflare.com/mac
 // Generate HTML for a machine card
 function createMachineCard(m) {
   const dateStr = new Date(m.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
-
+  
+  // Colores por dificultad
+  const difficultyColors = {
+    Easy: {
+      bg: "rgba(40,167,69,0.15)",
+      text: "#28A745",
+      border: "rgba(40,167,69,0.4)"
+    },
+    Intermediate: {
+      bg: "rgba(255,140,0,0.15)",
+      text: "#FF8C00",
+      border: "rgba(255,140,0,0.4)"
+    },
+    Hard: {
+      bg: "rgba(220,20,60,0.15)",
+      text: "#DC143C",
+      border: "rgba(220,20,60,0.4)"
+    },
+    Insane: {
+      bg: "rgba(138,43,226,0.15)",
+      text: "#8A2BE2",
+      border: "rgba(138,43,226,0.4)"
+    }
+  };
+  
   // Tags: difficulty, os, skills
   let tagsHtml = '';
-  if (m.difficulty) tagsHtml += `<span class="rounded-full font-medium px-2 py-0.5 text-xs" style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">#${m.difficulty.toLowerCase()}</span>`;
+  if (m.difficulty) {
+    const diff = difficultyColors[m.difficulty] || {
+      bg: "var(--color-surface-raised)",
+      text: "var(--color-text-muted)",
+      border: "var(--color-border)"
+    };
+
+    tagsHtml += `
+    <span class="rounded-full font-medium px-2 py-0.5 text-xs"
+      style="
+        background-color: ${diff.bg};
+        color: ${diff.text};
+        border: 1px solid ${diff.border};
+      ">
+      ${m.difficulty.toLowerCase()}
+    </span>
+  `;
+  }
   if (m.os) tagsHtml += `<span class="rounded-full font-medium px-2 py-0.5 text-xs" style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">#${m.os.toLowerCase()}</span>`;
   if (m.skills) {
     m.skills.forEach(s => {
