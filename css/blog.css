@@ -2336,9 +2336,21 @@ html {
 /* Subrayado animado rojizo */
 .post-title {
     position: relative;
-    display: inline-block;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* número de líneas */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     color: inherit;
     cursor: pointer;
+}
+
+.post-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* ajusta a gusto */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .post-title::after {
