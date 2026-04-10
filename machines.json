@@ -2041,5 +2041,22 @@
     "date": "2026-03-23",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_vulnerability_in_where_clause_allowing_retrieval_of_hidden_data",
+    "title": "SQL_Injection_vulnerability_in_WHERE_clause_allowing_retrieval_of_hidden_data PortSwigger (Easy)",
+    "description": "Writeup de SQL_Injection_vulnerability_in_WHERE_clause_allowing_retrieval_of_hidden_data",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli"
+    ],
+    "date": "2026-04-10",
+    "active": false,
+    "active_to_retire": false
   }
 ]
