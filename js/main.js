@@ -157,7 +157,7 @@ function createMachineCard(m) {
         ${m.title}
       </h3>
 
-      <p class="mb-3 text-sm leading-relaxed" style="color: var(--color-text-muted)">
+      <p class="post-description mb-3 text-sm leading-relaxed" style="color: var(--color-text-muted)">
         ${m.description}
       </p>
 
