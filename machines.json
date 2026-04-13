@@ -2058,5 +2058,26 @@
     "date": "2026-04-10",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "silentium",
+    "title": "Silentium HackTheBox (Easy)",
+    "description": "Writeup de Silentium",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "cve",
+      "npm",
+      "gogs",
+      "flowise",
+      "docker"
+    ],
+    "date": "2026-04-11",
+    "active": true,
+    "active_to_retire": false
   }
 ]
