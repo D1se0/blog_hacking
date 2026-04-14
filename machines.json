@@ -2079,5 +2079,76 @@
     "date": "2026-04-11",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_vulnerability_allowing_login_bypass",
+    "title": "SQL Injection vulnerability allowing login bypass PortSwigger (Easy)",
+    "description": "Writeup de SQL Injection vulnerability allowing login bypass",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "bypass"
+    ],
+    "date": "2026-04-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_union_attack_retrieving_data_from_other_tables",
+    "title": "SQL Injection UNION attack, retrieving data from other tables PortSwigger (Intermediate)",
+    "description": "Writeup de SQL Injection UNION attack, retrieving data from other tables",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "retrieving"
+    ],
+    "date": "2026-04-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_union_attack_finding_a_columns_containing_text",
+    "title": "SQL Injection UNION attack, finding a columns containing text PortSwigger (Intermediate)",
+    "description": "Writeup de SQL Injection UNION attack, finding a columns containing text",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "finding"
+    ],
+    "date": "2026-04-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_union_attack_determining_the_number_of_columns_returned_by_the_query",
+    "title": "SQL Injection UNION attack, determining the number of columns returned by the query PortSwigger (Intermediate)",
+    "description": "Writeup de SQL Injection UNION attack, determining the number of columns returned by the query",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli"
+    ],
+    "date": "2026-04-14",
+    "active": false,
+    "active_to_retire": false
   }
 ]
