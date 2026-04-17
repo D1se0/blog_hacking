@@ -2150,5 +2150,26 @@
     "date": "2026-04-14",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "autoescuela",
+    "title": "Autoescuela Dockerlabs (Easy)",
+    "description": "Writeup de Autoescuela",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "node",
+      "js",
+      "nextjs",
+      "cve",
+      "rce"
+    ],
+    "date": "2026-04-15",
+    "active": false,
+    "active_to_retire": false
   }
 ]
