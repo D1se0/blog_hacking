@@ -893,7 +893,7 @@
     ],
     "date": "2025-06-14",
     "active": true,
-    "active_to_retire": false
+    "active_to_retire": true
   },
   {
     "id": "Titanic",
