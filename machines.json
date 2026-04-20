@@ -2171,5 +2171,26 @@
     "date": "2026-04-15",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "logging",
+    "title": "Logging HackTheBox (Intermediate)",
+    "description": "Writeup de Logging",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ad",
+      "kerberos",
+      "dc",
+      "certs",
+      "dns"
+    ],
+    "date": "2026-04-18",
+    "active": true,
+    "active_to_retire": false
   }
 ]
