@@ -2192,5 +2192,116 @@
     "date": "2026-04-18",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_attack_listing_the_database_contents_on_non-oracle_databases",
+    "title": "SQL injection attack, listing the database contents on non-Oracle databases PortSwigger (Intermediate)",
+    "description": "Writeup de SQL injection attack, listing the database contents on non-Oracle databases",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sql",
+      "oracle"
+    ],
+    "date": "2026-04-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_attack_listing_the_database_contents_on_oracle",
+    "title": "SQL injection attack, listing the database contents on Oracle PortSwigger (Intermediate)",
+    "description": "Writeup de SQL injection attack, listing the database contents on Oracle",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sql",
+      "oracle"
+    ],
+    "date": "2026-04-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_attack_querying_the_database_type_and_version_on_mysql_and_microsoft",
+    "title": "SQL injection attack, querying the database type and version on MySQL and Microsoft PortSwigger (Intermediate)",
+    "description": "Writeup de SQL injection attack, querying the database type and version on MySQL and Microsoft",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sql",
+      "mysql",
+      "microsoft"
+    ],
+    "date": "2026-04-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_attack_querying_the_database_type_and_version_on_oracle",
+    "title": "SQL Injection attack, querying the database type and version on Oracle PortSwigger (Intermediate)",
+    "description": "Writeup de SQL Injection attack, querying the database type and version on Oracle",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sql",
+      "oracle",
+      "version"
+    ],
+    "date": "2026-04-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sql_injection_union_attack_retrieving_multiple_values_in_a_single_column",
+    "title": "SQL Injection UNION attack, retrieving multiple values in a single column PortSwigger (Intermediate)",
+    "description": "Writeup de SQL Injection UNION attack, retrieving multiple values in a single column",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sql",
+      "union",
+      "multiple"
+    ],
+    "date": "2026-04-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "blind_sql_injection_with_conditional_responses",
+    "title": "Blind SQL injection with conditional responses PortSwigger (Intermediate)",
+    "description": "Writeup de Blind SQL injection with conditional responses",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "PortSwigger",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "blind"
+    ],
+    "date": "2026-04-20",
+    "active": false,
+    "active_to_retire": false
   }
 ]
