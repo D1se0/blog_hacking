@@ -2303,5 +2303,24 @@
     "date": "2026-04-20",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "agriweb",
+    "title": "Agriweb HackTheBox (Easy)",
+    "description": "Writeup de Agriweb",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "js",
+      "json",
+      "prototype_pollution"
+    ],
+    "date": "2026-04-22",
+    "active": true,
+    "active_to_retire": false
   }
 ]
