@@ -2322,5 +2322,65 @@
     "date": "2026-04-22",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "shadowblocks",
+    "title": "ShadowBlocks Vulnyx (Easy)",
+    "description": "Writeup de ShadowBlocks",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "dd",
+      "iscsi",
+      "discos",
+      "carving",
+      "nfs"
+    ],
+    "date": "2026-04-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "blind",
+    "title": "Blind Vulnyx (Easy)",
+    "description": "Writeup de Blind",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "fuzz",
+      "blind_rce",
+      "js",
+      "jshell"
+    ],
+    "date": "2026-04-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "mailforge",
+    "title": "MailForge Vulnyx (Easy)",
+    "description": "Writeup de MailForge",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ssti",
+      "python3",
+      "sudo"
+    ],
+    "date": "2026-04-22",
+    "active": false,
+    "active_to_retire": false
   }
 ]
