@@ -2382,5 +2382,28 @@
     "date": "2026-04-22",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "pingpong",
+    "title": "PingPong HackTheBox (Insane)",
+    "description": "Writeup de PingPong",
+    "difficulty": "Insane",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ad",
+      "dc",
+      "certificados",
+      "forest",
+      "pivoting",
+      "red",
+      "tunneling"
+    ],
+    "date": "2026-04-25",
+    "active": true,
+    "active_to_retire": false
   }
 ]
