@@ -14,7 +14,7 @@ html {
     --spacing: .25rem;
     --container-md: 28rem;
     --container-2xl: 42rem;
-    --container-4xl: 56rem;
+    --container-4xl: 60rem !important;
     --text-xs: .75rem;
     --text-xs--line-height: calc(1/.75);
     --text-sm: .875rem;
