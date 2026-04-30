@@ -1,0 +1,70 @@
+[
+    {
+        "id": "ejpt",
+        "title": "INE eJPT",
+        "description": "INE Security eLearnSecurity Junior Penetration Tester certification focused on networking, enumeration, exploitation and real-world penetration testing fundamentals.",
+        "category": "Owned",
+        "tags": [
+            "pentesting",
+            "redteam",
+            "ine",
+            "security",
+            "owned"
+        ],
+        "status": "completed",
+        "date": "2024-09-16",
+        "url": "https://certs.ine.com/4504812e-a4c2-46fe-8cb0-115ec856a574#acc.x1fIBoml"
+    },
+    {
+        "id": "cwes",
+        "title": "HTB CWES",
+        "description": "Hack The Box Certified Web Exploitation Specialist focused on advanced web pentesting, exploitation and real-world application security testing.",
+        "category": "In Progress",
+        "tags": [
+            "web",
+            "appsec",
+            "hackthebox",
+            "pentesting",
+            "future"
+        ],
+        "status": "progress",
+        "date": "2026-05-01",
+        "url": "https://academy.hackthebox.com/preview/certifications/htb-certified-web-exploitation-specialist"
+    },
+    {
+        "id": "udemy-ciberseguridad-principiante",
+        "title": "Udemy Hacking Ético y Ciberseguridad",
+        "description": "Curso introductorio de hacking ético y ciberseguridad centrado en los fundamentos de Linux, Kali Linux, redes y conceptos básicos de pentesting. Orientado a nivel principiante con prácticas iniciales en seguridad informática.",
+        "category": "Owned",
+        "tags": [
+            "linux",
+            "kalilinux",
+            "ctf",
+            "pentesting",
+            "principiante",
+            "hacking etico",
+            "ciberseguridad"
+        ],
+        "status": "completed",
+        "date": "2024-11-25",
+        "url": "https://www.udemy.com/certificate/UC-0e8a8511-800e-480d-987d-ab2f63219fc0/"
+    },
+    {
+        "id": "udemy-ciberseguridad-avanzado",
+        "title": "Udemy Hacking Ético y Ciberseguridad Avanzado",
+        "description": "Curso avanzado de hacking ético y ciberseguridad enfocado en técnicas de pentesting, explotación de vulnerabilidades, análisis de sistemas y escenarios reales de seguridad ofensiva.",
+        "category": "Owned",
+        "tags": [
+            "linux",
+            "kalilinux",
+            "ctf",
+            "pentesting",
+            "avanzado",
+            "hacking etico",
+            "ciberseguridad"
+        ],
+        "status": "completed",
+        "date": "2025-02-17",
+        "url": "https://www.udemy.com/certificate/UC-4797a327-c93e-4a42-8e64-7d3eb9eab418/"
+    }
+]
