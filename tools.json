@@ -81,5 +81,20 @@
             "generate"
         ],
         "url": "https://d1se0.github.io/revShellsGenerator-page/"
+    },
+    {
+        "id": "calc-chmod",
+        "title": "Calculadora CHMOD Linux",
+        "logo": "tools/calc-chmod.png",
+        "description": "Calculadora web para generar permisos Linux en formato octal, simbólico y comandos chmod reales con soporte SUID, SGID y Sticky Bit.",
+        "tags": [
+            "linux",
+            "chmod",
+            "permissions",
+            "calculator",
+            "sysadmin",
+            "security"
+        ],
+        "url": "https://d1se0.github.io/chmod-calculator/"
     }
 ]
