@@ -717,7 +717,7 @@
     ],
     "date": "2026-01-24",
     "active": true,
-    "active_to_retire": false
+    "active_to_retire": true
   },
   {
     "id": "Perfection",
