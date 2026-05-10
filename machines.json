@@ -716,8 +716,8 @@
       "sql"
     ],
     "date": "2026-01-24",
-    "active": true,
-    "active_to_retire": true
+    "active": false,
+    "active_to_retire": false
   },
   {
     "id": "Perfection",
