@@ -24,7 +24,7 @@ async function loadHeader(activePage = '') {
   }
 }
 
-const REMOTE_MACHINES = "https://between-garden-count-term.trycloudflare.com/machines";
+const REMOTE_MACHINES = "http://51.170.40.86:8899/machines";
 
 // Generate HTML for a machine card
 function createMachineCard(m) {
