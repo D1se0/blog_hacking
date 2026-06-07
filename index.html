@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,72 +8,177 @@
   <link rel="stylesheet" href="css/blog.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <!-- Fondo de cuadrícula decorativa -->
+  <div class="grid-bg" aria-hidden="true"></div>
+
   <div id="header-container"></div>
 
-  <main id="main-content" class="mx-auto w-full max-w-4xl px-4 py-8" style="margin-top: -50px;">
-    <section class="py-16 sm:py-24">
-      <div class="space-y-6">
-        <div class="font-mono text-sm" style="color: var(--color-text-muted); font-size: 1.2rem;">
-          <span style="color: var(--color-accent)">$</span> whoami
-        </div>
-        <section id="statsSection" class="stats-section">
+  <main class="mx-auto w-full max-w-4xl px-4 py-8">
+
+    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <section class="hero-section">
+
+      <!-- Prompt de terminal -->
+      <div class="hero-prompt">
+        <span class="prompt-dollar">$</span> whoami
+      </div>
+
+      <!-- Stats (ocultas hasta abrir) -->
+      <section id="statsSection" class="stats-section">
+        <div class="stats-panel">
           <div class="stats-card">
             <canvas id="statsCanvas" width="280" height="280"></canvas>
-
-            <!-- Etiquetas flotantes -->
             <div id="difficultyLabels" class="difficulty-labels"></div>
-
-            <div id="statsTooltip" class="stats-tooltip"></div>
           </div>
-        </section>
-        <div style="display:flex; align-items:center; gap:15px;">
-          <h1 class="font-bold tracking-tight sm:text-5xl" style="font-size: 2.5rem;"> diseo </h1>
-
-          <button id="toggleStats" class="stats-btn">
-            Stats
-          </button>
+          <!-- La leyenda se inyecta aquí dinámicamente por renderStatsLegend() -->
         </div>
-        <p class="max-w-2xl text-lg leading-relaxed" style="color: var(--color-text-muted)">
-          Profesional en ciberseguridad especializado en pentesting, automatización de seguridad y desafíos
-          CTF.
-        </p>
-        <div class="flex flex-wrap gap-3 pt-2">
-          <!-- Botón principal -->
-          <a href="ctf.html"
-            class="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white transition-colors"
-            style="background-color: var(--color-accent)">
-            Read the CTFs
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"></path>
-            </svg>
-          </a>
+      </section>
 
-          <!-- Botón grisáceo nuevo -->
-          <a href="https://github.com/D1se0"
-            class="inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white transition-colors"
-            style="background-color: #1C2128">
-            My GitHub
-          </a>
-        </div>
+      <!-- Nombre + botón stats -->
+      <div class="hero-title-row">
+        <h1 class="hero-name">diseo</h1>
+        <button id="toggleStats" class="stats-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+          Stats
+        </button>
       </div>
+
+      <!-- Bio -->
+      <p class="hero-bio">
+        Profesional en ciberseguridad especializado en pentesting,<br class="hidden sm:inline">
+        automatización de seguridad y desafíos CTF.
+      </p>
+
+      <!-- Skills inline -->
+      <div class="hero-skills">
+        <span class="skill-chip">Pentesting</span>
+        <span class="skill-chip">CTF</span>
+        <span class="skill-chip">Red Team</span>
+        <span class="skill-chip">Scripting</span>
+        <span class="skill-chip">Linux</span>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="hero-actions">
+        <a href="ctf.html" class="btn-primary">
+          Read the CTFs
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"/>
+          </svg>
+        </a>
+        <a href="https://github.com/D1se0" target="_blank" class="btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          GitHub
+        </a>
+      </div>
+
     </section>
 
-    <section class="pb-16">
-      <div class="mb-6 flex items-center justify-between">
-        <h2 class="text-2xl font-bold">Latest Posts</h2>
-        <a href="ctf.html" class="text-sm font-medium transition-colors" style="color: var(--color-accent-light)">
-          View all &rarr;
+    <!-- ═══════════════════ ÚLTIMAS MÁQUINAS ═══════════════════ -->
+    <section class="latest-section">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-label">// latest</span>
+          <h2 class="section-title">Recent Writeups</h2>
+        </div>
+        <a href="ctf.html" class="view-all-link">
+          View all
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
         </a>
       </div>
       <div id="latest-posts-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <div style="color: var(--color-text-muted);">Loading...</div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
       </div>
     </section>
+
+    <!-- ═══════════════════ QUICK NAV ═══════════════════ -->
+    <section class="quicknav-section">
+      <div class="section-header">
+        <div class="section-title-group">
+          <span class="section-label">// explore</span>
+          <h2 class="section-title">All Sections</h2>
+        </div>
+      </div>
+      <div class="quicknav-grid">
+        <a href="cheatsheet.html" class="qnav-card">
+          <div class="qnav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          </div>
+          <div class="qnav-text">
+            <span class="qnav-title">CheatSheets</span>
+            <span class="qnav-desc">Comandos Linux &amp; Windows</span>
+          </div>
+        </a>
+        <a href="tools.html" class="qnav-card">
+          <div class="qnav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="qnav-text">
+            <span class="qnav-title">Tools</span>
+            <span class="qnav-desc">Herramientas de hacking</span>
+          </div>
+        </a>
+        <a href="reflections.html" class="qnav-card">
+          <div class="qnav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="qnav-text">
+            <span class="qnav-title">Reflections</span>
+            <span class="qnav-desc">Mentalidad &amp; aprendizaje</span>
+          </div>
+        </a>
+        <a href="certificates.html" class="qnav-card">
+          <div class="qnav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="qnav-text">
+            <span class="qnav-title">Certificates</span>
+            <span class="qnav-desc">Certificaciones obtenidas</span>
+          </div>
+        </a>
+        <a href="enviroments.html" class="qnav-card">
+          <div class="qnav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="qnav-text">
+            <span class="qnav-title">Environments</span>
+            <span class="qnav-desc">Entornos &amp; configuraciones</span>
+          </div>
+        </a>
+        <a href="ctf.html" class="qnav-card qnav-accent">
+          <div class="qnav-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <div class="qnav-text">
+            <span class="qnav-title">CTFs</span>
+            <span class="qnav-desc">Writeups &amp; resoluciones</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
   </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
   <script>
@@ -83,8 +187,6 @@
       loadLatestPosts();
     });
   </script>
-  <!-- Comprobacion de firma de servidor externo -->
   <script src="js/ssl-check.js"></script>
 </body>
-
 </html>

@@ -384,11 +384,26 @@ const mdRes = await fetch(mdFile, {
     }
     function enableImageModal() {
       contentDiv.querySelectorAll("img").forEach(img => {
+        img.style.cursor = "zoom-in";
         img.addEventListener("click", () => {
-          const modal = document.createElement("div"); modal.classList.add("image-modal");
-          const modalImg = document.createElement("img"); modalImg.src = img.src;
-          modal.appendChild(modalImg); document.body.appendChild(modal);
-          modal.addEventListener("click", (e) => { if (e.target === modal) modal.remove(); });
+          const modal    = document.createElement("div");
+          modal.classList.add("image-modal");
+
+          const modalImg = document.createElement("img");
+          modalImg.src   = img.src;
+
+          // Evitar que el click en la imagen burbujee al overlay (que la cerraría)
+          modalImg.addEventListener("click", (e) => e.stopPropagation());
+
+          modal.appendChild(modalImg);
+          document.body.appendChild(modal);
+
+          // Cerrar al hacer clic en el overlay (fuera de la imagen)
+          modal.addEventListener("click", () => modal.remove());
+
+          // Cerrar con Escape
+          const onKey = (e) => { if (e.key === "Escape") { modal.remove(); document.removeEventListener("keydown", onKey); } };
+          document.addEventListener("keydown", onKey);
         });
       });
     }

@@ -1,49 +1,68 @@
 <!-- header.html -->
 
 <header class="header-wrapper">
+  <nav class="header-nav mx-auto flex max-w-4xl items-center justify-between px-4">
 
-    <nav class="header-nav mx-auto flex max-w-4xl items-center justify-between px-4 py-4">
+    <!-- Logo -->
+    <a href="index.html" class="header-logo flex items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-svg">
+        <path d="M5 7l5 5l-5 5" />
+        <path d="M12 19l7 0" />
+      </svg>
+      <span class="logo-main">diseo</span><span class="logo-at">@</span><span class="logo-main">hacker</span>
+      <span class="terminal-cursor">_</span>
+    </a>
 
-        <!-- Logo -->
-        <a href="index.html" class="header-logo flex items-center gap-3">
-            <!-- SVG tipo terminal a la izquierda -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-svg">
-                <path d="M5 7l5 5l-5 5" />
-                <path d="M12 19l7 0" />
-            </svg>
+    <!-- Desktop nav -->
+    <ul class="header-desktop hidden items-center sm:flex">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="ctf.html" class="nav-link">CTFs</a></li>
+      <li><a href="tools.html" class="nav-link">Tools</a></li>
+      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+      <li><a href="certificates.html" class="nav-link">Certs</a></li>
+      <li><a href="enviroments.html" class="nav-link">Envs</a></li>
+      <li><a href="cheatsheet.html" class="nav-link">CheatSheet</a></li>
+    </ul>
 
-            <!-- Texto principal -->
-            <span class="logo-main">diseo</span><span class="logo-at">@</span><span class="logo-main">hacker</span>
+    <!-- Hamburger (mobile) -->
+    <button id="mobile-toggle" class="mobile-hamburger sm:hidden" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
 
-            <!-- Cursor parpadeante -->
-            <span class="terminal-cursor">_</span>
-        </a>
+  </nav>
 
-        <!-- Desktop nav -->
-        <ul class="header-desktop hidden items-center gap-6 sm:flex">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="ctf.html" class="nav-link nav-accent">CTFs</a></li>
-            <li><a href="tools.html" class="nav-link">Tools</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-            <li><a href="certificates.html" class="nav-link">Certificates</a></li>
-            <li><a href="enviroments.html" class="nav-link">Enviroments</a></li>
-            <li><a href="cheatsheet.html" class="nav-link">CheatSheet</a></li>
-        </ul>
+  <!-- Mobile nav -->
+  <div id="mobile-menu" class="hidden sm:hidden">
+    <ul class="mobile-menu-list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="ctf.html" class="nav-link">CTFs</a></li>
+      <li><a href="tools.html" class="nav-link">Tools</a></li>
+      <li><a href="reflections.html" class="nav-link">Reflections</a></li>
+      <li><a href="certificates.html" class="nav-link">Certificates</a></li>
+      <li><a href="enviroments.html" class="nav-link">Environments</a></li>
+      <li><a href="cheatsheet.html" class="nav-link">CheatSheet</a></li>
+    </ul>
+  </div>
 
-    </nav>
+  <script>
+    // Mobile menu toggle — scoped inside header to avoid conflicts
+    (function () {
+      const toggle = document.getElementById('mobile-toggle');
+      const menu   = document.getElementById('mobile-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        toggle.classList.toggle('open');
+      });
+    })();
 
-    <!-- Mobile nav -->
-    <div id="mobile-menu" class="hidden border-t sm:hidden">
-        <ul class="flex flex-col gap-1 px-4 py-3">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="ctf.html" class="nav-link nav-accent">CTFs</a></li>
-            <li><a href="tools.html" class="nav-link">Tools</a></li>
-            <li><a href="reflections.html" class="nav-link">Reflections</a></li>
-            <li><a href="certificates.html" class="nav-link">Certificates</a></li>
-            <li><a href="enviroments.html" class="nav-link">Enviroments</a></li>
-            <li><a href="cheatsheet.html" class="nav-link">CheatSheet</a></li>
-        </ul>
-    </div>
-
+    // Scroll shadow on header
+    (function () {
+      const nav = document.querySelector('.header-nav');
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 10);
+      }, { passive: true });
+    })();
+  </script>
 </header>

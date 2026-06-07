@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tools | diseo</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="css/blog.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools | diseo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div id="header-container"></div>
-
-    <main id="main-content" class="mx-auto w-full max-w-4xl px-4 py-8">
-        <section class="py-8">
-            <h1 class="mb-2 text-3xl font-bold">Tools</h1>
-            <p class="mb-8" style="color: var(--color-text-muted)">
-                Herramientas de hacking, ciberseguridad y productividad, con enlace directo a sus páginas oficiales.
-            </p>
-
-            <!-- Search bar -->
-            <div class="mb-6">
-                <input type="text" id="search-input" placeholder="Search tools..."
-                    class="w-full rounded-lg px-4 py-3 text-sm transition-colors"
-                    style="background-color: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); outline: none;">
-            </div>
-
-            <div id="tags-container" class="mb-8 flex flex-wrap gap-2">
-                <!-- Tags will be dynamically loaded -->
-            </div>
-
-            <div id="tools-grid" class="grid gap-4 sm:grid-cols-2">
-                <div style="color: var(--color-text-muted);">Loading tools...</div>
-            </div>
-
-            <!-- Pagination -->
-            <div id="pagination-container" class="mt-8 flex justify-center gap-2"></div>
-        </section>
-    </main>
-
-    <script src="js/main.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            loadHeader('tools.html');
-            initTools(); // función específica para tools
-        });
-    </script>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div id="header-container"></div>
+  <main class="mx-auto w-full max-w-4xl px-4 py-8">
+    <section class="page-section">
+      <div class="page-hero">
+        <span class="section-label">// arsenal</span>
+        <h1 class="page-title">Tools</h1>
+        <p class="page-desc">Herramientas de hacking, ciberseguridad y productividad, con enlace directo a sus páginas oficiales.</p>
+      </div>
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search tools..." class="search-input">
+      </div>
+      <div id="tags-container" class="tags-row"></div>
+      <div id="tools-grid" class="grid gap-4 sm:grid-cols-2">
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+      </div>
+      <div id="pagination-container" class="pagination-row"></div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      loadHeader('tools.html');
+      initTools();
+    });
+  </script>
 </body>
-
 </html>

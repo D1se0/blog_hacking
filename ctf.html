@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,39 +8,54 @@
   <link rel="stylesheet" href="css/blog.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
   <div id="header-container"></div>
 
-  <main id="main-content" class="mx-auto w-full max-w-4xl px-4 py-8">
-    <section class="py-8">
-      <h1 class="mb-2 text-3xl font-bold">CTFs</h1>
-      <p class="mb-8" style="color: var(--color-text-muted)">
-        CTF writeups, ciberseguridad, y hacking ético.
-      </p>
+  <main class="mx-auto w-full max-w-4xl px-4 py-8">
+    <section class="page-section">
 
-      <!-- Search bar -->
-      <div class="mb-6">
-        <input type="text" id="search-input" placeholder="Search writeups..."
-          class="w-full rounded-lg px-4 py-3 text-sm transition-colors"
-          style="background-color: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text); outline: none;">
+      <!-- Page header -->
+      <div class="page-hero">
+        <span class="section-label">// writeups</span>
+        <h1 class="page-title">CTFs</h1>
+        <p class="page-desc">CTF writeups, ciberseguridad y hacking ético.</p>
       </div>
 
-      <div id="tags-container" class="mb-8 flex flex-wrap gap-2">
-        <!-- Tags will be dynamically loaded -->
+      <!-- Search -->
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search writeups..." class="search-input">
       </div>
 
-      <div id="tags-container" class="mb-8 flex flex-wrap gap-2"></div>
-      <div id="ctf-type-filter" class="mb-8 flex flex-wrap gap-3"></div>
+      <!-- Tags -->
+      <div id="tags-container" class="tags-row"></div>
 
+      <!-- Type filters -->
+      <div id="ctf-type-filter" class="type-filter-row"></div>
+
+      <!-- Grid -->
       <div id="posts-grid" class="grid gap-4 sm:grid-cols-2">
-        <div style="color: var(--color-text-muted);">Loading...</div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
       </div>
 
       <!-- Pagination -->
-      <div id="pagination-container" class="mt-8 flex justify-center gap-2"></div>
+      <div id="pagination-container" class="pagination-row"></div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
   <script>
@@ -50,8 +64,6 @@
       initBlog();
     });
   </script>
-  <!-- Comprobacion de firma de servidor externo -->
   <script src="js/ssl-check.js"></script>
 </body>
-
 </html>

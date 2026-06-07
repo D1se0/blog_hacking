@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate | diseo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/blog.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div id="header-container"></div>
+
+  <main class="cert-article-main" id="cert-main">
+
+    <!-- Columna central del artículo -->
+    <article class="cert-article" id="cert-content">
+      <!-- Esqueleto de carga -->
+      <div class="cert-skeleton">
+        <div class="sk-hero"></div>
+        <div class="sk-line sk-title"></div>
+        <div class="sk-line sk-body"></div>
+        <div class="sk-line sk-body short"></div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
+
+  <script src="js/certificates.js"></script>
+  <script>
+    /* ─────────────────────────────────────────────
+       Datos enriquecidos por certificado.
+       Aquí puedes añadir cualquier campo extra
+       que quieras mostrar en el artículo.
+    ───────────────────────────────────────────── */
+    const CERT_META = {
+      "ejpt": {
+        provider:   "INE Security / eLearnSecurity",
+        level:      "Junior / Principiante",
+        format:     "Examen práctico (72 h)",
+        topics:     ["Networking", "Enumeration", "Exploitation", "Web Attacks", "Pivoting"],
+        highlights: [
+          "Primer certificado ofensivo orientado a pruebas de penetración reales.",
+          "El examen se realiza en un entorno de laboratorio controlado con máquinas reales.",
+          "Cubre fundamentos de redes TCP/IP, escaneo con Nmap, explotación con Metasploit y técnicas de post-explotación básica.",
+          "Valida la capacidad de realizar un pentest completo de nivel junior de forma autónoma."
+        ],
+        why: "Fue el primer certificado con el que demostré formalmente mis habilidades en pentesting. Representa la base sobre la que construí todo lo demás: metodología, reporting y pensamiento ofensivo."
+      },
+      "cwes": {
+        provider:   "Hack The Box",
+        level:      "Especialista / Avanzado",
+        format:     "Examen práctico",
+        topics:     ["SQL Injection", "XSS / CSRF", "SSRF", "File Upload Bypass", "Authentication Bypass", "API Security"],
+        highlights: [
+          "Certificación de nivel avanzado centrada exclusivamente en seguridad de aplicaciones web.",
+          "Cubre técnicas modernas de explotación web incluyendo vulnerabilidades del OWASP Top 10 y más allá.",
+          "El examen plantea escenarios de aplicaciones reales donde hay que encadenar múltiples vulnerabilidades.",
+          "Emitido por Hack The Box, referente mundial en formación de hacking ético."
+        ],
+        why: "La web es la superficie de ataque más común hoy en día. Esta certificación profundiza en un área donde la creatividad y el análisis detallado marcan la diferencia entre un tester mediocre y uno excelente."
+      },
+      "udemy-ciberseguridad-principiante": {
+        provider:   "Udemy",
+        level:      "Principiante",
+        format:     "Curso online + certificado de finalización",
+        topics:     ["Linux basics", "Kali Linux", "Redes", "Conceptos de pentesting", "Herramientas básicas"],
+        highlights: [
+          "Curso introductorio completo para quienes empiezan desde cero en ciberseguridad.",
+          "Incluye configuración de entornos de práctica con Kali Linux y VMs.",
+          "Cubre conceptos esenciales de redes, protocolos y los primeros pasos en hacking ético.",
+          "Base teórica y práctica que prepara para certificaciones más avanzadas."
+        ],
+        why: "El punto de partida. Este curso me dio el lenguaje y los fundamentos para entender el ecosistema de la ciberseguridad y decidir especializarme en pentesting ofensivo."
+      },
+      "udemy-ciberseguridad-avanzado": {
+        provider:   "Udemy",
+        level:      "Avanzado",
+        format:     "Curso online + certificado de finalización",
+        topics:     ["Explotación de vulnerabilidades", "Post-explotación", "Privilege Escalation", "CTF techniques", "Análisis de malware básico"],
+        highlights: [
+          "Evolución natural del curso de principiante, enfocado en técnicas ofensivas avanzadas.",
+          "Profundiza en escalada de privilegios en Linux y Windows, movimiento lateral y persistencia.",
+          "Incluye resolución de máquinas CTF reales como práctica complementaria.",
+          "Prepara para entornos reales de pentesting y certificaciones profesionales."
+        ],
+        why: "Consolidó mis habilidades y amplió mi toolkit significativamente. Después de este curso empecé a resolver máquinas de HackTheBox de forma consistente."
+      }
+    };
+
+    /* ─────────────────────────────────────────────
+       Inicialización
+    ───────────────────────────────────────────── */
+    document.addEventListener("DOMContentLoaded", async () => {
+      // Header
+      const res  = await fetch('header.html');
+      const html = await res.text();
+      document.getElementById('header-container').innerHTML = html;
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('nav-accent');
+        if (link.getAttribute('href').split('/').pop() === 'certificates.html')
+          link.classList.add('nav-accent');
+      });
+
+      // Leer ?id=
+      const id = new URLSearchParams(window.location.search).get('id');
+      if (!id) { renderError('No certificate specified.'); return; }
+
+      try {
+        const data = await fetch('certificates.json').then(r => r.json());
+        const cert = data.find(c => c.id === id);
+        if (!cert) { renderError('Certificate not found.'); return; }
+        document.title = `${cert.title} | diseo`;
+        renderArticle(cert);
+      } catch (e) {
+        renderError('Failed to load certificate data.');
+      }
+    });
+
+    /* ─────────────────────────────────────────────
+       Renderizado principal
+    ───────────────────────────────────────────── */
+    function renderArticle(c) {
+      const isCompleted = c.status === 'completed';
+      const statusColor = isCompleted ? '#22c55e' : '#f59e0b';
+      const statusLabel = isCompleted ? 'Completed' : 'In Progress';
+      const meta        = CERT_META[c.id] || {};
+
+      const dateStr = c.date
+        ? new Date(c.date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })
+        : '';
+
+      const allTags = [...(c.tags || [])];
+      const tagsHtml = allTags.map(t =>
+        `<span class="ca-tag">#${t.toLowerCase()}</span>`).join('');
+
+      const topicsHtml = (meta.topics || []).map(t =>
+        `<li class="ca-topic-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          ${t}
+        </li>`).join('');
+
+      const highlightsHtml = (meta.highlights || []).map(h =>
+        `<li class="ca-highlight-item">
+          <span class="ca-hl-dot"></span>
+          <span>${h}</span>
+        </li>`).join('');
+
+      document.getElementById('cert-content').innerHTML = `
+
+        <!-- ── Back ────────────────────────────── -->
+        <a href="certificates.html" class="ca-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          Back to Certificates
+        </a>
+
+        <!-- ── Hero ────────────────────────────── -->
+        <div class="ca-hero">
+          <div class="ca-hero-blur" style="background-image:url('certificates/${c.id}/images/logo.png')"></div>
+          <img src="certificates/${c.id}/images/logo.png" alt="${c.title}" class="ca-hero-img"
+               onerror="this.parentElement.style.background='var(--color-surface-raised)'">
+          <div class="ca-hero-fade"></div>
+        </div>
+
+        <!-- ── Cabecera del artículo ────────────── -->
+        <header class="ca-header">
+
+          <div class="ca-meta-row">
+            <span class="ca-status" style="background:${statusColor}18;color:${statusColor};border-color:${statusColor}44;">
+              <span style="width:6px;height:6px;border-radius:50%;background:${statusColor};flex-shrink:0;display:inline-block;"></span>
+              ${statusLabel}
+            </span>
+            ${dateStr ? `<span class="ca-date">${dateStr}</span>` : ''}
+            ${meta.level ? `<span class="ca-level">${meta.level}</span>` : ''}
+          </div>
+
+          <h1 class="ca-title">${c.title}</h1>
+          ${meta.provider ? `<p class="ca-provider">by ${meta.provider}</p>` : ''}
+
+          <div class="ca-tags">${tagsHtml}</div>
+
+          <!-- Botones: artículo activo, credencial como secundario -->
+          <div class="ca-actions">
+            ${c.url ? `
+            <a href="${c.url}" target="_blank" class="ca-btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Ver credencial oficial
+            </a>` : ''}
+          </div>
+
+        </header>
+
+        <!-- ── Divider ──────────────────────────── -->
+        <div class="ca-divider"></div>
+
+        <!-- ── Descripción ──────────────────────── -->
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">01</span>
+            Descripción
+          </h2>
+          <p class="ca-body-text">${c.description}</p>
+        </section>
+
+        <!-- ── Por qué la obtuve ─────────────────── -->
+        ${meta.why ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">02</span>
+            Por qué la obtuve
+          </h2>
+          <blockquote class="ca-quote">${meta.why}</blockquote>
+        </section>` : ''}
+
+        <!-- ── Temario ───────────────────────────── -->
+        ${topicsHtml ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${meta.why ? '03' : '02'}</span>
+            Temario cubierto
+          </h2>
+          <ul class="ca-topics">${topicsHtml}</ul>
+        </section>` : ''}
+
+        <!-- ── Puntos destacados ─────────────────── -->
+        ${highlightsHtml ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${meta.why ? '04' : '03'}</span>
+            Puntos destacados
+          </h2>
+          <ul class="ca-highlights">${highlightsHtml}</ul>
+        </section>` : ''}
+
+        <!-- ── Info técnica ──────────────────────── -->
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${meta.why ? '05' : '04'}</span>
+            Información técnica
+          </h2>
+          <div class="ca-info-grid">
+            ${meta.format   ? `<div class="ca-info-block"><span class="ca-info-label">Formato</span><span class="ca-info-val">${meta.format}</span></div>` : ''}
+            ${meta.provider ? `<div class="ca-info-block"><span class="ca-info-label">Emisor</span><span class="ca-info-val">${meta.provider}</span></div>` : ''}
+            ${meta.level    ? `<div class="ca-info-block"><span class="ca-info-label">Nivel</span><span class="ca-info-val">${meta.level}</span></div>` : ''}
+            ${c.category    ? `<div class="ca-info-block"><span class="ca-info-label">Categoría</span><span class="ca-info-val">${c.category}</span></div>` : ''}
+            ${dateStr       ? `<div class="ca-info-block"><span class="ca-info-label">Fecha</span><span class="ca-info-val">${dateStr}</span></div>` : ''}
+            ${c.url ? `<div class="ca-info-block ca-info-url-block">
+              <span class="ca-info-label">URL oficial</span>
+              <a href="${c.url}" target="_blank" class="ca-info-url">${c.url}</a>
+            </div>` : ''}
+          </div>
+        </section>
+
+      `;
+    }
+
+    function renderError(msg) {
+      document.getElementById('cert-content').innerHTML =
+        `<p style="color:var(--color-text-muted);padding:4rem 0;text-align:center;font-size:0.9rem;">${msg}</p>`;
+    }
+  </script>
+</body>
+</html>
