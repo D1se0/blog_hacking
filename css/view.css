@@ -255,36 +255,33 @@ body.dark .markdown-body pre {
 .image-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  opacity: 0;
-  animation: fadeInModal 0.25s ease forwards;
+  animation: fadeInModal 0.2s ease forwards;
 }
 
 .image-modal img {
-  max-width: 85%;
-  max-height: 85%;
-  border-radius: 18px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-  cursor: zoom-out;
-  transform: scale(0.95);
-  animation: zoomIn 0.25s ease forwards;
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+  border: 1px solid #30363d;
+  cursor: default;
+  animation: zoomIn 0.2s ease forwards;
 }
 
 @keyframes fadeInModal {
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 @keyframes zoomIn {
-  to {
-    transform: scale(1);
-  }
+  from { transform: scale(0.93); }
+  to   { transform: scale(1); }
 }
 
 /* Toggle sidebar button */
@@ -1228,3 +1225,195 @@ body.dark .logo-at {
   text-align: right;
 }
 
+
+/* =============================================================
+   VIEW.CSS — Mejoras visuales (2025 redesign)
+   Sobreescriben los estilos legacy anteriores.
+============================================================= */
+
+/* Forzar modo oscuro siempre */
+body {
+  background-color: #0d1117 !important;
+  color: #e6edf3 !important;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace !important;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+.sidebar {
+  background: #111820 !important;
+  border-right: 1px solid #21262d !important;
+  padding-top: 72px !important;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d #111820;
+}
+.sidebar a {
+  font-size: 0.8rem !important;
+  color: #8b949e !important;
+  padding: 5px 8px !important;
+  border-radius: 6px !important;
+  margin-bottom: 2px;
+  transition: all 0.18s ease !important;
+  border-left: 2px solid transparent;
+}
+.sidebar a:hover {
+  color: #e6edf3 !important;
+  background: rgba(255,255,255,0.04) !important;
+  transform: none !important;
+}
+.sidebar a.active {
+  color: #ff4060 !important;
+  border-left-color: #dc143c !important;
+  background: rgba(220,20,60,0.07) !important;
+  font-weight: 600 !important;
+}
+
+/* ── Main content ───────────────────────────────────────────── */
+.main {
+  background: transparent !important;
+}
+
+/* ── Markdown body ──────────────────────────────────────────── */
+.markdown-body {
+  background: #161b22 !important;
+  color: #e6edf3 !important;
+  border: 1px solid #21262d !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4) !important;
+  border-radius: 12px !important;
+}
+.markdown-body h1 { color: #e6edf3; border-bottom: 1px solid #21262d; padding-bottom: 0.4rem; }
+.markdown-body h2 { color: #e6edf3; border-bottom: 1px solid #21262d; }
+.markdown-body h3 { color: #cdd9e5; }
+.markdown-body a  { color: #ff4060; }
+.markdown-body a:hover { color: #ff6080; }
+.markdown-body code:not(pre code) {
+  background: rgba(220,20,60,0.12);
+  color: #ff6080;
+  border: 1px solid rgba(220,20,60,0.2);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+.markdown-body blockquote {
+  border-left: 3px solid #dc143c;
+  background: rgba(220,20,60,0.06);
+  color: #8b949e;
+}
+.markdown-body table { border-collapse: collapse; width: 100%; }
+.markdown-body th {
+  background: rgba(220,20,60,0.1);
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  padding: 0.5rem 0.75rem;
+}
+.markdown-body td {
+  border: 1px solid #21262d;
+  padding: 0.5rem 0.75rem;
+}
+.markdown-body tr:hover td { background: rgba(255,255,255,0.03); }
+
+.markdown-body pre {
+  background: #0d1117 !important;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+}
+.markdown-body img {
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+  border: 1px solid #21262d;
+}
+
+/* ── Sidebar TOC header label ────────────────────────────────── */
+.sidebar::before {
+  content: '// contents';
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #dc143c;
+  margin-bottom: 0.75rem;
+  padding: 0 8px;
+}
+
+/* ── Toggle sidebar button ──────────────────────────────────── */
+#toggleSidebar {
+  position: fixed;
+  top: 20px;
+  left: 16px;
+  z-index: 1100;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: rgba(13,17,23,0.9);
+  border: 1px solid #30363d;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+#toggleSidebar:hover {
+  border-color: rgba(220,20,60,0.5);
+  background: rgba(220,20,60,0.08);
+}
+#toggleSidebar svg line {
+  stroke: #8b949e;
+  stroke-width: 2;
+  transition: all 0.25s ease;
+}
+#toggleSidebar.open svg line { stroke: #ff4060; }
+
+/* ── Meta tags ──────────────────────────────────────────────── */
+.meta-container { gap: 8px; margin-bottom: 1rem; }
+.meta-date {
+  font-size: 0.78rem;
+  color: #8b949e;
+  padding: 3px 8px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+  border: 1px solid #21262d;
+}
+.meta-tag {
+  font-size: 0.75rem !important;
+  padding: 4px 10px !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid #30363d !important;
+  color: #8b949e !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* ── Machine image header ───────────────────────────────────── */
+.machine-image {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+.machine-image .bg-blur {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px) brightness(0.35);
+  transform: scale(1.1);
+}
+.machine-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 1rem;
+  z-index: 1;
+}
+
+/* ── Scrollbar for sidebar ──────────────────────────────────── */
+.sidebar::-webkit-scrollbar       { width: 4px; }
+.sidebar::-webkit-scrollbar-track { background: transparent; }
+.sidebar::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
