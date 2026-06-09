@@ -27,8 +27,9 @@
             "pentesting",
             "future"
         ],
-        "status": "progress",
-        "date": "2026-05-01",
+        "_comment": "Original status was 'progress', now completed",
+        "status": "completed",
+        "date": "2026-06-08",
         "url": "https://academy.hackthebox.com/preview/certifications/htb-certified-web-exploitation-specialist"
     },
     {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,14 @@
   <link rel="stylesheet" href="css/blog.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <div class="grid-bg" aria-hidden="true"></div>
   <div id="header-container"></div>
 
   <main class="cert-article-main" id="cert-main">
-
-    <!-- Columna central del artículo -->
     <article class="cert-article" id="cert-content">
-      <!-- Esqueleto de carga -->
       <div class="cert-skeleton">
         <div class="sk-hero"></div>
         <div class="sk-line sk-title"></div>
@@ -25,7 +24,6 @@
         <div class="sk-line sk-body short"></div>
       </div>
     </article>
-
   </main>
 
   <footer class="site-footer">
@@ -37,17 +35,19 @@
 
   <script src="js/certificates.js"></script>
   <script>
-    /* ─────────────────────────────────────────────
-       Datos enriquecidos por certificado.
-       Aquí puedes añadir cualquier campo extra
-       que quieras mostrar en el artículo.
-    ───────────────────────────────────────────── */
+
+    /* =========================================================
+       DATOS ENRIQUECIDOS POR CERTIFICADO
+       Añade aquí cualquier campo extra que quieras mostrar.
+    ========================================================= */
     const CERT_META = {
+
+      /* ── eJPT ─────────────────────────────────────────────── */
       "ejpt": {
-        provider:   "INE Security / eLearnSecurity",
-        level:      "Junior / Principiante",
-        format:     "Examen práctico (72 h)",
-        topics:     ["Networking", "Enumeration", "Exploitation", "Web Attacks", "Pivoting"],
+        provider: "INE Security / eLearnSecurity",
+        level: "Junior / Principiante",
+        format: "Examen práctico (72 h)",
+        topics: ["Networking", "Enumeration", "Exploitation", "Web Attacks", "Pivoting"],
         highlights: [
           "Primer certificado ofensivo orientado a pruebas de penetración reales.",
           "El examen se realiza en un entorno de laboratorio controlado con máquinas reales.",
@@ -56,24 +56,55 @@
         ],
         why: "Fue el primer certificado con el que demostré formalmente mis habilidades en pentesting. Representa la base sobre la que construí todo lo demás: metodología, reporting y pensamiento ofensivo."
       },
+
+      /* ── CWES ─────────────────────────────────────────────── */
       "cwes": {
-        provider:   "Hack The Box",
-        level:      "Especialista / Avanzado",
-        format:     "Examen práctico",
-        topics:     ["SQL Injection", "XSS / CSRF", "SSRF", "File Upload Bypass", "Authentication Bypass", "API Security"],
-        highlights: [
-          "Certificación de nivel avanzado centrada exclusivamente en seguridad de aplicaciones web.",
-          "Cubre técnicas modernas de explotación web incluyendo vulnerabilidades del OWASP Top 10 y más allá.",
-          "El examen plantea escenarios de aplicaciones reales donde hay que encadenar múltiples vulnerabilidades.",
-          "Emitido por Hack The Box, referente mundial en formación de hacking ético."
+        provider: "Hack The Box",
+        level: "Especialista / Avanzado",
+        format: "Examen práctico — 10 flags + informe técnico",
+        duration: "Completado en ~2 días",
+        topics: [
+          "SQL Injection", "XSS / CSRF", "SSRF", "XXE",
+          "File Upload Bypass", "Authentication Bypass",
+          "IDOR", "LFI", "Command Injection",
+          "API Security", "Web Fuzzing",
+          "Attacking Common Applications", "Reporting"
         ],
-        why: "La web es la superficie de ataque más común hoy en día. Esta certificación profundiza en un área donde la creatividad y el análisis detallado marcan la diferencia entre un tester mediocre y uno excelente."
+        highlights: [
+          "Certificación exigente que va más allá de un nivel intermedio: requiere capacidad de análisis avanzada y comprensión real de la lógica de negocio de las aplicaciones.",
+          "El examen simula un entorno empresarial real con un scope definido, descripción de la empresa y contexto profesional desde el primer minuto.",
+          "La metodología manual es clave — el examen penaliza la dependencia de herramientas automatizadas y premia el criterio técnico propio.",
+          "El informe técnico tiene tanto o más peso que las flags obtenidas: la calidad de la documentación es un factor decisivo en la evaluación final."
+        ],
+        why: "Cuando me enfrenté al CWES esperaba un examen desafiante, pero la realidad superó mis expectativas. Hay testimonios que lo presentan como algo relativamente accesible para perfiles con conocimientos medios de hacking web — bajo mi experiencia, no es así. Con varios años en el sector y un nivel que considero sólido, el examen consiguió ponerme a prueba en múltiples ocasiones, obligándome a revisar conceptos que creía dominar por completo. Eso, lejos de frustrarme, me pareció exactamente lo que debe hacer una buena certificación.",
+        experience: "El Path oficial de HTB para el CWES es de los mejores materiales formativos que he visto: bien estructurado, intuitivo, y con explicaciones que llevan desde conceptos básicos hasta técnicas de nivel medio-avanzado de forma progresiva. Algunos módulos se me hicieron más cuesta arriba que otros, pero en ningún momento sentí que el contenido fuera deficiente — todo lo contrario. Completé las 10 flags y el informe en aproximadamente dos días, elaborando la documentación en paralelo con el hacking. El examen está muy bien montado: al inicio te entregan un scope real, una descripción simulada de la empresa objetivo y todo el contexto necesario para que la experiencia sea lo más fiel posible a un pentest profesional. Cada flag tiene un valor diferente, lo que añade otra capa de estrategia. Lo recomiendo al 100% — y esta experiencia me motivó directamente a seguir sacando más certificaciones de Hack The Box.",
+        tips: [
+          "Elabora el informe a la vez que hackeas, no al final. HTB da mucho más peso al reporte que a las flags, y documentar en caliente es mucho más preciso y eficiente.",
+          "Usa SysReptor para el informe — viene con la plantilla oficial del CWES integrada y agiliza enormemente el proceso de documentación.",
+          "Revisa el código fuente, los archivos y los directorios con detenimiento. Gran parte del examen consiste en entender la lógica interna de las aplicaciones, no en lanzar herramientas a ciegas.",
+          "Evita depender de herramientas automatizadas y de la IA para resolver los retos. El examen está diseñado para evaluarte a ti, no a tus scripts — y además, desarrollarás un criterio técnico mucho más sólido.",
+          "Practica en PortSwigger entrando por Mystery Box: así enfrentas vulnerabilidades sin saber de antemano qué técnica toca, exactamente como en el examen.",
+          "Las máquinas de Vulnyx del creador j4ckie0x17 son especialmente útiles para preparar este examen — muchas de ellas replican el tipo de vulnerabilidades que aparecen en el CWES.",
+          "El Fortress de Akerva que recomienda HTB está bien, pero en mi opinión cubre poco de lo que realmente cae en el examen — no le des demasiado peso en tu preparación."
+        ],
+        machines: [
+          { name: "Swamp", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "Express", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "Bola", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "JarJar", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "Gattaca", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "Future", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "Jerry", platform: "Vulnyx", author: "j4ckie0x17" },
+          { name: "Lost", platform: "Vulnyx", author: "j4ckie0x17" }
+        ]
       },
+
+      /* ── Udemy Principiante ───────────────────────────────── */
       "udemy-ciberseguridad-principiante": {
-        provider:   "Udemy",
-        level:      "Principiante",
-        format:     "Curso online + certificado de finalización",
-        topics:     ["Linux basics", "Kali Linux", "Redes", "Conceptos de pentesting", "Herramientas básicas"],
+        provider: "Udemy",
+        level: "Principiante",
+        format: "Curso online + certificado de finalización",
+        topics: ["Linux basics", "Kali Linux", "Redes", "Conceptos de pentesting", "Herramientas básicas"],
         highlights: [
           "Curso introductorio completo para quienes empiezan desde cero en ciberseguridad.",
           "Incluye configuración de entornos de práctica con Kali Linux y VMs.",
@@ -82,11 +113,13 @@
         ],
         why: "El punto de partida. Este curso me dio el lenguaje y los fundamentos para entender el ecosistema de la ciberseguridad y decidir especializarme en pentesting ofensivo."
       },
+
+      /* ── Udemy Avanzado ──────────────────────────────────── */
       "udemy-ciberseguridad-avanzado": {
-        provider:   "Udemy",
-        level:      "Avanzado",
-        format:     "Curso online + certificado de finalización",
-        topics:     ["Explotación de vulnerabilidades", "Post-explotación", "Privilege Escalation", "CTF techniques", "Análisis de malware básico"],
+        provider: "Udemy",
+        level: "Avanzado",
+        format: "Curso online + certificado de finalización",
+        topics: ["Explotación de vulnerabilidades", "Post-explotación", "Privilege Escalation", "CTF techniques", "Análisis de malware básico"],
         highlights: [
           "Evolución natural del curso de principiante, enfocado en técnicas ofensivas avanzadas.",
           "Profundiza en escalada de privilegios en Linux y Windows, movimiento lateral y persistencia.",
@@ -95,14 +128,16 @@
         ],
         why: "Consolidó mis habilidades y amplió mi toolkit significativamente. Después de este curso empecé a resolver máquinas de HackTheBox de forma consistente."
       }
+
     };
 
-    /* ─────────────────────────────────────────────
-       Inicialización
-    ───────────────────────────────────────────── */
+    /* =========================================================
+       INICIALIZACIÓN
+    ========================================================= */
     document.addEventListener("DOMContentLoaded", async () => {
-      // Header
-      const res  = await fetch('header.html');
+
+      // Cargar header y marcar enlace activo
+      const res = await fetch('header.html');
       const html = await res.text();
       document.getElementById('header-container').innerHTML = html;
       document.querySelectorAll('.nav-link').forEach(link => {
@@ -111,7 +146,7 @@
           link.classList.add('nav-accent');
       });
 
-      // Leer ?id=
+      // Leer ?id= de la URL
       const id = new URLSearchParams(window.location.search).get('id');
       if (!id) { renderError('No certificate specified.'); return; }
 
@@ -126,44 +161,104 @@
       }
     });
 
-    /* ─────────────────────────────────────────────
-       Renderizado principal
-    ───────────────────────────────────────────── */
+    /* =========================================================
+       RENDERIZADO PRINCIPAL
+    ========================================================= */
     function renderArticle(c) {
+
       const isCompleted = c.status === 'completed';
       const statusColor = isCompleted ? '#22c55e' : '#f59e0b';
       const statusLabel = isCompleted ? 'Completed' : 'In Progress';
-      const meta        = CERT_META[c.id] || {};
+      const meta = CERT_META[c.id] || {};
 
       const dateStr = c.date
-        ? new Date(c.date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })
+        ? new Date(c.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
         : '';
 
-      const allTags = [...(c.tags || [])];
-      const tagsHtml = allTags.map(t =>
-        `<span class="ca-tag">#${t.toLowerCase()}</span>`).join('');
+      // ── Tags del JSON principal ───────────────────────────
+      const tagsHtml = (c.tags || []).map(t =>
+        `<span class="ca-tag">#${t.toLowerCase()}</span>`
+      ).join('');
 
-      const topicsHtml = (meta.topics || []).map(t =>
-        `<li class="ca-topic-item">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      // ── Temario ───────────────────────────────────────────
+      const topicsHtml = (meta.topics || []).map(t => `
+        <li class="ca-topic-item">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
           ${t}
-        </li>`).join('');
+        </li>`
+      ).join('');
 
-      const highlightsHtml = (meta.highlights || []).map(h =>
-        `<li class="ca-highlight-item">
+      // ── Highlights ────────────────────────────────────────
+      const highlightsHtml = (meta.highlights || []).map(h => `
+        <li class="ca-highlight-item">
           <span class="ca-hl-dot"></span>
           <span>${h}</span>
-        </li>`).join('');
+        </li>`
+      ).join('');
 
+      // ── Mi experiencia ────────────────────────────────────
+      const experienceHtml = meta.experience || '';
+
+      // ── Consejos (puntos amarillos) ───────────────────────
+      const tipsHtml = (meta.tips || []).map(t => `
+        <li class="ca-highlight-item">
+          <span class="ca-hl-dot" style="background:#f59e0b; box-shadow: 0 0 6px rgba(245,158,11,0.5);"></span>
+          <span>${t}</span>
+        </li>`
+      ).join('');
+
+      // ── Máquinas recomendadas ─────────────────────────────
+      const machinesHtml = (meta.machines || []).map(m =>
+        `<span class="ca-machine-chip">${m.name}</span>`
+      ).join('');
+
+      // ── Numeración dinámica de secciones ─────────────────
+      // Calculamos qué secciones opcionales existen para numerar correctamente
+      const hasWhy = !!meta.why;
+      const hasExperience = !!experienceHtml;
+      const hasTips = !!tipsHtml;
+      const hasMachines = !!machinesHtml;
+      const hasTopics = !!topicsHtml;
+      const hasHighlights = !!highlightsHtml;
+
+      let n = 1; // contador de sección
+      const num = () => String(n++).padStart(2, '0');
+
+      const s = {
+        desc: num(),
+        why: hasWhy ? num() : null,
+        experience: hasExperience ? num() : null,
+        tips: hasTips ? num() : null,
+        machines: hasMachines ? num() : null,
+        topics: hasTopics ? num() : null,
+        highlights: hasHighlights ? num() : null,
+        info: num()
+      };
+
+      // ── Info técnica extra (duration si existe) ───────────
+      const durationBlock = meta.duration
+        ? `<div class="ca-info-block">
+             <span class="ca-info-label">Duración del examen</span>
+             <span class="ca-info-val">${meta.duration}</span>
+           </div>`
+        : '';
+
+      // ── HTML final del artículo ───────────────────────────
       document.getElementById('cert-content').innerHTML = `
 
-        <!-- ── Back ────────────────────────────── -->
+        <!-- Back -->
         <a href="certificates.html" class="ca-back">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
           Back to Certificates
         </a>
 
-        <!-- ── Hero ────────────────────────────── -->
+        <!-- Hero imagen con blur de fondo -->
         <div class="ca-hero">
           <div class="ca-hero-blur" style="background-image:url('certificates/${c.id}/images/logo.png')"></div>
           <img src="certificates/${c.id}/images/logo.png" alt="${c.title}" class="ca-hero-img"
@@ -171,16 +266,18 @@
           <div class="ca-hero-fade"></div>
         </div>
 
-        <!-- ── Cabecera del artículo ────────────── -->
+        <!-- Cabecera -->
         <header class="ca-header">
-
           <div class="ca-meta-row">
-            <span class="ca-status" style="background:${statusColor}18;color:${statusColor};border-color:${statusColor}44;">
-              <span style="width:6px;height:6px;border-radius:50%;background:${statusColor};flex-shrink:0;display:inline-block;"></span>
+            <span class="ca-status"
+              style="background:${statusColor}18; color:${statusColor}; border-color:${statusColor}44;">
+              <span style="width:6px;height:6px;border-radius:50%;background:${statusColor};
+                           flex-shrink:0;display:inline-block;"></span>
               ${statusLabel}
             </span>
             ${dateStr ? `<span class="ca-date">${dateStr}</span>` : ''}
             ${meta.level ? `<span class="ca-level">${meta.level}</span>` : ''}
+            ${meta.duration ? `<span class="ca-level" style="color:var(--color-accent-light);border-color:rgba(220,20,60,0.3);background:rgba(220,20,60,0.07);">${meta.duration}</span>` : ''}
           </div>
 
           <h1 class="ca-title">${c.title}</h1>
@@ -188,72 +285,111 @@
 
           <div class="ca-tags">${tagsHtml}</div>
 
-          <!-- Botones: artículo activo, credencial como secundario -->
           <div class="ca-actions">
             ${c.url ? `
             <a href="${c.url}" target="_blank" class="ca-btn-secondary">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
               Ver credencial oficial
             </a>` : ''}
           </div>
-
         </header>
 
-        <!-- ── Divider ──────────────────────────── -->
         <div class="ca-divider"></div>
 
-        <!-- ── Descripción ──────────────────────── -->
+        <!-- 01 — Descripción -->
         <section class="ca-section">
           <h2 class="ca-section-title">
-            <span class="ca-section-num">01</span>
+            <span class="ca-section-num">${s.desc}</span>
             Descripción
           </h2>
           <p class="ca-body-text">${c.description}</p>
         </section>
 
-        <!-- ── Por qué la obtuve ─────────────────── -->
-        ${meta.why ? `
+        <!-- 02 — Por qué la obtuve -->
+        ${hasWhy ? `
         <section class="ca-section">
           <h2 class="ca-section-title">
-            <span class="ca-section-num">02</span>
+            <span class="ca-section-num">${s.why}</span>
             Por qué la obtuve
           </h2>
           <blockquote class="ca-quote">${meta.why}</blockquote>
         </section>` : ''}
 
-        <!-- ── Temario ───────────────────────────── -->
-        ${topicsHtml ? `
+        <!-- Mi experiencia -->
+        ${hasExperience ? `
         <section class="ca-section">
           <h2 class="ca-section-title">
-            <span class="ca-section-num">${meta.why ? '03' : '02'}</span>
+            <span class="ca-section-num">${s.experience}</span>
+            Mi experiencia
+          </h2>
+          <blockquote class="ca-quote ca-quote-neutral">${experienceHtml}</blockquote>
+        </section>` : ''}
+
+        <!-- Consejos para el examen -->
+        ${hasTips ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${s.tips}</span>
+            Consejos para el examen
+          </h2>
+          <ul class="ca-highlights">${tipsHtml}</ul>
+        </section>` : ''}
+
+        <!-- Máquinas recomendadas -->
+        ${hasMachines ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${s.machines}</span>
+            Máquinas recomendadas para preparar el examen
+          </h2>
+          <p class="ca-body-text" style="margin-bottom:0.9rem;">
+            Todas de <strong style="color:var(--color-text)">Vulnyx</strong>, creadas por
+            <strong style="color:var(--color-accent-light)">j4ckie0x17</strong> —
+            diseñadas con vulnerabilidades que se pueden encontrar en el examen del CWES.
+          </p>
+          <div class="ca-machines">${machinesHtml}</div>
+        </section>` : ''}
+
+        <!-- Temario cubierto -->
+        ${hasTopics ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${s.topics}</span>
             Temario cubierto
           </h2>
           <ul class="ca-topics">${topicsHtml}</ul>
         </section>` : ''}
 
-        <!-- ── Puntos destacados ─────────────────── -->
-        ${highlightsHtml ? `
+        <!-- Puntos destacados -->
+        ${hasHighlights ? `
         <section class="ca-section">
           <h2 class="ca-section-title">
-            <span class="ca-section-num">${meta.why ? '04' : '03'}</span>
+            <span class="ca-section-num">${s.highlights}</span>
             Puntos destacados
           </h2>
           <ul class="ca-highlights">${highlightsHtml}</ul>
         </section>` : ''}
 
-        <!-- ── Info técnica ──────────────────────── -->
+        <!-- Información técnica -->
         <section class="ca-section">
           <h2 class="ca-section-title">
-            <span class="ca-section-num">${meta.why ? '05' : '04'}</span>
+            <span class="ca-section-num">${s.info}</span>
             Información técnica
           </h2>
           <div class="ca-info-grid">
-            ${meta.format   ? `<div class="ca-info-block"><span class="ca-info-label">Formato</span><span class="ca-info-val">${meta.format}</span></div>` : ''}
+            ${meta.format ? `<div class="ca-info-block"><span class="ca-info-label">Formato</span><span class="ca-info-val">${meta.format}</span></div>` : ''}
+            ${durationBlock}
             ${meta.provider ? `<div class="ca-info-block"><span class="ca-info-label">Emisor</span><span class="ca-info-val">${meta.provider}</span></div>` : ''}
-            ${meta.level    ? `<div class="ca-info-block"><span class="ca-info-label">Nivel</span><span class="ca-info-val">${meta.level}</span></div>` : ''}
-            ${c.category    ? `<div class="ca-info-block"><span class="ca-info-label">Categoría</span><span class="ca-info-val">${c.category}</span></div>` : ''}
-            ${dateStr       ? `<div class="ca-info-block"><span class="ca-info-label">Fecha</span><span class="ca-info-val">${dateStr}</span></div>` : ''}
-            ${c.url ? `<div class="ca-info-block ca-info-url-block">
+            ${meta.level ? `<div class="ca-info-block"><span class="ca-info-label">Nivel</span><span class="ca-info-val">${meta.level}</span></div>` : ''}
+            ${c.category ? `<div class="ca-info-block"><span class="ca-info-label">Categoría</span><span class="ca-info-val">${c.category}</span></div>` : ''}
+            ${dateStr ? `<div class="ca-info-block"><span class="ca-info-label">Fecha</span><span class="ca-info-val">${dateStr}</span></div>` : ''}
+            ${c.url ? `
+            <div class="ca-info-block ca-info-url-block">
               <span class="ca-info-label">URL oficial</span>
               <a href="${c.url}" target="_blank" class="ca-info-url">${c.url}</a>
             </div>` : ''}
@@ -267,6 +403,8 @@
       document.getElementById('cert-content').innerHTML =
         `<p style="color:var(--color-text-muted);padding:4rem 0;text-align:center;font-size:0.9rem;">${msg}</p>`;
     }
+
   </script>
 </body>
+
 </html>
