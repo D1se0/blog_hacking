@@ -39,31 +39,37 @@
   </button>
 
   <!-- Contenedor de botones top-right con más separación lateral -->
-  <div style="position: fixed; top: 20px; right: 60px; display: flex; align-items: center; gap: 16px; z-index:1000;">
+  <!-- Botones fijos top-right -->
+  <div style="position: fixed; top: 20px; right: 60px; display: flex; align-items: center; gap: 12px; z-index:1000;">
 
-    <!-- Botón de idioma -->
-    <div class="dropdown">
-      <button id="translateBtn" class="btn btn-sm btn-outline-primary dropdown-toggle" type="button"
-        data-bs-toggle="dropdown" aria-expanded="false">
-        <!-- Icono de idioma SVG -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10
-                 10-4.486 10-10S17.514 2 12 2zm0 2c1.93 0 3.68.784 4.95
-                 2.05L12 12 7.05 6.05A6.963 6.963 0 0 1 12 4zm-6 8c0-1.93.784-3.68
-                 2.05-4.95L12 12l-5.95 5.95A6.963 6.963 0 0 1 6 12zm6 6c-1.93
-                 0-3.68-.784-4.95-2.05L12 12l5.95 5.95A6.963 6.963 0 0 1 12 18z" />
+    <!-- Traductor -->
+    <div class="tr-wrapper" id="trWrapper">
+      <button id="translateBtn" class="tr-btn" title="Translate writeup">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/>
+          <path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/>
         </svg>
+        <span id="trCurrentLang">ES</span>
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </button>
-      <ul id="langDropdown" class="dropdown-menu">
-        <li><a class="dropdown-item" href="#" data-lang="en">English</a></li>
-        <li><a class="dropdown-item" href="#" data-lang="es">Español</a></li>
-        <li><a class="dropdown-item" href="#" data-lang="fr">Français</a></li>
-        <li><a class="dropdown-item" href="#" data-lang="de">Deutsch</a></li>
-        <li><a class="dropdown-item" href="#" data-lang="it">Italiano</a></li>
+      <ul id="trDropdown" class="tr-dropdown" hidden>
+        <li class="tr-dropdown-label">Translate to</li>
+        <li><button class="tr-item" data-lang="en"  data-label="EN">English</button></li>
+        <li><button class="tr-item" data-lang="es"  data-label="ES">Español</button></li>
+        <li><button class="tr-item" data-lang="fr"  data-label="FR">Français</button></li>
+        <li><button class="tr-item" data-lang="de"  data-label="DE">Deutsch</button></li>
+        <li><button class="tr-item" data-lang="it"  data-label="IT">Italiano</button></li>
+        <li><button class="tr-item" data-lang="pt"  data-label="PT">Português</button></li>
+        <li><button class="tr-item" data-lang="zh-CN" data-label="ZH">Chino</button></li>
+        <li><button class="tr-item" data-lang="ja"  data-label="JA">Japones</button></li>
+        <li class="tr-dropdown-divider"></li>
+        <li><button class="tr-item tr-item-reset" data-lang="_original" data-label="--">Restaurar</button></li>
       </ul>
     </div>
 
-    <!-- Botón de modo (light/dark) -->
+    <!-- Modo oscuro (oculto) -->
     <button id="modeToggle" aria-label="Toggle theme" class="btn btn-sm btn-outline-secondary"
       style="visibility: hidden;">
       <svg id="themeIcon" viewBox="0 0 24 24" width="18" height="18"></svg>
@@ -388,20 +394,12 @@ const mdRes = await fetch(mdFile, {
         img.addEventListener("click", () => {
           const modal    = document.createElement("div");
           modal.classList.add("image-modal");
-
           const modalImg = document.createElement("img");
           modalImg.src   = img.src;
-
-          // Evitar que el click en la imagen burbujee al overlay (que la cerraría)
           modalImg.addEventListener("click", (e) => e.stopPropagation());
-
           modal.appendChild(modalImg);
           document.body.appendChild(modal);
-
-          // Cerrar al hacer clic en el overlay (fuera de la imagen)
           modal.addEventListener("click", () => modal.remove());
-
-          // Cerrar con Escape
           const onKey = (e) => { if (e.key === "Escape") { modal.remove(); document.removeEventListener("keydown", onKey); } };
           document.addEventListener("keydown", onKey);
         });
@@ -530,45 +528,112 @@ const mdRes = await fetch(mdFile, {
       setThemeIcon(isDark);
     });
 
-    // Guardamos el contenido original para poder volver a traducir múltiples veces
-    let originalText = contentDiv.innerText;
+    // ── TRADUCTOR ────────────────────────────────────────────────────────────
+    // Guarda el HTML original renderizado del markdown para poder restaurarlo
+    let originalHTML = null;
+    let isTranslating = false;
 
-    document.querySelectorAll("#langDropdown .dropdown-item").forEach(item => {
-      item.addEventListener("click", async (e) => {
-        e.preventDefault();
-        const targetLang = item.dataset.lang;
-        if (!targetLang) return;
+    // Divide texto largo en chunks por párrafos para no superar el límite de la API
+    function chunkText(text, maxLen = 3800) {
+      const paragraphs = text.split('\n\n');
+      const chunks = [];
+      let current  = '';
+      for (const p of paragraphs) {
+        if (current.length + p.length > maxLen && current) {
+          chunks.push(current.trim());
+          current = p + '\n\n';
+        } else {
+          current += p + '\n\n';
+        }
+      }
+      if (current.trim()) chunks.push(current.trim());
+      return chunks;
+    }
+
+    // Llama a Google Translate (endpoint gtx — sin CORS, sin API key)
+    async function translateChunk(text, targetLang) {
+      const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`;
+      const res  = await fetch(url);
+      if (!res.ok) throw new Error('translate fetch failed');
+      const data = await res.json();
+      // data[0] = array de segmentos: cada uno es [traducido, original, ...]
+      return data[0].map(seg => seg[0]).join('');
+    }
+
+    // Toggle del dropdown custom
+    const trWrapper  = document.getElementById('trWrapper');
+    const trBtn      = document.getElementById('translateBtn');
+    const trDropdown = document.getElementById('trDropdown');
+    const trLabel    = document.getElementById('trCurrentLang');
+
+    trBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = trDropdown.hidden;
+      trDropdown.hidden = !isHidden;
+      trBtn.classList.toggle('active', isHidden);
+    });
+    document.addEventListener('click', () => {
+      trDropdown.hidden = true;
+      trBtn.classList.remove('active');
+    });
+    trDropdown.addEventListener('click', (e) => e.stopPropagation());
+
+    // Click en cada idioma
+    document.querySelectorAll('.tr-item').forEach(item => {
+      item.addEventListener('click', async () => {
+        if (isTranslating) return;
+
+        const lang  = item.dataset.lang;
+        const label = item.dataset.label;
+
+        trDropdown.hidden = true;
+        trBtn.classList.remove('active');
+
+        // Restaurar original
+        if (lang === '_original') {
+          if (originalHTML) contentDiv.innerHTML = originalHTML;
+          trLabel.textContent = 'ES';
+          enableImageModal();
+          return;
+        }
+
+        // Guardar HTML original la primera vez
+        if (!originalHTML) originalHTML = contentDiv.innerHTML;
+
+        // Extraer texto plano respetando saltos de línea
+        const plainText = contentDiv.innerText;
+        const chunks    = chunkText(plainText);
+
+        // Mostrar spinner
+        isTranslating = true;
+        trBtn.classList.add('loading');
+        trLabel.textContent = '...';
 
         try {
-          // Llamada al endpoint público que soporta CORS
-          const res = await fetch("https://translate.argosopentech.com/translate", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              q: originalText,
-              source: "auto",
-              target: targetLang,
-              format: "text"
-            })
-          });
+          const translatedChunks = [];
+          for (const chunk of chunks) {
+            const t = await translateChunk(chunk, lang);
+            translatedChunks.push(t);
+          }
+          const fullTranslation = translatedChunks.join('\n\n');
 
-          if (!res.ok) throw new Error("Error en la traducción");
-
-          const data = await res.json();
-          contentDiv.innerText = data.translatedText;
-
-          // Cierra el dropdown automáticamente
-          const dropdown = bootstrap.Dropdown.getInstance(document.getElementById("translateBtn"));
-          dropdown.hide();
+          // Reemplazar el texto del contenido manteniendo el contenedor
+          contentDiv.innerText = fullTranslation;
+          trLabel.textContent  = label;
 
         } catch (err) {
-          console.error(err);
-          alert("Error traduciendo el contenido. Intenta de nuevo.");
+          console.error('Translation error:', err);
+          contentDiv.innerHTML = originalHTML;
+          trLabel.textContent  = 'Error';
+          setTimeout(() => { trLabel.textContent = 'ES'; }, 2000);
+        } finally {
+          isTranslating = false;
+          trBtn.classList.remove('loading');
         }
       });
     });
 
-    async function checkActiveMachine(tags) {
+        async function checkActiveMachine(tags) {
       const isActive = tags.active === true || tags.active === "true";
       if (!isActive) return;
 

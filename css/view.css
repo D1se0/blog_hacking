@@ -1417,3 +1417,109 @@ body {
 .sidebar::-webkit-scrollbar       { width: 4px; }
 .sidebar::-webkit-scrollbar-track { background: transparent; }
 .sidebar::-webkit-scrollbar-thumb { background: #30363d; border-radius: 2px; }
+
+/* =============================================================
+   TRADUCTOR CUSTOM
+============================================================= */
+
+.tr-wrapper {
+  position: relative;
+}
+
+.tr-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  background: rgba(13,17,23,0.9);
+  color: #8b949e;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Fira Mono', monospace;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+.tr-btn:hover,
+.tr-btn.active {
+  border-color: rgba(220,20,60,0.5);
+  color: #ff4060;
+  background: rgba(220,20,60,0.08);
+}
+.tr-btn.loading {
+  opacity: 0.6;
+  cursor: wait;
+  pointer-events: none;
+}
+.tr-btn.loading #trCurrentLang {
+  animation: trPulse 0.8s ease-in-out infinite;
+}
+@keyframes trPulse {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.3; }
+}
+
+.tr-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 170px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 4px;
+  list-style: none;
+  margin: 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  animation: trDropIn 0.15s ease;
+  z-index: 9999;
+}
+@keyframes trDropIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tr-dropdown-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #dc143c;
+  padding: 6px 8px 4px;
+  font-family: 'Fira Mono', monospace;
+}
+
+.tr-dropdown-divider {
+  height: 1px;
+  background: #21262d;
+  margin: 4px 0;
+}
+
+.tr-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #8b949e;
+  font-size: 0.8rem;
+  font-family: 'Fira Mono', monospace;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.tr-item:hover {
+  background: rgba(255,255,255,0.05);
+  color: #e6edf3;
+}
+.tr-item-reset {
+  color: #6e7681;
+}
+.tr-item-reset:hover {
+  color: #ff4060;
+  background: rgba(220,20,60,0.08);
+}
