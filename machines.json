@@ -2405,5 +2405,23 @@
     "date": "2026-04-25",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "reactor",
+    "title": "Reactor HackTheBox (Easy)",
+    "description": "Writeup de Reactor — Easy Linux en HackTheBox",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "web",
+      "node",
+      "nextjs",
+      "cve",
+      "js"
+    ],
+    "date": "2026-06-10",
+    "active": true,
+    "active_to_retire": false
   }
 ]
