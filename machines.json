@@ -9098,5 +9098,26 @@
     "date": "2024-10-01",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "devhub",
+    "title": "DevHub HackTheBox (Intermediate)",
+    "description": "Writeup de DevHub — Intermediate Linux en HackTheBox",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "chisel",
+      "rce",
+      "port_forwarding",
+      "services",
+      "APIs"
+    ],
+    "date": "2026-06-11",
+    "active": true,
+    "active_to_retire": false
   }
 ]
