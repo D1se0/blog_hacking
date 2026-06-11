@@ -1355,9 +1355,133 @@ body {
 }
 
 .markdown-body pre {
-  background: #0d1117 !important;
-  border: 1px solid #21262d;
-  border-radius: 8px;
+  position: relative;
+  margin: 1.4rem 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 10px !important;
+  overflow: visible !important;
+}
+
+/* Barra de cabecera con semáforos */
+.markdown-body pre::before {
+  content: '';
+  display: block;
+  height: 34px;
+  background: #1c2128;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #30363d;
+  border-bottom: 1px solid #21262d;
+  background-image:
+    radial-gradient(circle, #ff5f57 5.5px, transparent 5.5px),
+    radial-gradient(circle, #febc2e 5.5px, transparent 5.5px),
+    radial-gradient(circle, #28c840 5.5px, transparent 5.5px);
+  background-size: 13px 13px, 13px 13px, 13px 13px;
+  background-position: 13px center, 31px center, 49px center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+/* Cuerpo del código */
+.markdown-body pre code {
+  display: block !important;
+  background: #0a0e13 !important;
+  border: 1px solid #30363d !important;
+  border-top: none !important;
+  border-radius: 0 0 10px 10px !important;
+  padding: 0.95rem 1.1rem 1rem !important;
+  font-family: 'Fira Mono', 'JetBrains Mono', monospace !important;
+  font-size: 0.82rem !important;
+  line-height: 1.65 !important;
+  color: #e6edf3 !important;
+  overflow-x: auto;
+
+}
+
+.markdown-body pre code::-webkit-scrollbar       { height: 3px; }
+.markdown-body pre code::-webkit-scrollbar-track  { background: #0a0e13; }
+.markdown-body pre code::-webkit-scrollbar-thumb  { background: #30363d; border-radius: 2px; }
+
+/* Label del lenguaje centrado en la cabecera */
+.markdown-body pre .lang-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-family: 'Fira Mono', monospace;
+  font-weight: 700;
+  color: #6e7681;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Botón copiar */
+.markdown-body pre .copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  height: 22px;
+  padding: 0 9px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.6rem;
+  font-family: 'Fira Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(13, 17, 23, 0.7);
+  border: 1px solid #30363d;
+  border-radius: 5px;
+  color: #6e7681;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.18s ease, color 0.18s ease,
+              border-color 0.18s ease, background 0.18s ease;
+  z-index: 10;
+}
+
+.markdown-body pre:hover .copy-btn {
+  opacity: 1;
+}
+
+.markdown-body pre .copy-btn:hover {
+  background: rgba(220, 20, 60, 0.1);
+  border-color: rgba(220, 20, 60, 0.4);
+  color: #ff4060;
+}
+
+.markdown-body pre .copy-btn.copied {
+  background: rgba(40, 200, 64, 0.08);
+  border-color: rgba(40, 200, 64, 0.35);
+  color: #28c840;
+  opacity: 1;
+}
+
+/* Icono SVG dentro del botón */
+.markdown-body pre .copy-btn svg {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+
+/* Mobile: sin cabecera, border-radius completo */
+@media (max-width: 640px) {
+  .markdown-body pre::before { display: none; }
+  .markdown-body pre code {
+    border-radius: 8px !important;
+    border-top: 1px solid #30363d !important;
+  }
+  .markdown-body pre .copy-btn { opacity: 1; top: 8px; right: 8px; }
 }
 
 .markdown-body img {
