@@ -130,15 +130,26 @@ function createMachineCard(m) {
   }
 
   // ── Badges de skills (habilidades requeridas) ────────────────────────────
+  // Máximo de tags visibles antes del botón "Ver más"
+  const MAX_VISIBLE_TAGS = 3;
+
   if (m.skills) {
-    m.skills.forEach(s => {
-      tagsHtml += `
-        <span class="rounded-full font-medium px-2 py-0.5 text-xs"
-          style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">
-          #${s.toLowerCase()}
-        </span>
-      `;
+    m.skills.forEach((s, idx) => {
+      const hidden = idx >= MAX_VISIBLE_TAGS ? ' data-extra-tag="true" style="display:none; background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)"' : ' style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)"';
+      tagsHtml += `<span class="rounded-full font-medium px-2 py-0.5 text-xs"${hidden}>#${s.toLowerCase()}</span>`;
     });
+
+    // Botón "Ver más" solo si hay tags ocultos
+    if (m.skills.length > MAX_VISIBLE_TAGS) {
+      const extra = m.skills.length - MAX_VISIBLE_TAGS;
+      tagsHtml += `
+        <button class="tag-toggle-btn rounded-full px-2 py-0.5 text-xs font-medium"
+          style="background-color: var(--color-surface-raised); color: var(--color-accent-light); border: 1px solid var(--color-accent-light); cursor:pointer;"
+          data-expanded="false">
+          +${extra} más
+        </button>
+      `;
+    }
   }
 
   // ── Badge de estado (Activa / Retirada) ──────────────────────────────────
@@ -309,9 +320,11 @@ async function initBlog() {
 ============================================================================= */
 
 function renderTags(tags) {
-  const container = document.getElementById('tags-container');
+  const container  = document.getElementById('tags-container');
+  const MAX_TAGS   = 12; // tags visibles antes de "Ver más"
+  const extraCount = tags.length - MAX_TAGS;
 
-  // Botón "All" activo por defecto
+  // ── Botón "All" activo por defecto ───────────────────────────────────────
   let html = `
     <button data-tag="All" class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors"
       style="background-color: var(--color-accent); color: white">
@@ -319,21 +332,53 @@ function renderTags(tags) {
     </button>
   `;
 
-  // Botones para cada tag disponible
-  tags.forEach(tag => {
-    // El tag especial 'active_to_retire' tiene su propia etiqueta visual
-    const label = tag === 'active_to_retire' ? '#nos_deja_pronto' : `#${tag}`;
+  // ── Botones de tags: primeros MAX_TAGS visibles, el resto ocultos ─────────
+  tags.forEach((tag, idx) => {
+    const label   = tag === 'active_to_retire' ? '#nos_deja_pronto' : `#${tag}`;
+    const hidden  = idx >= MAX_TAGS;
     html += `
-      <button data-tag="${tag}" class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors"
-        style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">
+      <button data-tag="${tag}"
+        class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors${hidden ? ' tags-extra-btn' : ''}"
+        style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border);${hidden ? ' display:none;' : ''}">
         ${label}
       </button>
     `;
   });
 
+  // ── Botón "Ver más" si hay tags ocultos ───────────────────────────────────
+  if (extraCount > 0) {
+    html += `
+      <button id="tags-show-more"
+        class="rounded-full px-3 py-1 text-xs font-medium transition-colors"
+        data-expanded="false"
+        style="background-color: var(--color-surface-raised); color: var(--color-accent-light); border: 1px solid var(--color-accent-light); cursor: pointer;">
+        +${extraCount} más
+      </button>
+    `;
+  }
+
   container.innerHTML = html;
 
-  // Asignar eventos: al clicar un tag, actualizar estilos y filtrar
+  // ── Evento "Ver más / Ver menos" ─────────────────────────────────────────
+  const showMoreBtn = document.getElementById('tags-show-more');
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', () => {
+      const expanded  = showMoreBtn.dataset.expanded === 'true';
+      const extras    = container.querySelectorAll('.tags-extra-btn');
+
+      if (expanded) {
+        extras.forEach(b => b.style.display = 'none');
+        showMoreBtn.textContent      = `+${extraCount} más`;
+        showMoreBtn.dataset.expanded = 'false';
+      } else {
+        extras.forEach(b => b.style.display = '');
+        showMoreBtn.textContent      = 'Ver menos';
+        showMoreBtn.dataset.expanded = 'true';
+      }
+    });
+  }
+
+  // ── Eventos de filtrado por tag ───────────────────────────────────────────
   document.querySelectorAll('.tag-btn').forEach(btn => {
     btn.addEventListener('click', e => {
       currentTag = e.target.getAttribute('data-tag');
@@ -486,6 +531,28 @@ function renderBlog() {
 
   grid.innerHTML = currentItems.map(createMachineCard).join('');
   renderPagination();
+
+  // ── Delegar eventos para botones "Ver más" de tags ───────────────────────
+  grid.querySelectorAll('.tag-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const card    = btn.closest('.flex.flex-wrap');
+      const extras  = card.querySelectorAll('[data-extra-tag="true"]');
+      const expanded = btn.dataset.expanded === 'true';
+
+      if (expanded) {
+        extras.forEach(t => t.style.display = 'none');
+        const count = extras.length;
+        btn.textContent    = `+${count} más`;
+        btn.dataset.expanded = 'false';
+      } else {
+        extras.forEach(t => { t.style.display = ''; t.removeAttribute('style'); t.style.backgroundColor = 'var(--color-surface-raised)'; t.style.color = 'var(--color-text-muted)'; t.style.border = '1px solid var(--color-border)'; });
+        btn.textContent    = 'Ver menos';
+        btn.dataset.expanded = 'true';
+      }
+    });
+  });
 }
 
 
@@ -540,22 +607,58 @@ function renderPagination() {
     </button>
   `;
 
-  // ── Números de página ────────────────────────────────────────────────────
+  // ── Números de página con ellipsis ─────────────────────────────────────
+  // Genera la lista de páginas a mostrar con "..." cuando hay muchas
+  function getPageNumbers(current, total) {
+    // Siempre mostramos: primera, última, actual y 1 a cada lado
+    const delta = 1; // páginas a cada lado de la actual
+    const range = [];
+    const rangeWithDots = [];
+
+    const left  = Math.max(2, current - delta);
+    const right = Math.min(total - 1, current + delta);
+
+    range.push(1);
+    for (let i = left; i <= right; i++) range.push(i);
+    range.push(total);
+
+    // Deduplicar y ordenar
+    const uniq = [...new Set(range)].sort((a, b) => a - b);
+
+    let prev = null;
+    for (const p of uniq) {
+      if (prev !== null && p - prev > 1) rangeWithDots.push('...');
+      rangeWithDots.push(p);
+      prev = p;
+    }
+    return rangeWithDots;
+  }
+
+  const pageNumbers = getPageNumbers(currentPage, totalPages);
   let html = prevArrow;
 
-  for (let i = 1; i <= totalPages; i++) {
-    const isActive = i === currentPage;
-    html += `
-      <button class="page-btn rounded-md px-3 py-1 text-sm font-medium transition-colors"
-        style="
-          background-color: ${isActive ? 'var(--color-accent)' : 'var(--color-surface)'};
-          color: ${isActive ? 'white' : 'var(--color-text-muted)'};
-          border: 1px solid ${isActive ? 'var(--color-accent)' : 'var(--color-border)'}"
-        data-page="${i}">
-        ${i}
-      </button>
-    `;
-  }
+  pageNumbers.forEach(p => {
+    if (p === '...') {
+      html += `
+        <span class="rounded-md px-3 py-1 text-sm"
+          style="color: var(--color-text-muted); user-select:none;">
+          …
+        </span>
+      `;
+    } else {
+      const isActive = p === currentPage;
+      html += `
+        <button class="page-btn rounded-md px-3 py-1 text-sm font-medium transition-colors"
+          style="
+            background-color: ${isActive ? 'var(--color-accent)' : 'var(--color-surface)'};
+            color: ${isActive ? 'white' : 'var(--color-text-muted)'};
+            border: 1px solid ${isActive ? 'var(--color-accent)' : 'var(--color-border)'}"
+          data-page="${p}">
+          ${p}
+        </button>
+      `;
+    }
+  });
 
   html += nextArrow;
   container.innerHTML = html;
@@ -858,7 +961,9 @@ async function initTools() {
 ============================================================================= */
 
 function renderToolTags(tags) {
-  const container = document.getElementById('tags-container');
+  const container  = document.getElementById('tags-container');
+  const MAX_TAGS   = 12;
+  const extraCount = tags.length - MAX_TAGS;
 
   let html = `
     <button data-tag="All" class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors"
@@ -867,30 +972,59 @@ function renderToolTags(tags) {
     </button>
   `;
 
-  tags.forEach(tag => {
+  tags.forEach((tag, idx) => {
+    const hidden = idx >= MAX_TAGS;
     html += `
-      <button data-tag="${tag}" class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors"
-        style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border)">
+      <button data-tag="${tag}"
+        class="tag-btn rounded-full px-3 py-1 text-xs font-medium transition-colors${hidden ? ' tags-extra-btn' : ''}"
+        style="background-color: var(--color-surface-raised); color: var(--color-text-muted); border: 1px solid var(--color-border);${hidden ? ' display:none;' : ''}">
         #${tag}
       </button>
     `;
   });
 
+  if (extraCount > 0) {
+    html += `
+      <button id="tags-show-more"
+        class="rounded-full px-3 py-1 text-xs font-medium transition-colors"
+        data-expanded="false"
+        style="background-color: var(--color-surface-raised); color: var(--color-accent-light); border: 1px solid var(--color-accent-light); cursor: pointer;">
+        +${extraCount} más
+      </button>
+    `;
+  }
+
   container.innerHTML = html;
+
+  const showMoreBtn = document.getElementById('tags-show-more');
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', () => {
+      const expanded = showMoreBtn.dataset.expanded === 'true';
+      const extras   = container.querySelectorAll('.tags-extra-btn');
+
+      if (expanded) {
+        extras.forEach(b => b.style.display = 'none');
+        showMoreBtn.textContent      = `+${extraCount} más`;
+        showMoreBtn.dataset.expanded = 'false';
+      } else {
+        extras.forEach(b => b.style.display = '');
+        showMoreBtn.textContent      = 'Ver menos';
+        showMoreBtn.dataset.expanded = 'true';
+      }
+    });
+  }
 
   // Asignar eventos de filtrado
   document.querySelectorAll('.tag-btn').forEach(btn => {
     btn.addEventListener('click', e => {
       currentToolTag = e.target.dataset.tag;
 
-      // Resetear estilos
       document.querySelectorAll('.tag-btn').forEach(b => {
         b.style.backgroundColor = 'var(--color-surface-raised)';
         b.style.color           = 'var(--color-text-muted)';
         b.style.border          = '1px solid var(--color-border)';
       });
 
-      // Activar el seleccionado
       e.target.style.backgroundColor = 'var(--color-accent)';
       e.target.style.color           = 'white';
       e.target.style.border          = 'none';
