@@ -56,7 +56,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Bizness",
+    "id": "bizness",
     "title": "Bizness HackTheBox (Easy)",
     "description": "Writeup de Bizness",
     "difficulty": "Easy",
@@ -93,7 +93,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Boardlight",
+    "id": "boardlight",
     "title": "Boardlight HackTheBox (Easy)",
     "description": "Writeup de Boardlight",
     "difficulty": "Easy",
@@ -113,7 +113,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Builder",
+    "id": "builder",
     "title": "Builder HackTheBox (Intermediate)",
     "description": "Writeup de Builder",
     "difficulty": "Intermediate",
@@ -132,9 +132,9 @@
     "active_to_retire": false
   },
   {
-    "id": "Cap",
+    "id": "cap",
     "title": "Cap HackTheBox (Easy)",
-    "description": "Writeup de Cap",
+    "description": "Writeup de Cap — máquina Linux de nivel Easy en HTB.",
     "difficulty": "Easy",
     "os": "Linux",
     "type": "HTB",
@@ -151,7 +151,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Certificate",
+    "id": "certificate",
     "title": "Certificate HackTheBox (Hard)",
     "description": "Writeup de Certificate",
     "difficulty": "Hard",
@@ -190,7 +190,7 @@
     "active_to_retire": false
   },
   {
-    "id": "CodePartTwo",
+    "id": "codeparttwo",
     "title": "CodePartTwo HackTheBox (Easy)",
     "description": "Writeup de CodePartTwo",
     "difficulty": "Easy",
@@ -246,7 +246,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Chemistry",
+    "id": "chemistry",
     "title": "Chemistry HackTheBox (Easy)",
     "description": "Writeup de Chemistry",
     "difficulty": "Easy",
@@ -302,7 +302,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Editor",
+    "id": "editor",
     "title": "Editor HackTheBox (Easy)",
     "description": "Writeup de Editor",
     "difficulty": "Easy",
@@ -322,7 +322,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Editorial",
+    "id": "editorial",
     "title": "Editorial HackTheBox (Easy)",
     "description": "Writeup de Editorial",
     "difficulty": "Easy",
@@ -359,9 +359,9 @@
     "active_to_retire": false
   },
   {
-    "id": "Era",
+    "id": "era",
     "title": "Era HackTheBox (Intermediate)",
-    "description": "Writeup de Era",
+    "description": "Writeup de Era — máquina Linux de nivel Intermediate en HTB.",
     "difficulty": "Intermediate",
     "os": "Linux",
     "type": "HTB",
@@ -428,7 +428,7 @@
       "rsa"
     ],
     "date": "2026-01-31",
-    "active": false,
+    "active": true,
     "active_to_retire": false
   },
   {
@@ -469,7 +469,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Giveback",
+    "id": "giveback",
     "title": "Giveback HackTheBox (Intermediate)",
     "description": "Writeup de Giveback",
     "difficulty": "Intermediate",
@@ -508,7 +508,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Headless",
+    "id": "headless",
     "title": "Headless HackTheBox (Easy)",
     "description": "Writeup de Headless",
     "difficulty": "Easy",
@@ -547,7 +547,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Hacknet",
+    "id": "hacknet",
     "title": "Hacknet HackTheBox (Intermediate)",
     "description": "Writeup de Hacknet",
     "difficulty": "Intermediate",
@@ -566,7 +566,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Imagery",
+    "id": "imagery",
     "title": "Imagery HackTheBox (Intermediate)",
     "description": "Writeup de Imagery",
     "difficulty": "Intermediate",
@@ -586,7 +586,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Internal",
+    "id": "internal",
     "title": "Internal Dockerlabs (Easy)",
     "description": "Writeup de Internal",
     "difficulty": "Easy",
@@ -624,7 +624,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Mirage",
+    "id": "mirage",
     "title": "Mirage HackTheBox (Hard)",
     "description": "Writeup de Mirage",
     "difficulty": "Hard",
@@ -682,7 +682,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Outbound",
+    "id": "outbound",
     "title": "Outbound HackTheBox (Easy)",
     "description": "Writeup de Outbound",
     "difficulty": "Easy",
@@ -720,7 +720,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Perfection",
+    "id": "perfection",
     "title": "Perfection HackTheBox (Easy)",
     "description": "Writeup de Perfection",
     "difficulty": "Easy",
@@ -739,7 +739,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Planning",
+    "id": "planning",
     "title": "Planning HackTheBox (Easy)",
     "description": "Writeup de Planning",
     "difficulty": "Easy",
@@ -758,7 +758,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Previous",
+    "id": "previous",
     "title": "Previous HackTheBox (Intermediate)",
     "description": "Writeup de Previous",
     "difficulty": "Intermediate",
@@ -798,7 +798,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Rustykey",
+    "id": "rustykey",
     "title": "Rustykey HackTheBox (Hard)",
     "description": "Writeup de Rustykey",
     "difficulty": "Hard",
@@ -818,7 +818,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Signed",
+    "id": "signed",
     "title": "Signed HackTheBox (Intermediate)",
     "description": "Writeup de Signed",
     "difficulty": "Intermediate",
@@ -838,7 +838,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Soulmate",
+    "id": "soulmate",
     "title": "Soulmate HackTheBox (Easy)",
     "description": "Writeup de Soulmate",
     "difficulty": "Easy",
@@ -857,7 +857,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Strutted",
+    "id": "strutted",
     "title": "Strutted HackTheBox (Intermediate)",
     "description": "Writeup de Strutted",
     "difficulty": "Intermediate",
@@ -896,7 +896,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Titanic",
+    "id": "titanic",
     "title": "Titanic HackTheBox (Easy)",
     "description": "Writeup de Titanic",
     "difficulty": "Easy",
@@ -916,7 +916,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Tombwatcher",
+    "id": "tombwatcher",
     "title": "Tombwatcher HackTheBox (Intermediate)",
     "description": "Writeup de Tombwatcher",
     "difficulty": "Intermediate",
@@ -936,7 +936,7 @@
     "active_to_retire": false
   },
   {
-    "id": "TwoMillion",
+    "id": "twomillion",
     "title": "TwoMillion HackTheBox (Easy)",
     "description": "Writeup de TwoMillion",
     "difficulty": "Easy",
@@ -955,7 +955,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Usage",
+    "id": "usage",
     "title": "Usage HackTheBox (Easy)",
     "description": "Writeup de Usage",
     "difficulty": "Easy",
@@ -975,7 +975,7 @@
     "active_to_retire": false
   },
   {
-    "id": "Voleur",
+    "id": "voleur",
     "title": "Voleur HackTheBox (Intermediate)",
     "description": "Writeup de Voleur",
     "difficulty": "Intermediate",
@@ -1014,7 +1014,7 @@
     "active_to_retire": false
   },
   {
-    "id": "WhiteRabbit",
+    "id": "whiterabbit",
     "title": "WhiteRabbit HackTheBox (Insane)",
     "description": "Writeup de WhiteRabbit",
     "difficulty": "Insane",
@@ -1188,7 +1188,6 @@
       "web",
       "docker",
       "cve",
-      "web",
       "rce"
     ],
     "date": "2026-03-21",
@@ -1559,37 +1558,49 @@
     "date": "2026-01-19",
     "active": false,
     "active_to_retire": false
-  }
-,
-{
-  "id": "devarea",
-  "title": "DevArea HackTheBox (Intermediate)",
-  "description": "Writeup de DevArea",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "HTB",
-  "skills": [
-    "ctf", "writeup", "web", "xml", "permisos", "rce", "cve", "sudo"
-  ],
-  "date": "2026-03-28",
-  "active": true,
-  "active_to_retire": false
-}
-,
-{
-  "id": "secornotsec",
-  "title": "SECorNOTsec Dockerlabs (Intermediate)",
-  "description": "Writeup de SECorNOTsec",
-  "difficulty": "Intermediate",
-  "os": "Linux",
-  "type": "Dockerlabs",
-  "skills": [
-    "ctf", "writeup", "web", "bypass", "inyection", "command", "sudo", "cookie"
-  ],
-  "date": "2026-03-30",
-  "active": false,
-  "active_to_retire": false
-},
+  },
+  {
+    "id": "devarea",
+    "title": "DevArea HackTheBox (Intermediate)",
+    "description": "Writeup de DevArea",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "xml",
+      "permisos",
+      "rce",
+      "cve",
+      "sudo"
+    ],
+    "date": "2026-03-28",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "secornotsec",
+    "title": "SECorNOTsec Dockerlabs (Intermediate)",
+    "description": "Writeup de SECorNOTsec",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "bypass",
+      "inyection",
+      "command",
+      "sudo",
+      "cookie"
+    ],
+    "date": "2026-03-30",
+    "active": false,
+    "active_to_retire": false
+  },
   {
     "id": "nightblade",
     "title": "NightBlade Dockerlabs (Intermediate)",
@@ -2422,6 +2433,6670 @@
     ],
     "date": "2026-06-10",
     "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "access",
+    "title": "Access BugBountyLabs (Principiante)",
+    "description": "Writeup de Access",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "web",
+      "apache"
+    ],
+    "date": "2024-06-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "connectx",
+    "title": "ConnectX BugBountyLabs (Principiante)",
+    "description": "Writeup de ConnectX",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql-injection",
+      "rce",
+      "idor",
+      "nmap"
+    ],
+    "date": "2025-09-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "corsy",
+    "title": "Corsy BugBountyLabs (Avanzado)",
+    "description": "Writeup de Corsy",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "apache",
+      "python"
+    ],
+    "date": "2025-05-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dogshow",
+    "title": "DogShow BugBountyLabs (Avanzado)",
+    "description": "Writeup de DogShow",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "nmap",
+      "web",
+      "apache"
+    ],
+    "date": "2026-01-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "escape",
+    "title": "Escape BugBountyLabs (Principiante)",
+    "description": "Writeup de Escape",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "nmap",
+      "web",
+      "ssti"
+    ],
+    "date": "2024-07-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "forgery",
+    "title": "Forgery BugBountyLabs (Principiante)",
+    "description": "Writeup de Forgery",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-06-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hiddenredirection",
+    "title": "HiddenRedirection BugBountyLabs (Principiante)",
+    "description": "Writeup de HiddenRedirection",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "web",
+      "python",
+      "php"
+    ],
+    "date": "2025-09-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "listing",
+    "title": "Listing BugBountyLabs (Principiante)",
+    "description": "Writeup de Listing",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-12-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "neomarket",
+    "title": "NeoMarket  BugBountyLabs (Avanzado)",
+    "description": "Writeup de NeoMarket",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "sql-injection",
+      "rce",
+      "lfi"
+    ],
+    "date": "2024-06-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "redirection",
+    "title": "Redirection BugBountyLabs (Principiante)",
+    "description": "Writeup de Redirection",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "web",
+      "apache"
+    ],
+    "date": "2025-08-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "reflection",
+    "title": "Reflection BugBountyLabs (Principiante)",
+    "description": "Writeup de Reflection",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "nmap",
+      "web",
+      "ssti"
+    ],
+    "date": "2025-11-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "trr0rlabs",
+    "title": "Trr0rlabs BugBountyLabs (Avanzado)",
+    "description": "Writeup de Trr0rlabs",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "xss",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2024-07-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "xssas",
+    "title": "XSSaS BugBountyLabs (Experto)",
+    "description": "Writeup de XSSaS",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "fuzzing",
+      "nmap",
+      "ffuf"
+    ],
+    "date": "2025-04-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "challenge-webhooks",
+    "title": "Challenge Webhooks Easy",
+    "description": "Writeup de Challenge Webhooks",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "rfi",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2024-07-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-0xc0ffee",
+    "title": "CTF 0xc0ffee Intermediate",
+    "description": "Writeup de CTF 0xc0ffee",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-06-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-404-not-found",
+    "title": "CTF 404-not-found Easy",
+    "description": "Writeup de CTF 404-not-found",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "nmap",
+      "ffuf",
+      "web"
+    ],
+    "date": "2026-02-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-acmesupport",
+    "title": "CTF Acmesupport Hard",
+    "description": "Writeup de CTF Acmesupport",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-09-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-avengers",
+    "title": "CTF Avengers Easy",
+    "description": "Writeup de CTF Avengers",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup"
+    ],
+    "date": "2025-12-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-chmod-4755",
+    "title": "CTF chmod-4755 Intermediate",
+    "description": "Writeup de CTF chmod-4755",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2026-04-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-ciberhack",
+    "title": "CTF Ciberhack Intermediate",
+    "description": "Writeup de CTF Ciberhack",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup"
+    ],
+    "date": "2024-06-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-cinehack",
+    "title": "CTF CineHack Intermediate",
+    "description": "Writeup de CTF CineHack",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-06-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-cracker",
+    "title": "CTF Cracker Intermediate",
+    "description": "Writeup de CTF Cracker",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "ffuf",
+      "web",
+      "ssh"
+    ],
+    "date": "2026-04-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-crackoff",
+    "title": "CTF CrackOff Hard",
+    "description": "Writeup de CTF CrackOff",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql-injection",
+      "xss",
+      "rce",
+      "idor"
+    ],
+    "date": "2025-08-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-ctrl-x",
+    "title": "CTF Ctrl-X Easy",
+    "description": "Writeup de CTF Ctrl-X",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-01-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-cyb3rsh1eurld",
+    "title": "CTF Cyb3rSh1€ld Intermediate",
+    "description": "Writeup de CTF Cyb3rSh1€ld",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup"
+    ],
+    "date": "2026-04-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-dance-samba",
+    "title": "CTF dance-samba Intermediate",
+    "description": "Writeup de CTF dance-samba",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-09-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-darkweb",
+    "title": "CTF Darkweb Hard",
+    "description": "Writeup de CTF Darkweb",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-12-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-express",
+    "title": "CTF Express Intermediate",
+    "description": "Writeup de CTF Express",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-03-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-flow",
+    "title": "CTF Flow Hard",
+    "description": "Writeup de CTF Flow",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "buffer-overflow",
+      "nmap"
+    ],
+    "date": "2024-11-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-forbiddenhack",
+    "title": "CTF ForbiddenHack Easy",
+    "description": "Writeup de CTF ForbiddenHack",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-09-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-gitea",
+    "title": "CTF Gitea Intermediate",
+    "description": "Writeup de CTF Gitea",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "path-traversal",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-10-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-goodness",
+    "title": "CTF Goodness Easy",
+    "description": "Writeup de CTF Goodness",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2026-03-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-hackmedaddy",
+    "title": "CTF HackMeDaddy Hard",
+    "description": "Writeup de CTF HackMeDaddy",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "bruteforce",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-09-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-hackzones",
+    "title": "CTF Hackzones Intermediate",
+    "description": "Writeup de CTF Hackzones",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "idor",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-04-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-inj3ct0rs",
+    "title": "CTF inj3ct0rs Intermediate",
+    "description": "Writeup de CTF inj3ct0rs",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql-injection",
+      "xss",
+      "nmap",
+      "web"
+    ],
+    "date": "2024-02-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-jenkhack",
+    "title": "CTF Jenkhack Easy",
+    "description": "Writeup de CTF Jenkhack",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "reverse-shell",
+      "web",
+      "sudo"
+    ],
+    "date": "2024-02-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-lfi.elf",
+    "title": "CTF LFI.elf Easy",
+    "description": "Writeup de CTF LFI.elf",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2024-06-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-lifeordead",
+    "title": "CTF LifeOrDead Hard",
+    "description": "Writeup de CTF LifeOrDead",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "rfi",
+      "idor",
+      "bruteforce"
+    ],
+    "date": "2026-02-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-logisticcloud",
+    "title": "CTF LogisticCloud Intermediate",
+    "description": "Writeup de CTF LogisticCloud",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "xss",
+      "rce",
+      "idor"
+    ],
+    "date": "2025-07-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-mapache2",
+    "title": "CTF Mapache2 Intermediate",
+    "description": "Writeup de CTF Mapache2",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "hydra",
+      "web"
+    ],
+    "date": "2025-04-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-memesploit",
+    "title": "CTF Memesploit Intermediate",
+    "description": "Writeup de CTF Memesploit",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-06-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-minecraft",
+    "title": "CTF Minecraft Intermediate",
+    "description": "Writeup de CTF Minecraft",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2025-02-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-paralele",
+    "title": "CTF Paralele Intermediate",
+    "description": "Writeup de CTF Paralele",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "nmap",
+      "web",
+      "sudo"
+    ],
+    "date": "2026-02-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-pressenter",
+    "title": "CTF PressEnter Easy",
+    "description": "Writeup de CTF PressEnter",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "reverse-shell",
+      "web",
+      "mysql"
+    ],
+    "date": "2024-05-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-r00tless",
+    "title": "CTF r00tless Hard",
+    "description": "Writeup de CTF r00tless",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-11-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-securelab",
+    "title": "CTF SecureLAB Hard",
+    "description": "Writeup de CTF SecureLAB",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "bruteforce",
+      "nmap"
+    ],
+    "date": "2025-08-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-sender",
+    "title": "CTF Sender Intermediate",
+    "description": "Writeup de CTF Sender",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "buffer-overflow",
+      "nmap"
+    ],
+    "date": "2024-05-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-smishing",
+    "title": "CTF Smishing Intermediate",
+    "description": "Writeup de CTF Smishing",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-11-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-tokenaso",
+    "title": "CTF Tokenaso Intermediate",
+    "description": "Writeup de CTF Tokenaso",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "xxe",
+      "idor",
+      "nmap"
+    ],
+    "date": "2024-06-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-tproot",
+    "title": "CTF TpRoot Very Easy",
+    "description": "Writeup de CTF TpRoot",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "metasploit",
+      "web",
+      "ftp"
+    ],
+    "date": "2025-02-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-vulnvault",
+    "title": "CTF VulnVault Intermediate",
+    "description": "Writeup de CTF VulnVault",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "ssh",
+      "docker"
+    ],
+    "date": "2025-03-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ctf-winfake",
+    "title": "CTF WinFake Easy",
+    "description": "Writeup de CTF WinFake",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "hydra",
+      "web"
+    ],
+    "date": "2025-05-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ghost",
+    "title": "Ghost CTF Hard",
+    "description": "Writeup de Ghost",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup"
+    ],
+    "date": "2025-11-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "aidor",
+    "title": "Aidor DockerLabs (Easy)",
+    "description": "Writeup de Aidor",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rce",
+      "idor",
+      "nmap"
+    ],
+    "date": "2024-05-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "allien",
+    "title": "Allien DockerLabs (Easy)",
+    "description": "Writeup de Allien",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "enumeration",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2025-07-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "apachebyte",
+    "title": "ApacheByte DockerLabs (Intermediate)",
+    "description": "Writeup de ApacheByte",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rce",
+      "lfi",
+      "rfi"
+    ],
+    "date": "2025-11-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "apibase",
+    "title": "ApiBase DockerLabs (Easy)",
+    "description": "Writeup de ApiBase",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-12-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "balufood",
+    "title": "Balufood DockerLabs (Easy)",
+    "description": "Writeup de Balufood",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-06-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bicho",
+    "title": "Bicho DockerLabs (Easy)",
+    "description": "Writeup de Bicho",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-02-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bola",
+    "title": "Bola DockerLabs (Intermediate)",
+    "description": "Writeup de Bola",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-07-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bypassme",
+    "title": "Bypassme DockerLabs (Easy)",
+    "description": "Writeup de Bypassme",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rce",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2024-12-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "chocoping",
+    "title": "ChocoPing DockerLabs (Intermediate)",
+    "description": "Writeup de ChocoPing",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-10-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ciberguard",
+    "title": "Ciberguard DockerLabs (Intermediate)",
+    "description": "Writeup de Ciberguard",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "hydra",
+      "reverse-shell"
+    ],
+    "date": "2025-10-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crossfi",
+    "title": "Crossfi DockerLabs (Intermediate)",
+    "description": "Writeup de Crossfi",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "rfi",
+      "nmap",
+      "web"
+    ],
+    "date": "2024-11-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crystalteam",
+    "title": "Crystalteam DockerLabs (Intermediate)",
+    "description": "Writeup de Crystalteam",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "sql-injection",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-07-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cuentaatras",
+    "title": "CuentaAtrás DockerLabs (Intermediate)",
+    "description": "Writeup de CuentaAtrás",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-02-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "duque",
+    "title": "Duque DockerLabs (Easy)",
+    "description": "Writeup de Duque",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "sql-injection",
+      "lfi",
+      "idor"
+    ],
+    "date": "2024-11-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ejotapete",
+    "title": "Ejotapete DockerLabs (Very Easy)",
+    "description": "Writeup de Ejotapete",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-09-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ekisese",
+    "title": "Ekisese DockerLabs (Intermediate)",
+    "description": "Writeup de Ekisese",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "rce",
+      "nmap",
+      "web"
+    ],
+    "date": "2025-01-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "flasky",
+    "title": "Flasky DockerLabs (Intermediate)",
+    "description": "Writeup de Flasky",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "path-traversal",
+      "nmap",
+      "web"
+    ],
+    "date": "2024-11-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "galeria",
+    "title": "Galeria DockerLabs (Easy)",
+    "description": "Writeup de Galeria",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-08-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "gallery",
+    "title": "Gallery DockerLabs (Hard)",
+    "description": "Writeup de Gallery",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-04-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "grooti",
+    "title": "Grooti DockerLabs (Easy)",
+    "description": "Writeup de Grooti",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "hydra",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-07-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "inclusion",
+    "title": "Inclusion DockerLabs (Intermediate)",
+    "description": "Writeup de Inclusion",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "bruteforce",
+      "fuzzing"
+    ],
+    "date": "2025-07-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "influencerhate",
+    "title": "InfluencerHate DockerLabs (Easy)",
+    "description": "Writeup de InfluencerHate",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "bruteforce",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-12-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "jason",
+    "title": "Jason DockerLabs (Intermediate)",
+    "description": "Writeup de Jason",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "web",
+      "ssh",
+      "sudo"
+    ],
+    "date": "2026-02-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "machupicchu",
+    "title": "MachuPicchu DockerLabs (Intermediate)",
+    "description": "Writeup de MachuPicchu",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "rce",
+      "idor",
+      "nmap"
+    ],
+    "date": "2024-05-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "master",
+    "title": "Master DockerLabs (Intermediate)",
+    "description": "Writeup de Master",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-11-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ofuskeit",
+    "title": "Ofuskeit DockerLabs (Intermediate)",
+    "description": "Writeup de Ofuskeit",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-09-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "paradise",
+    "title": "Paradise DockerLabs (Easy)",
+    "description": "Writeup de Paradise",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "hydra",
+      "smb",
+      "ssh"
+    ],
+    "date": "2024-12-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "perrito-magico",
+    "title": "Perrito Magico DockerLabs (Intermediate)",
+    "description": "Writeup de Perrito Magico",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "web"
+    ],
+    "date": "2025-12-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pingctf",
+    "title": "PingCTF DockerLabs (Easy)",
+    "description": "Writeup de PingCTF",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2024-10-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pkgpoison",
+    "title": "Pkgpoison DockerLabs (Easy)",
+    "description": "Writeup de Pkgpoison",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-12-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "race",
+    "title": "Race DockerLabs (Intermediate)",
+    "description": "Writeup de Race",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-03-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "rolarola",
+    "title": "Rolarola DockerLabs (Intermediate)",
+    "description": "Writeup de Rolarola",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "command-injection",
+      "nmap"
+    ],
+    "date": "2025-11-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "rubiks",
+    "title": "Rubiks DockerLabs (Intermediate)",
+    "description": "Writeup de Rubiks",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-09-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "showtime",
+    "title": "ShowTime DockerLabs (Easy)",
+    "description": "Writeup de ShowTime",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql-injection",
+      "nmap",
+      "hydra",
+      "reverse-shell"
+    ],
+    "date": "2025-03-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sites",
+    "title": "Sites DockerLabs (Intermediate)",
+    "description": "Writeup de Sites",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "bruteforce",
+      "fuzzing"
+    ],
+    "date": "2025-08-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "smashing",
+    "title": "Smashing DockerLabs (Hard)",
+    "description": "Writeup de Smashing",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-09-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "socialhub",
+    "title": "SocialHub DockerLabs (Hard)",
+    "description": "Writeup de SocialHub",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "rfi",
+      "idor",
+      "nmap"
+    ],
+    "date": "2024-12-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "spiderport",
+    "title": "SpiderPort DockerLabs (Intermediate)",
+    "description": "Writeup de SpiderPort",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "fuzzing",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-08-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "status",
+    "title": "Status DockerLabs (Intermediate)",
+    "description": "Writeup de Status",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "ssrf",
+      "rce",
+      "lfi",
+      "rfi"
+    ],
+    "date": "2024-04-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "strongjenkins",
+    "title": "StrongJenkins DockerLabs (Intermediate)",
+    "description": "Writeup de StrongJenkins",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "metasploit",
+      "web",
+      "suid"
+    ],
+    "date": "2025-04-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "thedog",
+    "title": "TheDog DockerLabs (Intermediate)",
+    "description": "Writeup de TheDog",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "path-traversal",
+      "bruteforce",
+      "fuzzing"
+    ],
+    "date": "2025-07-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "upload",
+    "title": "Upload DockerLabs (Easy)",
+    "description": "Writeup de Upload",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "reverse-shell",
+      "sudo",
+      "docker"
+    ],
+    "date": "2025-06-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "waffy",
+    "title": "Waffy DockerLabs (Hard)",
+    "description": "Writeup de Waffy",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rce",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2025-12-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "wargames",
+    "title": "Wargames DockerLabs (Easy)",
+    "description": "Writeup de Wargames",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-01-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "always",
+    "title": "Always HackMyVM (Easy - Windows)",
+    "description": "Writeup de Always",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-06-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "alzheimer",
+    "title": "Alzheimer HackMyVM (Easy- Linux)",
+    "description": "Writeup de Alzheimer",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "ftp",
+      "ssh"
+    ],
+    "date": "2024-11-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "art",
+    "title": "Art HackMyVM (Easy - Linux)",
+    "description": "Writeup de Art",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "sql-injection",
+      "lfi",
+      "fuzzing"
+    ],
+    "date": "2025-10-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bah",
+    "title": "bah HackMyVM (Easy - Linux)",
+    "description": "Writeup de bah",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2026-01-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "baseme",
+    "title": "BaseME HackMyVM (Easy- Linux)",
+    "description": "Writeup de BaseME",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "rfi",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-12-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "comingsoon",
+    "title": "Comingsoon HackMyVM (Easy - Linux)",
+    "description": "Writeup de Comingsoon",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "bruteforce",
+      "fuzzing"
+    ],
+    "date": "2024-06-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "connection",
+    "title": "Connection HackMyVM (Easy - Linux)",
+    "description": "Writeup de Connection",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-01-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crazymed",
+    "title": "Crazymed HackMyVM (Easy - Linux)",
+    "description": "Writeup de Crazymed",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "nmap",
+      "metasploit",
+      "ssh"
+    ],
+    "date": "2026-02-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crossroads",
+    "title": "Crossroads HackMyVM (Easy - Linux)",
+    "description": "Writeup de Crossroads",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-04-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dc01",
+    "title": "DC01 HackMyVM (Easy - Windows)",
+    "description": "Writeup de DC01",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "web"
+    ],
+    "date": "2024-03-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dc02",
+    "title": "DC02 HackMyVM (Intermediate - Windows)",
+    "description": "Writeup de DC02",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "smb"
+    ],
+    "date": "2025-06-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "deeper",
+    "title": "Deeper HackMyVM (Easy - Linux)",
+    "description": "Writeup de Deeper",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-03-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "doc",
+    "title": "Doc HackMyVM (Easy - Linux)",
+    "description": "Writeup de Doc",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rfi",
+      "xxe",
+      "idor"
+    ],
+    "date": "2024-07-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "driftingblues3",
+    "title": "Driftingblues3 HackMyVM (Easy- Linux)",
+    "description": "Writeup de Driftingblues3",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "reverse-shell",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-05-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "driftingblues5",
+    "title": "Driftingblues5 HackMyVM (Easy - Linux)",
+    "description": "Writeup de Driftingblues5",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "web"
+    ],
+    "date": "2025-10-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "driftingblues6",
+    "title": "Driftingblues6 HackMyVM (Easy- Linux)",
+    "description": "Writeup de Driftingblues6",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-03-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "faust",
+    "title": "Faust HackMyVM (Easy - Linux)",
+    "description": "Writeup de Faust",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-05-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "find",
+    "title": "Find HackMyVM (Easy - Linux)",
+    "description": "Writeup de Find",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-01-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "flower",
+    "title": "Flower HackMyVM (Easy- Linux)",
+    "description": "Writeup de Flower",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-06-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "forbidden",
+    "title": "forbidden HackMyVM (Intermediate- Linux)",
+    "description": "Writeup de forbidden",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "idor",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2024-11-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "friendly",
+    "title": "Friendly  HackMyVM (Easy - Linux)",
+    "description": "Writeup de Friendly",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-07-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "friendly2",
+    "title": "Friendly2 HackMyVM (Easy - Linux)",
+    "description": "Writeup de Friendly2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-06-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "friendly3",
+    "title": "Friendly3  HackMyVM (Easy - Linux)",
+    "description": "Writeup de Friendly3",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "hydra",
+      "web"
+    ],
+    "date": "2025-08-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "gift",
+    "title": "Gift HackMyVM (Easy - Linux)",
+    "description": "Writeup de Gift",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "hydra",
+      "web"
+    ],
+    "date": "2026-05-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "gigachard",
+    "title": "Gigachard HackMyVM (Easy- Linux)",
+    "description": "Writeup de Gigachard",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-08-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hannah",
+    "title": "Hannah HackMyVM (Easy - Linux)",
+    "description": "Writeup de Hannah",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "hydra",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-12-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "helium",
+    "title": "Helium HackMyVM (Easy- Linux)",
+    "description": "Writeup de Helium",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-09-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hidden",
+    "title": "Hidden HackMyVM (Easy- Linux)",
+    "description": "Writeup de Hidden",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-05-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hommie",
+    "title": "hommie HackMyVM (Easy- Linux)",
+    "description": "Writeup de hommie",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xxe",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-11-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hostname",
+    "title": "Hostname HackMyVM (Easy- Linux)",
+    "description": "Writeup de Hostname",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-08-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hundred",
+    "title": "Hundred HackMyVM (Intermediate - Linux)",
+    "description": "Writeup de Hundred",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-05-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "icecream",
+    "title": "Icecream HackMyVM (Easy - Linux)",
+    "description": "Writeup de Icecream",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "smb"
+    ],
+    "date": "2024-04-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "insomnia",
+    "title": "Insomnia HackMyVM (Easy - Linux)",
+    "description": "Writeup de Insomnia",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-02-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "isengard",
+    "title": "Isengard HackMyVM (Easy - Linux)",
+    "description": "Writeup de Isengard",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2026-02-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "jan",
+    "title": "Jan HackMyVM (Easy - Linux)",
+    "description": "Writeup de Jan",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2026-02-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "liar",
+    "title": "Liar HackMyVM (Easy - Windows)",
+    "description": "Writeup de Liar",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2024-02-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "liceo",
+    "title": "Liceo HackMyVM (Easy - Linux)",
+    "description": "Writeup de Liceo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-03-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "locker",
+    "title": "Locker HackMyVM (Easy - Linux)",
+    "description": "Writeup de Locker",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-07-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "may",
+    "title": "May HackMyVM (Intermediate - Linux)",
+    "description": "Writeup de May",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "rfi",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-08-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "method",
+    "title": "Method HackMyVM (Easy- Linux)",
+    "description": "Writeup de Method",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-11-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "nessus",
+    "title": "Nessus HackMyVM (Easy - Windows)",
+    "description": "Writeup de Nessus",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "rce",
+      "idor",
+      "nmap"
+    ],
+    "date": "2024-09-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "noob",
+    "title": "Noob HackMyVM (Easy- Linux)",
+    "description": "Writeup de Noob",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-01-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "p4l4nc4",
+    "title": "P4l4nc4 HackMyVM (Easy - Linux)",
+    "description": "Writeup de P4l4nc4",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-12-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pingme",
+    "title": "Pingme HackMyVM (Intermediate - Linux)",
+    "description": "Writeup de Pingme",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-09-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pipy",
+    "title": "Pipy HackMyVM (Easy - Linux)",
+    "description": "Writeup de Pipy",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "buffer-overflow",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-09-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "preload",
+    "title": "Preload HackMyVM (Easy - Linux)",
+    "description": "Writeup de Preload",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "nmap",
+      "ffuf"
+    ],
+    "date": "2025-07-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pwned",
+    "title": "Pwned HackMyVM (Easy - Linux)",
+    "description": "Writeup de Pwned",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-04-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "quick",
+    "title": "Quick HackMyVM (Easy - Linux)",
+    "description": "Writeup de Quick",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "rfi",
+      "idor"
+    ],
+    "date": "2025-01-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "quick2",
+    "title": "Quick2 HackMyVM (Easy - Linux)",
+    "description": "Writeup de Quick2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "rfi",
+      "enumeration"
+    ],
+    "date": "2024-10-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "quick3",
+    "title": "Quick3 HackMyVM (Easy - Linux)",
+    "description": "Writeup de Quick3",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2026-02-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "quick4",
+    "title": "Quick4 HackMyVM (Easy - Linux)",
+    "description": "Writeup de Quick4",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rce",
+      "rfi",
+      "fuzzing"
+    ],
+    "date": "2026-02-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "quoted",
+    "title": "quoted HackMyVM (Easy - Windows)",
+    "description": "Writeup de quoted",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "metasploit"
+    ],
+    "date": "2024-07-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "qweasd",
+    "title": "Qweasd HackMyVM (Intermediate - Linux)",
+    "description": "Writeup de Qweasd",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "nmap",
+      "hydra",
+      "ssh"
+    ],
+    "date": "2024-09-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ripper",
+    "title": "Ripper HackMyVM (Easy- Linux)",
+    "description": "Writeup de Ripper",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2026-02-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "runas",
+    "title": "Runas HackMyVM (Easy - Windows)",
+    "description": "Writeup de Runas",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "fuzzing",
+      "nmap",
+      "ffuf"
+    ],
+    "date": "2024-11-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "simple",
+    "title": "Simple HackMyVM (Easy - Windows)",
+    "description": "Writeup de Simple",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-06-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "smol",
+    "title": "Smol HackMyVM (Intermediate - Linux)",
+    "description": "Writeup de Smol",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-06-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "soul",
+    "title": "Soul HackMyVM (Hard - Linux)",
+    "description": "Writeup de Soul",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-07-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stars",
+    "title": "Stars HackMyVM (Easy - Linux)",
+    "description": "Writeup de Stars",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-12-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "suidy",
+    "title": "Suidy HackMyVM (Intermediate - Linux)",
+    "description": "Writeup de Suidy",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-07-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "suidyrevenge",
+    "title": "SuidyRevenge HackMyVM (Hard - Linux)",
+    "description": "Writeup de SuidyRevenge",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-09-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "superhuman",
+    "title": "Superhuman HackMyVM (Easy- Linux)",
+    "description": "Writeup de Superhuman",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-05-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "system",
+    "title": "System HackMyVM (Easy - Linux)",
+    "description": "Writeup de System",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "xxe",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-05-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "t800",
+    "title": "t800 HackMyVM (Easy - Linux)",
+    "description": "Writeup de t800",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2026-03-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "talk",
+    "title": "Talk HackMyVM (Easy - Linux)",
+    "description": "Writeup de Talk",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "sql-injection",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-09-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "translator",
+    "title": "Translator HackMyVM (Easy - Linux)",
+    "description": "Writeup de Translator",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-08-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "tripladvisor",
+    "title": "TriplAdvisor HackMyVM (Easy - Windows)",
+    "description": "Writeup de TriplAdvisor",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-10-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "tron",
+    "title": "Tron HackMyVM (Easy- Linux)",
+    "description": "Writeup de Tron",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-06-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "twisted",
+    "title": "Twisted HackMyVM (Easy- Linux)",
+    "description": "Writeup de Twisted",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-05-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "uvalde",
+    "title": "Uvalde HackMyVM (Easy - Linux)",
+    "description": "Writeup de Uvalde",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-10-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "visions",
+    "title": "Visions HackMyVM (Easy - Linux)",
+    "description": "Writeup de Visions",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-09-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "vmessage",
+    "title": "VMessage HackMyVM (Easy - Linux)",
+    "description": "Writeup de VMessage",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2025-05-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "warez",
+    "title": "Warez HackMyVM (Easy - Linux)",
+    "description": "Writeup de Warez",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-06-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "warrior",
+    "title": "Warrior HackMyVM (Easy - Linux)",
+    "description": "Writeup de Warrior",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-12-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "webmaster",
+    "title": "WebMaster HackMyVM (Easy - Linux)",
+    "description": "Writeup de WebMaster",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2025-11-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "whitedoor",
+    "title": "Whitedoor HackMyVM (Easy - Linux)",
+    "description": "Writeup de Whitedoor",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "web",
+      "ftp",
+      "ssh"
+    ],
+    "date": "2026-03-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "zero",
+    "title": "Zero HackMyVM (Easy - Windows)",
+    "description": "Writeup de Zero",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "HackMyVM",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "metasploit"
+    ],
+    "date": "2026-02-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cookie-monster-secret-recipe",
+    "title": "Cookie Monster Secret Recipe PicoCTF (Easy)",
+    "description": "Writeup de Cookie Monster Secret Recipe",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "idor",
+      "web"
+    ],
+    "date": "2024-09-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crack-the-gate-1",
+    "title": "Crack the Gate 1 PicoCTF (Easy)",
+    "description": "Writeup de Crack the Gate 1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "web"
+    ],
+    "date": "2025-11-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crack-the-gate-2",
+    "title": "Crack the Gate 2 PicoCTF (Intermediate)",
+    "description": "Writeup de Crack the Gate 2",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "bruteforce",
+      "web"
+    ],
+    "date": "2024-03-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "crack-the-power",
+    "title": "Crack the Power PicoCTF (Intermediate)",
+    "description": "Writeup de Crack the Power",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "python"
+    ],
+    "date": "2025-08-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "first-grep",
+    "title": "First Grep PicoCTF (Easy)",
+    "description": "Writeup de First Grep",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup"
+    ],
+    "date": "2025-06-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "flag-hunters",
+    "title": "Flag Hunters PicoCTF (Easy)",
+    "description": "Writeup de Flag Hunters",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sql-injection",
+      "xss",
+      "rce",
+      "idor"
+    ],
+    "date": "2024-08-21",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "function-overwrite",
+    "title": "function overwrite PicoCTF (Hard)",
+    "description": "Writeup de function overwrite",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor"
+    ],
+    "date": "2025-11-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "log-hunt",
+    "title": "Log Hunt PicoCTF (Easy)",
+    "description": "Writeup de Log Hunt",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "recon"
+    ],
+    "date": "2025-12-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pie-time-2",
+    "title": "PIE TIME 2 PicoCTF (Intermediate)",
+    "description": "Writeup de PIE TIME 2",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "python",
+      "stack",
+      "binary"
+    ],
+    "date": "2026-01-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pie-time",
+    "title": "PIE TIME PicoCTF (Easy)",
+    "description": "Writeup de PIE TIME",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "python",
+      "binary"
+    ],
+    "date": "2025-05-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "riddle-registry",
+    "title": "Riddle Registry PicoCTF (Easy)",
+    "description": "Writeup de Riddle Registry",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web"
+    ],
+    "date": "2024-04-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "accounting",
+    "title": "Accounting (Windows) TheHackersLabs (Principiante)",
+    "description": "Writeup de Accounting",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-07-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cocido-andaluz",
+    "title": "Cocido Andaluz (Windows) TheHackersLabs (Principiante)",
+    "description": "Writeup de Cocido Andaluz",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "nmap",
+      "hydra",
+      "metasploit"
+    ],
+    "date": "2025-01-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ensala-papas",
+    "title": "Ensalá Papas (Windows) TheHackersLabs (Principiante)",
+    "description": "Writeup de Ensalá Papas",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-02-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "espeto-malagueno",
+    "title": "Espeto Malagueño (Windows) TheHackersLabs (Principiante)",
+    "description": "Writeup de Espeto Malagueño",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "nmap",
+      "web"
+    ],
+    "date": "2024-11-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "microchoft",
+    "title": "Microchoft (Windows) TheHackersLabs (Principiante)",
+    "description": "Writeup de Microchoft",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "metasploit",
+      "smb",
+      "ssh"
+    ],
+    "date": "2026-01-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "quokka",
+    "title": "Quokka (Windows) TheHackersLabs (Principiante)",
+    "description": "Writeup de Quokka",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-05-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "colddboxeasy_en",
+    "title": "ColddBoxEasy\\_EN VulnHub",
+    "description": "Writeup de ColddBoxEasy_EN",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "reverse-shell",
+      "web",
+      "ftp"
+    ],
+    "date": "2025-07-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "nasef_1-locating-target",
+    "title": "NASEF\\_1 LOCATING TARGET VulnHub",
+    "description": "Writeup de NASEF_1 LOCATING TARGET",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "CTF",
+    "skills": [
+      "ctf",
+      "writeup",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "web"
+    ],
+    "date": "2025-05-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "admin",
+    "title": "Admin Vulnyx (Easy - Windows)",
+    "description": "Writeup de Admin",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-10-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "blog",
+    "title": "Blog Vulnyx (Easy - Linux)",
+    "description": "Writeup de Blog",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-07-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "brain",
+    "title": "Brain Vulnyx (Easy - Linux)",
+    "description": "Writeup de Brain",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "lfi",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-10-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "build",
+    "title": "Build Vulnyx (Very Easy- Windows)",
+    "description": "Writeup de Build",
+    "difficulty": "Very Easy",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "smb",
+      "api",
+      "jenkins"
+    ],
+    "date": "2025-03-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "change",
+    "title": "Change Vulnyx (Intermediate - Windows)",
+    "description": "Writeup de Change",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-06-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "controler",
+    "title": "Controler Vulnyx (Intermediate - Windows)",
+    "description": "Writeup de Controler",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-03-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dump",
+    "title": "Dump Vulnyx (Easy - Linux)",
+    "description": "Writeup de Dump",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "reverse-shell",
+      "web",
+      "ftp"
+    ],
+    "date": "2026-01-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "eternal",
+    "title": "Eternal Vulnyx (Very Easy- Windows)",
+    "description": "Writeup de Eternal",
+    "difficulty": "Very Easy",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "metasploit",
+      "smb",
+      "api"
+    ],
+    "date": "2025-09-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "experience",
+    "title": "Experience Vulnyx (Very Easy- Windows)",
+    "description": "Writeup de Experience",
+    "difficulty": "Very Easy",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "nmap",
+      "metasploit",
+      "smb",
+      "upload"
+    ],
+    "date": "2026-02-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "external",
+    "title": "External Vulnyx (Easy - Linux)",
+    "description": "Writeup de External",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "xxe",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2024-01-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "fire",
+    "title": "Fire Vulnyx (Easy - Linux)",
+    "description": "Writeup de Fire",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2026-02-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hat",
+    "title": "Hat Vulnyx (Intermediate - Linux)",
+    "description": "Writeup de Hat",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "lfi",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-08-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hook",
+    "title": "Hook Vulnyx (Easy - Linux)",
+    "description": "Writeup de Hook",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-01-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hosting",
+    "title": "Hosting Vulnyx (Easy - Windows)",
+    "description": "Writeup de Hosting",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-11-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "load",
+    "title": "Load Vulnyx (Easy - Linux)",
+    "description": "Writeup de Load",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "rfi",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-04-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "magic",
+    "title": "Magic Vulnyx (Easy - Linux)",
+    "description": "Writeup de Magic",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-08-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ober",
+    "title": "Ober Vulnyx (Easy - Linux)",
+    "description": "Writeup de Ober",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "fuzzing",
+      "nmap",
+      "web"
+    ],
+    "date": "2026-02-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "observer",
+    "title": "Observer Vulnyx (Easy - Linux)",
+    "description": "Writeup de Observer",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "xss",
+      "rfi",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-07-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "open",
+    "title": "Open Vulnyx (Easy - Linux)",
+    "description": "Writeup de Open",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "rce",
+      "idor",
+      "nmap"
+    ],
+    "date": "2025-09-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "play",
+    "title": "Play Vulnyx (Easy - Linux)",
+    "description": "Writeup de Play",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-05-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "plex",
+    "title": "Plex Vulnyx (Easy - Linux)",
+    "description": "Writeup de Plex",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-11-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "printer",
+    "title": "Printer Vulnyx (Easy - Linux)",
+    "description": "Writeup de Printer",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-08-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ready",
+    "title": "Ready Vulnyx (Easy - Linux)",
+    "description": "Writeup de Ready",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rfi",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-09-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "remote",
+    "title": "Remote Vulnyx (Easy - Linux)",
+    "description": "Writeup de Remote",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "rfi",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-11-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sandwich",
+    "title": "Sandwich Vulnyx (Intermediate - Linux)",
+    "description": "Writeup de Sandwich",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-08-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "shop",
+    "title": "Shop Vulnyx (Easy - Linux)",
+    "description": "Writeup de Shop",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "sqli",
+      "sql-injection",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-01-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sun",
+    "title": "Sun Vulnyx (Easy - Linux)",
+    "description": "Writeup de Sun",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2025-05-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "swamp",
+    "title": "Swamp Vulnyx (Easy - Linux)",
+    "description": "Writeup de Swamp",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "fuzzing",
+      "nmap",
+      "ffuf",
+      "ssh"
+    ],
+    "date": "2025-06-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "war",
+    "title": "War Vulnyx (Easy - Windows)",
+    "description": "Writeup de War",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "idor",
+      "fuzzing",
+      "nmap",
+      "metasploit"
+    ],
+    "date": "2025-08-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "yourwaf",
+    "title": "YourWAF Vulnyx (Easy - Linux)",
+    "description": "Writeup de YourWAF",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Vulnyx",
+    "skills": [
+      "ctf",
+      "writeup",
+      "rce",
+      "idor",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2024-11-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "aaguademayo",
+    "title": "AaguaDeMayo DockerLabs (Easy)",
+    "description": "Writeup de AaguaDeMayo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "gobuster",
+      "ssh",
+      "privilege-escalation"
+    ],
+    "date": "2025-10-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "debugme",
+    "title": "Debugme DockerLabs (Hard)",
+    "description": "Writeup de Debugme",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "lfi",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-05-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "devil",
+    "title": "Devil DockerLabs (Intermediate)",
+    "description": "Writeup de Devil",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-11-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "devtools",
+    "title": "DevTools DockerLabs (intermediate)",
+    "description": "Writeup de DevTools",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "lfi",
+      "nmap",
+      "hydra",
+      "ssh"
+    ],
+    "date": "2025-01-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dockerlabs",
+    "title": "Dockerlabs DockerLabs (Easy)",
+    "description": "Writeup de Dockerlabs",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "lfi",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-01-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dockhacklab",
+    "title": "DockHackLab DockerLabs (Intermediate)",
+    "description": "Writeup de DockHackLab",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-08-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "domain",
+    "title": "Domain DockerLabs (Intermediate)",
+    "description": "Writeup de Domain",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-09-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "doubletrouble",
+    "title": "DoubleTrouble DockerLabs (Hard)",
+    "description": "Writeup de DoubleTrouble",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sql-injection",
+      "rce",
+      "lfi",
+      "nmap"
+    ],
+    "date": "2025-08-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "eclipse",
+    "title": "Eclipse DockerLabs (intermediate)",
+    "description": "Writeup de Eclipse",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "lfi",
+      "nmap",
+      "metasploit"
+    ],
+    "date": "2024-07-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "elevator",
+    "title": "Elevator DockerLabs (Easy)",
+    "description": "Writeup de Elevator",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "reverse-shell"
+    ],
+    "date": "2025-02-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "extraviado",
+    "title": "Extraviado DockerLabs (Easy)",
+    "description": "Writeup de Extraviado",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "ssh",
+      "docker",
+      "apache"
+    ],
+    "date": "2025-01-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "fileception",
+    "title": "Fileception DockerLabs (Intermediate)",
+    "description": "Writeup de Fileception",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-09-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "findyoustyle",
+    "title": "FindYouStyle DockerLabs (Easy)",
+    "description": "Writeup de FindYouStyle",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "lfi",
+      "nmap",
+      "metasploit",
+      "web"
+    ],
+    "date": "2025-04-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "firsthacking",
+    "title": "Firsthacking DockerLabs (Very Easy)",
+    "description": "Writeup de Firsthacking",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "metasploit",
+      "ftp",
+      "docker"
+    ],
+    "date": "2024-07-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "fooding",
+    "title": "Fooding DockerLabs (Intermediate)",
+    "description": "Writeup de Fooding",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2024-11-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "forgotten_portal",
+    "title": "Forgotten\\_portal DockerLabs (Intermediate)",
+    "description": "Writeup de Forgotten_portal",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-12-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hackpenguin",
+    "title": "Hackpenguin DockerLabs (Intermediate)",
+    "description": "Writeup de Hackpenguin",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-04-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hedgehog",
+    "title": "Hedgehog DockerLabs (Very Easy)",
+    "description": "Writeup de Hedgehog",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "hydra",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-06-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hiddencat",
+    "title": "Hiddencat DockerLabs (Easy)",
+    "description": "Writeup de Hiddencat",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "nmap",
+      "hydra",
+      "web"
+    ],
+    "date": "2024-07-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "injection",
+    "title": "Injection DockerLabs (Very Easy)",
+    "description": "Writeup de Injection",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sql-injection",
+      "nmap",
+      "ssh",
+      "suid"
+    ],
+    "date": "2025-02-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "insanity",
+    "title": "Insanity DockerLabs (Hard)",
+    "description": "Writeup de Insanity",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "buffer-overflow",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-06-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "insecure",
+    "title": "Insecure DockerLabs (Hard)",
+    "description": "Writeup de Insecure",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "rfi",
+      "idor",
+      "buffer-overflow"
+    ],
+    "date": "2024-12-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "internship",
+    "title": "Internship DockerLabs (Easy)",
+    "description": "Writeup de Internship",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sql-injection",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-03-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "library",
+    "title": "Library DockerLabs (Easy)",
+    "description": "Writeup de Library",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-06-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "los-40-ladrones",
+    "title": "Los 40 Ladrones DockerLabs (Easy)",
+    "description": "Writeup de Los 40 Ladrones",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2025-08-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "mirame",
+    "title": "Mirame DockerLabs (Easy)",
+    "description": "Writeup de Mirame",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sql-injection",
+      "rce",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-10-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "move",
+    "title": "Move DockerLabs (Easy)",
+    "description": "Writeup de Move",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "xss",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-11-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "mybb",
+    "title": "MyBB DockerLabs (Intermediate)",
+    "description": "Writeup de MyBB",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-04-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "nodeclimb",
+    "title": "NodeClimb DockerLabs (Easy)",
+    "description": "Writeup de NodeClimb",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "ftp",
+      "ssh",
+      "sudo"
+    ],
+    "date": "2026-03-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "norc",
+    "title": "NorC DockerLabs (Hard)",
+    "description": "Writeup de NorC",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sql-injection",
+      "rce",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2025-05-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "obsession",
+    "title": "Obsession DockerLabs (Very Easy)",
+    "description": "Writeup de Obsession",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-10-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "patriaquerida",
+    "title": "Patriaquerida DockerLabs (Easy)",
+    "description": "Writeup de Patriaquerida",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-06-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pequenas-mentirosas",
+    "title": "Pequenas-mentirosas DockerLabs (Easy)",
+    "description": "Writeup de Pequenas-mentirosas",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "nmap",
+      "hydra",
+      "ssh"
+    ],
+    "date": "2024-11-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "picadilly",
+    "title": "Picadilly DockerLabs (Easy)",
+    "description": "Writeup de Picadilly",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "bruteforce",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2026-03-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pinguinazo",
+    "title": "Pinguinazo DockerLabs (Easy)",
+    "description": "Writeup de Pinguinazo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "xss",
+      "rce",
+      "fuzzing",
+      "enumeration"
+    ],
+    "date": "2024-08-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pntopntobarra",
+    "title": "Pntopntobarra DockerLabs (Easy)",
+    "description": "Writeup de Pntopntobarra",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "nmap",
+      "ssh",
+      "sudo"
+    ],
+    "date": "2025-12-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "predictable",
+    "title": "Predictable DockerLabs (Hard)",
+    "description": "Writeup de Predictable",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2025-05-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "psycho",
+    "title": "Psycho DockerLabs (Easy)",
+    "description": "Writeup de Psycho",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "ffuf"
+    ],
+    "date": "2025-12-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pyred",
+    "title": "PyRed DockerLabs (Intermediate)",
+    "description": "Writeup de PyRed",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2025-05-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "queuemedic",
+    "title": "Queuemedic DockerLabs (Hard)",
+    "description": "Writeup de Queuemedic",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sqli",
+      "rce",
+      "lfi",
+      "fuzzing"
+    ],
+    "date": "2024-10-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "raas",
+    "title": "Raas DockerLabs (Hard)",
+    "description": "Writeup de Raas",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "smb",
+      "ssh",
+      "sudo"
+    ],
+    "date": "2024-02-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "report",
+    "title": "Report DockerLabs (intermediate)",
+    "description": "Writeup de Report",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sqli",
+      "rce",
+      "lfi",
+      "rfi"
+    ],
+    "date": "2024-05-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "reverse",
+    "title": "Reverse DockerLabs (intermediate)",
+    "description": "Writeup de Reverse",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "lfi",
+      "idor",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2024-03-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "secretjenkins",
+    "title": "SecretJenkins DockerLabs (Easy)",
+    "description": "Writeup de SecretJenkins",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "hydra",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-05-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "seeker",
+    "title": "Seeker DockerLabs (Intermediate)",
+    "description": "Writeup de Seeker",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "xss",
+      "rfi",
+      "idor",
+      "buffer-overflow"
+    ],
+    "date": "2026-03-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sjd",
+    "title": "sjd DockerLabs (Very Easy)",
+    "description": "Writeup de sjd",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-11-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "skullnet",
+    "title": "Skullnet Dockerlabs (Difícil)",
+    "description": "Writeup de Skullnet",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "nmap",
+      "web",
+      "ssh"
+    ],
+    "date": "2024-02-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "spain",
+    "title": "Spain DockerLabs (Hard)",
+    "description": "Writeup de Spain",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "rfi",
+      "idor",
+      "buffer-overflow"
+    ],
+    "date": "2024-03-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stack",
+    "title": "Stack DockerLabs (Intermediate)",
+    "description": "Writeup de Stack",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "lfi",
+      "buffer-overflow",
+      "fuzzing"
+    ],
+    "date": "2024-12-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stranger",
+    "title": "Stranger DockerLabs (Intermediate)",
+    "description": "Writeup de Stranger",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2026-03-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "summervibes",
+    "title": "SummerVibes DockerLabs (Hard)",
+    "description": "Writeup de SummerVibes",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2024-06-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "swiss",
+    "title": "Swiss DockerLabs (Intermediate)",
+    "description": "Writeup de Swiss",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "lfi",
+      "fuzzing",
+      "nmap"
+    ],
+    "date": "2025-06-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "trust",
+    "title": "Trust DockerLabs (Very Easy)",
+    "description": "Writeup de Trust",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2024-09-08",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "unrecover",
+    "title": "Unrecover DockerLabs (Intermediate)",
+    "description": "Writeup de Unrecover",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "hydra",
+      "ftp",
+      "ssh"
+    ],
+    "date": "2025-09-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "usersearch",
+    "title": "Usersearch DockerLabs (intermediate)",
+    "description": "Writeup de Usersearch",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "sql-injection",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-10-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "vacaciones",
+    "title": "Vacaciones DockerLabs (Very Easy)",
+    "description": "Writeup de Vacaciones",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "hydra",
+      "ssh",
+      "sudo"
+    ],
+    "date": "2025-11-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "vendetta",
+    "title": "Vendetta DockerLabs (Easy)",
+    "description": "Writeup de Vendetta",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "nmap",
+      "hydra",
+      "ssh",
+      "mysql"
+    ],
+    "date": "2026-03-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "veneno",
+    "title": "Veneno DockerLabs (Intermediate)",
+    "description": "Writeup de Veneno",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "idor",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2025-10-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "verdejo",
+    "title": "Verdejo DockerLabs (Easy)",
+    "description": "Writeup de Verdejo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "xss",
+      "lfi",
+      "idor",
+      "fuzzing"
+    ],
+    "date": "2024-08-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "walking-dead",
+    "title": "Walking Dead DockerLabs (Easy)",
+    "description": "Writeup de Walking Dead",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-12-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "walkingcms",
+    "title": "WalkingCMS DockerLabs (Easy)",
+    "description": "Writeup de WalkingCMS",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2026-01-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "whereismywebshell",
+    "title": "WhereIsMyWebShell DockerLabs (Easy)",
+    "description": "Writeup de WhereIsMyWebShell",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "fuzzing",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2025-09-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "whoiam",
+    "title": "Whoiam DockerLabs (Easy)",
+    "description": "Writeup de Whoiam",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-11-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "winterfell",
+    "title": "Winterfell DockerLabs (Easy)",
+    "description": "Writeup de Winterfell",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "dockerlabs",
+      "rce",
+      "fuzzing",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-02-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bounty-hacker",
+    "title": "Bounty Hacker TryHackMe",
+    "description": "Writeup de Bounty Hacker",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "TryHackMe",
+    "skills": [
+      "ctf",
+      "writeup",
+      "tryhackme",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2023-11-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "creative",
+    "title": "Creative TryHackMe",
+    "description": "Writeup de Creative",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "TryHackMe",
+    "skills": [
+      "ctf",
+      "writeup",
+      "tryhackme",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2022-06-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "mr-robot",
+    "title": "Mr Robot CTF TryHackMe",
+    "description": "Writeup de Mr Robot",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "TryHackMe",
+    "skills": [
+      "ctf",
+      "writeup",
+      "tryhackme",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2023-02-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "rootme",
+    "title": "RootMe TryHackMe",
+    "description": "Writeup de RootMe",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "TryHackMe",
+    "skills": [
+      "ctf",
+      "writeup",
+      "tryhackme",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "suid"
+    ],
+    "date": "2023-01-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "funbox",
+    "title": "Funbox\\_CTF\\_4 VulnHub",
+    "description": "Writeup de Funbox_CTF_4",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2023-01-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "kb-vuln3",
+    "title": "KB-VULN3 VulnHub",
+    "description": "Writeup de KB-VULN3",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "enumeration",
+      "nmap",
+      "reverse-shell"
+    ],
+    "date": "2021-01-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "basic_pentesting2-vulbhub",
+    "title": "Basic\\_Pentesting2 VulbHub",
+    "description": "Writeup de Basic_Pentesting2 VulbHub",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "xxe",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2021-02-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "basic_pentesting_1",
+    "title": "Basic\\_Pentesting\\_1 VulnHub",
+    "description": "Writeup de Basic_Pentesting_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "metasploit"
+    ],
+    "date": "2021-05-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "bassamctf",
+    "title": "BassamCTF VulnHub",
+    "description": "Writeup de BassamCTF",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2023-12-12",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "born2root_2",
+    "title": "BORN2ROOT\\_2 VulnHub",
+    "description": "Writeup de BORN2ROOT_2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2021-07-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cengbox",
+    "title": "CengBox VulnHub",
+    "description": "Writeup de CengBox",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "sqli",
+      "sql-injection",
+      "rce",
+      "idor"
+    ],
+    "date": "2021-10-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "chill_hack",
+    "title": "Chill\\_hack VulnHub",
+    "description": "Writeup de Chill_hack",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-10-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ck-00",
+    "title": "CK-00 VulnHub",
+    "description": "Writeup de CK-00",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2022-10-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "clover_1",
+    "title": "Clover\\_1 VulnHub",
+    "description": "Writeup de Clover_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "sql-injection",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2021-01-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "cofeeaddicts",
+    "title": "Cofeeaddicts VulnHub",
+    "description": "Writeup de Cofeeaddicts",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "reverse-shell"
+    ],
+    "date": "2023-05-09",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "connect-the-dots",
+    "title": "Connect-The-Dots VulnHub",
+    "description": "Writeup de Connect-The-Dots",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "lfi",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2021-11-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "corrosion2",
+    "title": "Corrosion2 VulnHub",
+    "description": "Writeup de Corrosion2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "lfi",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2022-01-05",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "djinn_2",
+    "title": "djinn\\_2 VulnHub",
+    "description": "Writeup de djinn_2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "xss",
+      "rce",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2021-11-15",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "driftingblues_7",
+    "title": "driftingblues\\_7 VulnHub",
+    "description": "Writeup de driftingblues_7",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "nmap",
+      "ffuf",
+      "web"
+    ],
+    "date": "2022-11-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "dripping_blues",
+    "title": "Dripping\\_blues VulnHub",
+    "description": "Writeup de Dripping_blues",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2021-12-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "durian",
+    "title": "Durian VulnHub",
+    "description": "Writeup de Durian",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "xss",
+      "rce",
+      "lfi",
+      "enumeration"
+    ],
+    "date": "2023-04-11",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "election",
+    "title": "Election VulnHub",
+    "description": "Writeup de Election",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2022-03-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "empire-lupin-one",
+    "title": "Empire Lupin One VulnHub",
+    "description": "Writeup de Empire Lupin One",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "xss",
+      "rce",
+      "xxe",
+      "enumeration"
+    ],
+    "date": "2024-07-01",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "evilbox_one",
+    "title": "EVILBOX\\_ONE VulnHub",
+    "description": "Writeup de EVILBOX_ONE",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2023-05-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "funbox_lunchbreaker",
+    "title": "Funbox\\_Lunchbreaker VulnHub",
+    "description": "Writeup de Funbox_Lunchbreaker",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2024-10-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "gaara",
+    "title": "Gaara VulnHub",
+    "description": "Writeup de Gaara",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2024-07-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "gigachad_vh",
+    "title": "Gigachad\\_vh VulnHub",
+    "description": "Writeup de Gigachad_vh",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "nmap",
+      "ftp",
+      "ssh",
+      "suid"
+    ],
+    "date": "2023-05-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hack-me-please",
+    "title": "HACK ME PLEASE VulnHub",
+    "description": "Writeup de HACK ME PLEASE",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "nmap",
+      "reverse-shell",
+      "web"
+    ],
+    "date": "2023-10-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hackathonctf2",
+    "title": "HACKATHONCTF2 VulnHub",
+    "description": "Writeup de HACKATHONCTF2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2021-04-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hackeable-ll",
+    "title": "Hackeable ll VulnHub",
+    "description": "Writeup de Hackeable ll",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "reverse-shell"
+    ],
+    "date": "2024-09-23",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hacksudo_aliens",
+    "title": "Hacksudo\\_Aliens VulnHub",
+    "description": "Writeup de Hacksudo_Aliens",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2022-01-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "ica1",
+    "title": "Ica1 VulnHub",
+    "description": "Writeup de Ica1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "idor",
+      "nmap",
+      "hydra"
+    ],
+    "date": "2022-04-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "jangow",
+    "title": "Jangow VulnHub",
+    "description": "Writeup de Jangow",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2021-01-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "jetty",
+    "title": "Jetty VulnHub",
+    "description": "Writeup de Jetty",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "ftp"
+    ],
+    "date": "2023-08-27",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "literallyvulnerable",
+    "title": "LiterallyVulnerable VulnHub",
+    "description": "Writeup de LiterallyVulnerable",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2022-09-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "masashi",
+    "title": "Masashi VulnHub",
+    "description": "Writeup de Masashi",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2022-11-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "minu_1",
+    "title": "MINU\\_1 VulnHub",
+    "description": "Writeup de MINU_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "xss",
+      "lfi",
+      "xxe",
+      "nmap"
+    ],
+    "date": "2022-12-13",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "momentum",
+    "title": "Momentum VulnHub",
+    "description": "Writeup de Momentum",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "xss",
+      "idor",
+      "nmap",
+      "web"
+    ],
+    "date": "2021-05-28",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "moneybox",
+    "title": "MoneyBox VulnHub",
+    "description": "Writeup de MoneyBox",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "hydra",
+      "gobuster"
+    ],
+    "date": "2021-04-17",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "monitoring",
+    "title": "Monitoring VulnHub",
+    "description": "Writeup de Monitoring",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "nmap",
+      "metasploit",
+      "ssh"
+    ],
+    "date": "2021-12-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "nivek",
+    "title": "NiveK VulnHub",
+    "description": "Writeup de NiveK",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "sql-injection",
+      "rce",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2024-04-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "odin",
+    "title": "Odin VulnHub",
+    "description": "Writeup de Odin",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "nmap",
+      "api",
+      "sudo",
+      "cron"
+    ],
+    "date": "2022-07-26",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "photographer",
+    "title": "Photographer VulnHub",
+    "description": "Writeup de Photographer",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2022-07-02",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "prime_2",
+    "title": "Prime\\_2 VulnHub",
+    "description": "Writeup de Prime_2",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "lfi",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2024-03-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "pylington",
+    "title": "PYLINGTON VulnHub",
+    "description": "Writeup de PYLINGTON",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2021-12-10",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "rootthis_1",
+    "title": "RootThis\\_1 VulnHub",
+    "description": "Writeup de RootThis_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "enumeration",
+      "nmap",
+      "gobuster",
+      "reverse-shell"
+    ],
+    "date": "2021-10-25",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "seppuku",
+    "title": "Seppuku VulnHub",
+    "description": "Writeup de Seppuku",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "lfi",
+      "rfi",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2023-08-19",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "shenron-3",
+    "title": "shenron-3 VulnHub",
+    "description": "Writeup de shenron-3",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2022-04-22",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "shuriken_1",
+    "title": "Shuriken\\_1 VulnHub",
+    "description": "Writeup de Shuriken_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "lfi",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-08-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "so_simple_1",
+    "title": "So\\_simple\\_1 VulnHub",
+    "description": "Writeup de So_simple_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "enumeration",
+      "nmap",
+      "gobuster"
+    ],
+    "date": "2024-10-04",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stapler",
+    "title": "Stapler VulnHub",
+    "description": "Writeup de Stapler",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2023-11-20",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sumo",
+    "title": "Sumo VulnHub",
+    "description": "Writeup de Sumo",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "brute-force",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2022-10-03",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "sunset_dusk",
+    "title": "SUNSET\\_DUSK VulnHub",
+    "description": "Writeup de SUNSET_DUSK",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "nmap",
+      "hydra",
+      "reverse-shell"
+    ],
+    "date": "2022-02-24",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "symfonos_1",
+    "title": "Symfonos\\_1 VulnHub",
+    "description": "Writeup de Symfonos_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "lfi",
+      "idor",
+      "enumeration"
+    ],
+    "date": "2023-11-06",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "system_failure",
+    "title": "System\\_failure VulnHub",
+    "description": "Writeup de System_failure",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "rfi",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-08-18",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "thales",
+    "title": "Thales VulnHub",
+    "description": "Writeup de Thales",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "idor",
+      "nmap",
+      "msfvenom",
+      "reverse-shell"
+    ],
+    "date": "2022-02-16",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "thoth_tech_1",
+    "title": "THOTH\\_TECH\\_1 VulnHub",
+    "description": "Writeup de THOTH_TECH_1",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-03-14",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "unknowndevice64",
+    "title": "unknowndevice64 VulnHub",
+    "description": "Writeup de unknowndevice64",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "nmap",
+      "reverse-shell",
+      "web",
+      "ssh"
+    ],
+    "date": "2023-11-07",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "vikings",
+    "title": "Vikings VulnHub",
+    "description": "Writeup de Vikings",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "VulnHub",
+    "skills": [
+      "ctf",
+      "writeup",
+      "vulnhub",
+      "rce",
+      "idor",
+      "enumeration",
+      "nmap"
+    ],
+    "date": "2024-10-01",
+    "active": false,
     "active_to_retire": false
   }
 ]
