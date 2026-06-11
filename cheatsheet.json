@@ -247,5 +247,56 @@
     ],
     "os": "Linux",
     "date": "2026-03-04"
+  },
+  {
+    "id": "php",
+    "title": "PHP Hacking",
+    "description": "PHP general y vulnerabilidades: LFI, RFI, SQLi, XSS, RCE, File Upload, Type Juggling y más.",
+    "category": "PHP",
+    "tags": [
+      "php",
+      "lfi",
+      "rfi",
+      "sqli",
+      "xss",
+      "rce",
+      "web",
+      "hacking"
+    ],
+    "os": "N/A",
+    "date": "2026-06-09"
+  },
+  {
+    "id": "python3",
+    "title": "Python3 Hacking",
+    "description": "Python3 general y scripts de hacking: sockets, HTTP, fuzzing, brute force, exploits, criptografía.",
+    "category": "Python",
+    "tags": [
+      "python",
+      "scripting",
+      "sockets",
+      "exploits",
+      "hacking",
+      "automatizacion"
+    ],
+    "os": "N/A",
+    "date": "2026-06-09"
+  },
+  {
+    "id": "xml",
+    "title": "XML & XXE",
+    "description": "XML, DTD, XPath, XSLT y vulnerabilidades XXE: lectura de archivos, SSRF, OOB, XPath Injection.",
+    "category": "XML",
+    "tags": [
+      "xml",
+      "xxe",
+      "xpath",
+      "dtd",
+      "ssrf",
+      "lfi",
+      "hacking"
+    ],
+    "os": "N/A",
+    "date": "2026-06-09"
   }
 ]
