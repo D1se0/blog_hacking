@@ -9119,5 +9119,27 @@
     "date": "2026-06-11",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "connected",
+    "title": "Connected HackTheBox (Easy)",
+    "description": "Writeup de Connected — Easy Linux en HackTheBox",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "writeup",
+      "ctf",
+      "web",
+      "cve",
+      "freepbx",
+      "sqli",
+      "rce",
+      "suid",
+      "incron"
+    ],
+    "date": "2026-06-12",
+    "active": true,
+    "active_to_retire": false
   }
 ]
