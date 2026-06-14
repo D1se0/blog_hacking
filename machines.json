@@ -1152,7 +1152,7 @@
       "cve"
     ],
     "date": "2026-03-14",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
