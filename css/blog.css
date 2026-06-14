@@ -3616,3 +3616,15 @@ a.group {
     color: var(--color-accent-light);
     background: var(--color-accent-dim);
 }
+
+.ca-cert-image-wrapper {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.ca-cert-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}

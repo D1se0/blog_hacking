@@ -63,6 +63,7 @@
         level: "Especialista / Avanzado",
         format: "Examen práctico — 10 flags + informe técnico",
         duration: "Completado en ~2 días",
+        image: "certificates/cwes/images/cwes-certificate.png",
         topics: [
           "SQL Injection", "XSS / CSRF", "SSRF", "XXE",
           "File Upload Bypass", "Authentication Bypass",
@@ -299,7 +300,12 @@
           </div>
         </header>
 
-        <div class="ca-divider"></div>
+        ${meta.image ? `
+<div class="ca-cert-image-wrapper">
+  <img src="${meta.image}" alt="${c.title} certificate" class="ca-cert-image">
+</div>` : ''}
+
+<div class="ca-divider"></div>
 
         <!-- 01 — Descripción -->
         <section class="ca-section">

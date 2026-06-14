@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Bounty | diseo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/bugbounty.css">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div id="header-container"></div>
+
+  <main class="mx-auto w-full max-w-4xl px-4 py-8">
+    <section class="page-section">
+
+      <div class="page-hero">
+        <span class="section-label">// bug bounty</span>
+        <h1 class="page-title">Bug Bounty</h1>
+        <p class="page-desc">Vulnerabilidades reales encontradas en programas de bug bounty — reportes, impacto y técnicas.</p>
+      </div>
+
+      <!-- Stats row -->
+      <div id="bb-stats" class="bb-stats-row"></div>
+
+      <!-- Search -->
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search bugs, programs, types..."
+          class="search-input">
+      </div>
+
+      <!-- Tags -->
+      <div id="tags-container" class="tags-row"></div>
+
+      <!-- Grid de tarjetas -->
+      <div id="bugs-grid" class="bb-grid">
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+      </div>
+
+      <!-- Paginación -->
+      <div id="pagination-container" class="pagination-row"></div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
+
+  <script src="js/bugbounty.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      await initBugBounty();
+
+      // Stats: contar por severidad tras cargar el JSON
+      try {
+        const data = await fetch('bugbounty.json').then(r => r.json());
+        const counts = { Critical:0, High:0, Medium:0, Low:0, Informational:0 };
+        data.forEach(b => { if (counts[b.severity] !== undefined) counts[b.severity]++; });
+
+        const colors = {
+          Critical:'#ef4444', High:'#f97316', Medium:'#eab308',
+          Low:'#22c55e', Informational:'#3b82f6'
+        };
+
+        document.getElementById('bb-stats').innerHTML =
+          Object.entries(counts).filter(([,v]) => v > 0).map(([k, v]) => `
+            <div class="bb-stat-chip" style="border-color:${colors[k]}33;background:${colors[k]}0d;">
+              <span class="bb-dot" style="background:${colors[k]};box-shadow:0 0 5px ${colors[k]}66;"></span>
+              <span style="color:${colors[k]};font-weight:700;">${v}</span>
+              <span style="color:var(--color-text-muted);">${k}</span>
+            </div>
+          `).join('') +
+          `<div class="bb-stat-chip" style="border-color:var(--color-border);">
+            <span style="color:var(--color-text);font-weight:700;">${data.length}</span>
+            <span style="color:var(--color-text-muted);">Total</span>
+          </div>`;
+      } catch {}
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bug Report | diseo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/bugbounty.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div id="header-container"></div>
+
+  <main class="bb-report-main">
+    <article class="bb-report-article" id="report-content">
+      <div class="cert-skeleton">
+        <div class="sk-hero"></div>
+        <div class="sk-line sk-title"></div>
+        <div class="sk-line sk-body"></div>
+        <div class="sk-line sk-body short"></div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
+
+  <script>
+
+    const SEVERITY = {
+      'Critical':      { color:'#ef4444', bg:'rgba(239,68,68,0.1)',   border:'rgba(239,68,68,0.3)'   },
+      'High':          { color:'#f97316', bg:'rgba(249,115,22,0.1)',  border:'rgba(249,115,22,0.3)'  },
+      'Medium':        { color:'#eab308', bg:'rgba(234,179,8,0.1)',   border:'rgba(234,179,8,0.3)'   },
+      'Low':           { color:'#22c55e', bg:'rgba(34,197,94,0.1)',   border:'rgba(34,197,94,0.3)'   },
+      'Informational': { color:'#3b82f6', bg:'rgba(59,130,246,0.1)', border:'rgba(59,130,246,0.3)'  },
+    };
+
+    const STATUS = {
+      'resolved':  { label:'Resolved',  color:'#22c55e' },
+      'accepted':  { label:'Accepted',  color:'#3b82f6' },
+      'duplicate': { label:'Duplicate', color:'#8b5cf6' },
+      'triaged':   { label:'Triaged',   color:'#f59e0b' },
+      'pending':   { label:'Pending',   color:'#6b7280' },
+      'n/a':       { label:'N/A',       color:'#6b7280' },
+    };
+
+    /* ── BUG_META: aquí añades datos enriquecidos para cada report ──────────
+       Clave = id del bug en bugbounty.json
+       Campos opcionales:
+         steps[]         pasos para reproducir
+         poc             prueba de concepto (código)
+         recommendation  recomendación de mitigación
+         references[]    links externos (CVE, artículos, etc.)
+         timeline{}      { reported, triaged, resolved }
+         environment     stack afectado
+         cvss_vector     vector CVSS completo
+         attachments[]   { label, url }
+    ─────────────────────────────────────────────────────────────────────── */
+    const BUG_META = {
+
+      "example-bug": {
+        steps: [
+          "Abrir el formulario de login en /login",
+          "En el campo username introducir: ' OR '1'='1' --",
+          "Dejar el campo password en blanco",
+          "Enviar la petición y observar que el acceso es concedido sin credenciales válidas"
+        ],
+        poc: `# Request HTTP capturado con Burp Suite
+POST /api/v1/auth/login HTTP/1.1
+Host: target.com
+Content-Type: application/json
+
+{"username": "' OR '1'='1' -- -", "password": ""}
+
+# Response
+HTTP/1.1 200 OK
+{"token": "eyJhbGci...", "user": {"id":1,"role":"admin"}}`,
+        recommendation: "Utilizar consultas preparadas (Prepared Statements) en todas las interacciones con la base de datos. Implementar un ORM o validación estricta del input antes de incluirlo en queries SQL. Añadir rate-limiting y bloqueo por intentos fallidos.",
+        timeline: {
+          reported: "2025-03-10",
+          triaged:  "2025-03-11",
+          resolved: "2025-03-14"
+        },
+        environment: "Node.js + MySQL 8.0 — API REST en producción",
+        cvss_vector: "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        references: [
+          { label: "OWASP — SQL Injection", url: "https://owasp.org/www-community/attacks/SQL_Injection" },
+          { label: "CWE-89", url: "https://cwe.mitre.org/data/definitions/89.html" }
+        ]
+      }
+
+    };
+
+    /* ── Init ─────────────────────────────────────────────────────────────── */
+    document.addEventListener('DOMContentLoaded', async () => {
+
+      // Header
+      const res  = await fetch('header.html');
+      const html = await res.text();
+      document.getElementById('header-container').innerHTML = html;
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('nav-accent');
+        if (link.getAttribute('href').split('/').pop() === 'bugbounty.html')
+          link.classList.add('nav-accent');
+      });
+
+      // Leer ?id=
+      const id = new URLSearchParams(window.location.search).get('id');
+      if (!id) { renderError('No bug specified.'); return; }
+
+      try {
+        const data = await fetch('bugbounty.json').then(r => r.json());
+        const bug  = data.find(b => b.id === id);
+        if (!bug) { renderError('Bug report not found.'); return; }
+        document.title = `${bug.title} | diseo`;
+        renderReport(bug);
+      } catch (e) {
+        renderError('Failed to load bug report.');
+      }
+    });
+
+    /* ── Render ───────────────────────────────────────────────────────────── */
+    function renderReport(b) {
+      const sev    = SEVERITY[b.severity] || SEVERITY['Informational'];
+      const st     = STATUS[(b.status||'').toLowerCase()] || STATUS['pending'];
+      const meta   = BUG_META[b.id] || {};
+      const cvss   = b.cvss ? parseFloat(b.cvss).toFixed(1) : null;
+      const bounty = b.bounty && b.bounty !== '' ? b.bounty : null;
+
+      const dateStr = b.date
+        ? new Date(b.date).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })
+        : '';
+
+      // Sección counter
+      let n = 1;
+      const num = () => String(n++).padStart(2,'0');
+
+      // Tags
+      const tagsHtml = (b.tags||[]).map(t =>
+        `<span class="ca-tag">#${t.toLowerCase()}</span>`).join('');
+
+      // Timeline
+      const fmtDate = d => d
+        ? new Date(d).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})
+        : '—';
+
+      const tlHtml = meta.timeline ? `
+        <div class="bb-timeline">
+          <div class="bb-tl-item">
+            <span class="bb-tl-dot" style="background:#6b7280;"></span>
+            <span class="bb-tl-label">Reported</span>
+            <span class="bb-tl-date">${fmtDate(meta.timeline.reported)}</span>
+          </div>
+          <div class="bb-tl-connector"></div>
+          <div class="bb-tl-item">
+            <span class="bb-tl-dot" style="background:#f59e0b;"></span>
+            <span class="bb-tl-label">Triaged</span>
+            <span class="bb-tl-date">${fmtDate(meta.timeline.triaged)}</span>
+          </div>
+          <div class="bb-tl-connector"></div>
+          <div class="bb-tl-item">
+            <span class="bb-tl-dot" style="background:#22c55e;"></span>
+            <span class="bb-tl-label">Resolved</span>
+            <span class="bb-tl-date">${fmtDate(meta.timeline.resolved)}</span>
+          </div>
+        </div>` : '';
+
+      // Steps
+      const stepsHtml = (meta.steps||[]).map((s,i) => `
+        <li class="bb-step">
+          <span class="bb-step-num">${String(i+1).padStart(2,'0')}</span>
+          <span>${s}</span>
+        </li>`).join('');
+
+      // References
+      const refsHtml = (meta.references||[]).map(r => `
+        <a href="${r.url}" target="_blank" class="bb-ref-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          ${r.label}
+        </a>`).join('');
+
+      // Secciones activas
+      const hasSummary   = !!b.summary;
+      const hasImpact    = !!b.impact;
+      const hasEndpoint  = !!b.affected_endpoint;
+      const hasSteps     = (meta.steps||[]).length > 0;
+      const hasPoc       = !!meta.poc;
+      const hasRec       = !!meta.recommendation;
+      const hasEnv       = !!meta.environment;
+      const hasTimeline  = !!meta.timeline;
+      const hasRefs      = (meta.references||[]).length > 0;
+
+      document.getElementById('report-content').innerHTML = `
+
+        <!-- Back -->
+        <a href="bugbounty.html" class="ca-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+          Back to Bug Bounty
+        </a>
+
+        <!-- Hero banner de color según severidad -->
+        <div class="bb-report-hero" style="background:linear-gradient(135deg,${sev.bg} 0%,transparent 70%);border-color:${sev.border};">
+          <div class="bb-report-hero-icon" style="background:${sev.bg};border:1px solid ${sev.border};color:${sev.color};">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <div class="bb-report-hero-type" style="color:${sev.color};">${b.type||'Web'}</div>
+        </div>
+
+        <!-- Cabecera -->
+        <header class="ca-header">
+          <div class="ca-meta-row">
+            <span class="bb-sev-badge"
+              style="background:${sev.bg};color:${sev.color};border:1px solid ${sev.border};">
+              <span class="bb-dot" style="background:${sev.color};box-shadow:0 0 6px ${sev.color}66;"></span>
+              ${b.severity}
+            </span>
+            <span style="display:inline-flex;align-items:center;gap:6px;
+              font-size:0.72rem;font-weight:600;color:${st.color};">
+              <span class="bb-dot" style="background:${st.color};"></span>
+              ${st.label}
+            </span>
+            ${cvss ? `<span class="ca-level" style="color:${sev.color};
+              border-color:${sev.border};background:${sev.bg};">CVSS ${cvss}</span>` : ''}
+            ${bounty ? `<span class="ca-level" style="color:#22c55e;
+              border-color:rgba(34,197,94,0.3);background:rgba(34,197,94,0.08);">
+              ${bounty} Bounty</span>` : ''}
+            ${dateStr ? `<span class="ca-date">${dateStr}</span>` : ''}
+          </div>
+
+          <h1 class="ca-title">${b.title}</h1>
+          ${b.program ? `<p class="ca-provider">via ${b.program}</p>` : ''}
+
+          <div class="ca-tags">${tagsHtml}</div>
+
+          ${b.url ? `
+          <div class="ca-actions">
+            <a href="${b.url}" target="_blank" class="ca-btn-secondary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              Ver reporte original
+            </a>
+          </div>` : ''}
+        </header>
+
+        <div class="ca-divider"></div>
+
+        ${hasTimeline ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Timeline
+          </h2>
+          ${tlHtml}
+        </section>` : ''}
+
+        <!-- Descripción -->
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Descripción
+          </h2>
+          <p class="ca-body-text">${b.description}</p>
+        </section>
+
+        ${hasSummary ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Resumen técnico
+          </h2>
+          <blockquote class="ca-quote ca-quote-neutral">${b.summary}</blockquote>
+        </section>` : ''}
+
+        ${hasImpact ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Impacto
+          </h2>
+          <div class="bb-impact-box" style="border-color:${sev.border};background:${sev.bg};">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="${sev.color}"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;">
+              <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            <span style="color:var(--color-text);">${b.impact}</span>
+          </div>
+        </section>` : ''}
+
+        ${hasEndpoint ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Endpoint afectado
+          </h2>
+          <div class="bb-endpoint">${b.affected_endpoint}</div>
+        </section>` : ''}
+
+        ${hasSteps ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Pasos para reproducir
+          </h2>
+          <ol class="bb-steps-list">${stepsHtml}</ol>
+        </section>` : ''}
+
+        ${hasPoc ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Prueba de concepto (PoC)
+          </h2>
+          <pre class="bb-poc"><code>${escapeHtml(meta.poc)}</code></pre>
+        </section>` : ''}
+
+        ${hasRec ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Recomendación
+          </h2>
+          <div class="bb-recommendation">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span style="color:var(--color-text);">${meta.recommendation}</span>
+          </div>
+        </section>` : ''}
+
+        <!-- Info técnica -->
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Información técnica
+          </h2>
+          <div class="ca-info-grid">
+            <div class="ca-info-block">
+              <span class="ca-info-label">Severidad</span>
+              <span class="ca-info-val" style="color:${sev.color};">${b.severity}</span>
+            </div>
+            ${cvss ? `<div class="ca-info-block">
+              <span class="ca-info-label">CVSS Score</span>
+              <span class="ca-info-val" style="color:${sev.color};font-weight:700;">${cvss}</span>
+            </div>` : ''}
+            ${meta.cvss_vector ? `<div class="ca-info-block" style="grid-column:span 2;">
+              <span class="ca-info-label">CVSS Vector</span>
+              <span class="ca-info-val" style="font-family:'Fira Mono',monospace;font-size:0.75rem;word-break:break-all;">${meta.cvss_vector}</span>
+            </div>` : ''}
+            <div class="ca-info-block">
+              <span class="ca-info-label">Tipo</span>
+              <span class="ca-info-val">${b.type||'—'}</span>
+            </div>
+            <div class="ca-info-block">
+              <span class="ca-info-label">Estado</span>
+              <span class="ca-info-val" style="color:${st.color};">${st.label}</span>
+            </div>
+            ${bounty ? `<div class="ca-info-block">
+              <span class="ca-info-label">Recompensa</span>
+              <span class="ca-info-val" style="color:#22c55e;font-weight:700;">${bounty}</span>
+            </div>` : ''}
+            ${b.program ? `<div class="ca-info-block">
+              <span class="ca-info-label">Programa</span>
+              <span class="ca-info-val">${b.program}</span>
+            </div>` : ''}
+            ${hasEnv ? `<div class="ca-info-block" style="grid-column:span 2;">
+              <span class="ca-info-label">Entorno</span>
+              <span class="ca-info-val">${meta.environment}</span>
+            </div>` : ''}
+            ${dateStr ? `<div class="ca-info-block">
+              <span class="ca-info-label">Fecha</span>
+              <span class="ca-info-val">${dateStr}</span>
+            </div>` : ''}
+          </div>
+        </section>
+
+        ${hasRefs ? `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Referencias
+          </h2>
+          <div class="bb-refs">${refsHtml}</div>
+        </section>` : ''}
+
+      `;
+    }
+
+    function escapeHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function renderError(msg) {
+      document.getElementById('report-content').innerHTML =
+        `<p style="color:var(--color-text-muted);padding:4rem 0;text-align:center;">${msg}</p>`;
+    }
+
+  </script>
+</body>
+</html>
