@@ -9141,5 +9141,27 @@
     "date": "2026-06-12",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "smarthire",
+    "title": "SmartHire HackTheBox (Intermediate)",
+    "description": "Writeup de SmartHire — Intermediate Linux en HackTheBox",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "writeup",
+      "ctf",
+      "web",
+      "rce",
+      "cve",
+      "sudo",
+      "python",
+      "path_hijacking",
+      "ia"
+    ],
+    "date": "2026-06-15",
+    "active": true,
+    "active_to_retire": false
   }
 ]
