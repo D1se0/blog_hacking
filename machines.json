@@ -9163,5 +9163,24 @@
     "date": "2026-06-15",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "mass-assignment-privilege-escalation",
+    "title": "Mass Assignment Privilege Escalation BBLabs (Easy)",
+    "description": "Writeup de Mass Assignment Privilege Escalation — Easy Linux en BBLabs",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "BBLabs",
+    "skills": [
+      "web",
+      "ctf",
+      "writeup",
+      "json",
+      "api",
+      "mass_assigment"
+    ],
+    "date": "2026-06-16",
+    "active": false,
+    "active_to_retire": false
   }
 ]
