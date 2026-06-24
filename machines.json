@@ -3675,20 +3675,20 @@
   },
   {
     "id": "duque",
-    "title": "Duque DockerLabs (Easy)",
-    "description": "Writeup de Duque",
+    "title": "Duque Dockerlabs (Easy)",
+    "description": "Writeup de Duque - Easy Linux en Dockerlabs",
     "difficulty": "Easy",
     "os": "Linux",
-    "type": "CTF",
+    "type": "Dockerlabs",
     "skills": [
       "ctf",
       "writeup",
+      "web",
       "sqli",
-      "sql-injection",
-      "lfi",
-      "idor"
+      "rce",
+      "suid"
     ],
-    "date": "2024-11-17",
+    "date": "2026-06-24",
     "active": false,
     "active_to_retire": false
   },
