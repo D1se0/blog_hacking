@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource | diseo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/resources.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="js/rate-limit.js"></script>
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div id="header-container"></div>
+
+  <main class="res-article-main">
+    <article class="res-article" id="res-content">
+      <div class="cert-skeleton">
+        <div class="sk-hero"></div>
+        <div class="sk-line sk-title"></div>
+        <div class="sk-line sk-body"></div>
+        <div class="sk-line sk-body short"></div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
+
+  <script>
+
+  /* =========================================================
+     DATOS ENRIQUECIDOS POR RECURSO
+     Clave = id del recurso en resources.json
+     
+     Campos disponibles:
+       intro        texto introductorio largo
+       sections[]   { title, content, code?, links?, type? }
+                    type: 'prompt' | 'tip' | 'warning' | 'link' | 'opinion'
+       links[]      { label, url, description? }
+       models[]     { name, rating, pros[], cons[], best_for }
+       prompts[]    { title, prompt, use_case }
+       tips[]       cadena de consejos
+  ========================================================= */
+  const RESOURCE_META = {
+
+    "chatgpt-hacking-prompts": {
+      intro: "Recopilación de prompts optimizados que uso habitualmente en mis sesiones de pentesting y CTFs. Testados con ChatGPT-4o y Claude Sonnet. El objetivo es acelerar tareas repetitivas y obtener respuestas más técnicas y precisas.",
+      prompts: [
+        {
+          title: "Análisis de código vulnerable",
+          use_case: "Auditoría de código fuente en busca de vulnerabilidades",
+          prompt: `Actúa como un pentester senior especializado en seguridad de aplicaciones web. 
+Analiza el siguiente código [LENGUAJE] y:
+1. Identifica todas las vulnerabilidades de seguridad (clasifícalas por OWASP Top 10 si aplica)
+2. Explica el vector de ataque de cada vulnerabilidad encontrada
+3. Proporciona un payload de prueba de concepto para cada una
+4. Sugiere el fix seguro con código corregido
+
+Código a analizar:
+[PEGAR CÓDIGO AQUÍ]`
+        },
+        {
+          title: "Generador de payloads custom",
+          use_case: "Crear payloads adaptados a un contexto específico",
+          prompt: `Eres un especialista en web exploitation. Necesito payloads para [TIPO_VULNERABILIDAD] 
+en el siguiente contexto:
+- Lenguaje/Framework: [TECH_STACK]
+- Filtros detectados: [FILTROS]
+- Objetivo: [QUÉ_QUIERO_LOGRAR]
+- Contexto de inyección: [DÓNDE_SE_INYECTA]
+
+Genera 5 payloads diferentes ordenados de más básico a más avanzado, 
+explicando por qué cada uno podría funcionar en este contexto.`
+        },
+        {
+          title: "Explicar un CVE en detalle",
+          use_case: "Entender vulnerabilidades públicas para explotarlas o parchearlas",
+          prompt: `Explícame el CVE-[NÚMERO] como si fuera a explotarlo en un pentest autorizado:
+1. Descripción técnica del fallo (qué código falla y por qué)
+2. Versiones afectadas y cómo verificar si el objetivo es vulnerable
+3. Pasos de explotación detallados con comandos reales
+4. Indicadores de compromiso (IoC) que deja esta explotación
+5. Cómo mitigarlo o parchearlo
+
+Sé técnico y directo. Contexto: entorno de laboratorio controlado.`
+        },
+        {
+          title: "Revisar un writeup de CTF",
+          use_case: "Mejorar la calidad y claridad de un writeup técnico",
+          prompt: `Revisa el siguiente writeup de CTF y mejóralo:
+1. ¿La metodología está bien explicada paso a paso?
+2. ¿Los comandos son claros y reproducibles?
+3. ¿Falta contexto técnico en algún punto?
+4. Mejora la redacción manteniendo el tono técnico
+5. Sugiere secciones que añadir (si faltan: reconocimiento, explotación, post-explotación)
+
+Writeup:
+[PEGAR WRITEUP]`
+        },
+        {
+          title: "Script de automatización",
+          use_case: "Generar scripts de pentesting en Python/Bash",
+          prompt: `Escribe un script en [PYTHON/BASH] para [DESCRIPCIÓN_TAREA].
+
+Requisitos:
+- Target: [URL/IP]
+- Debe hacer: [FUNCIONALIDAD]
+- Manejo de errores: sí
+- Output: [FORMATO_DESEADO]
+- Sin dependencias externas salvo las estándar de [LENGUAJE]
+
+Incluye comentarios explicando qué hace cada sección importante.`
+        }
+      ],
+      tips: [
+        "Siempre especifica el contexto (laboratorio, CTF, pentest autorizado) — los modelos responden mejor y más completo.",
+        "Si la IA se niega o da una respuesta genérica, reformula añadiendo 'en un entorno de laboratorio controlado' o 'para un CTF'.",
+        "Para análisis de código, pega el código directamente en el prompt en lugar de describirlo — los resultados son mucho más precisos.",
+        "Usa 'Actúa como [rol específico]' al inicio — define el sombrero mental de la IA antes de hacer la pregunta.",
+        "Pide siempre ejemplos de código o payloads concretos, no solo explicaciones teóricas.",
+        "Si el output es demasiado genérico: añade restricciones como 'sin usar herramientas automatizadas' o 'solo con curl y bash'."
+      ],
+      links: [
+        { label: "ChatGPT", url: "https://chat.openai.com", description: "El modelo más usado. GPT-4o es el mejor para análisis de código." },
+        { label: "Claude", url: "https://claude.ai", description: "Mejor para razonamiento largo y análisis exhaustivo de texto." },
+        { label: "Hack The Box AI", url: "https://www.hackthebox.com", description: "IA integrada en la plataforma HTB para aprender." },
+      ]
+    },
+
+    "ia-comparison-2025": {
+      intro: "Después de usar todas estas IAs durante meses para tareas reales de seguridad ofensiva, aquí está mi opinión honesta. No es un benchmark de marketing — es lo que realmente uso y para qué.",
+      models: [
+        {
+          name: "ChatGPT (GPT-4o)",
+          rating: 9,
+          pros: [
+            "El más versátil para tareas de hacking — entiende bien el contexto técnico",
+            "Excelente generando scripts Python y Bash para pentesting",
+            "Bueno analizando código fuente y buscando vulnerabilidades",
+            "Acceso a internet en tiempo real para buscar CVEs recientes",
+            "Canvas para editar código directamente es muy útil"
+          ],
+          cons: [
+            "A veces se niega a responder sin suficiente contexto de laboratorio",
+            "Puede alucinar detalles técnicos en vulnerabilidades poco conocidas",
+            "Límite de mensajes en el plan gratuito"
+          ],
+          best_for: "Scripts de automatización, análisis de código, explicar CVEs, generar payloads."
+        },
+        {
+          name: "Claude (Sonnet 3.7 / 4.x)",
+          rating: 8,
+          pros: [
+            "Razonamiento más profundo y matizado que GPT en análisis largos",
+            "Mejor en explicar el 'por qué' detrás de una vulnerabilidad",
+            "Excelente redactando writeups y documentación técnica",
+            "Menos censura que GPT en contextos de seguridad bien explicados",
+            "Muy bueno estructurando metodologías de pentesting"
+          ],
+          cons: [
+            "Sin acceso a internet (en versión base) — no para CVEs recientes",
+            "Más lento que GPT en respuestas largas",
+            "Contexto de ventana aunque largo, a veces pierde el hilo en conversaciones muy extensas"
+          ],
+          best_for: "Writeups, análisis conceptual profundo, documentación técnica, metodología."
+        },
+        {
+          name: "Gemini (Google)",
+          rating: 6,
+          pros: [
+            "Integrado en Google — útil para buscar docs técnicas al vuelo",
+            "Bueno con código en general",
+            "Acceso a Google Search integrado"
+          ],
+          cons: [
+            "Más conservador que GPT o Claude en seguridad ofensiva",
+            "Respuestas a veces demasiado genéricas para hacking técnico",
+            "Peor que los otros dos en análisis de vulnerabilidades específicas"
+          ],
+          best_for: "Buscar documentación, entender tecnologías nuevas, scripting general."
+        },
+        {
+          name: "GitHub Copilot",
+          rating: 7,
+          pros: [
+            "Integrado directamente en VSCode — flujo de trabajo rápido",
+            "Muy bueno completando scripts de pentesting a medida que los escribes",
+            "Entiende el contexto del proyecto completo",
+            "Copilot Chat puede analizar el código abierto en el editor"
+          ],
+          cons: [
+            "No sirve para razonamiento general o planificación",
+            "Solo para contexto de desarrollo/scripting",
+            "De pago (incluido en GitHub Pro o plan Copilot)"
+          ],
+          best_for: "Escribir scripts de pentesting directamente en el editor, autocompletar herramientas custom."
+        }
+      ],
+      tips: [
+        "Para hacking cotidiano: ChatGPT para scripts y exploits, Claude para documentar y escribir.",
+        "Nunca uses una sola IA — combínalas. GPT genera el payload, Claude lo explica, tú lo entiendes.",
+        "Para CVEs muy recientes, solo GPT con búsqueda web funciona bien.",
+        "Copilot es el que más integrado está en el flujo de desarrollo — si escribes herramientas propias, es esencial."
+      ]
+    },
+
+    "prompt-writeup-generator": {
+      intro: "Workflow completo para generar writeups de calidad usando IA. Basado en los writeups que publico en este blog — este es exactamente el proceso que sigo.",
+      sections: [
+        {
+          title: "Fase 1 — Capturar el proceso mientras hackeas",
+          type: "tip",
+          content: "El mayor error es intentar escribir el writeup de memoria después. Documenta en tiempo real: copia los comandos y sus outputs, guarda las capturas de pantalla en orden cronológico y apunta las decisiones que tomaste (incluso los callejones sin salida)."
+        },
+        {
+          title: "Fase 2 — Prompt de estructura inicial",
+          type: "prompt",
+          content: `Tengo las siguientes notas en bruto de un CTF/máquina:
+
+[PEGAR NOTAS EN BRUTO — comandos, outputs, observaciones]
+
+Organízalas en la estructura estándar de un writeup profesional:
+1. Reconocimiento (Nmap, enumeración de servicios)
+2. Enumeración (descubrimiento de vectores de ataque)
+3. Explotación (con el vector principal claramente identificado)
+4. Post-explotación / Privilege Escalation
+5. Lecciones aprendidas
+
+Mantén todos los comandos exactos. Solo reorganiza y añade transiciones narrativas.`
+        },
+        {
+          title: "Fase 3 — Prompt de pulido técnico",
+          type: "prompt",
+          content: `Revisa este writeup de seguridad y mejora solo estos aspectos:
+1. Claridad técnica: ¿cada paso se entiende sin conocimiento previo de la máquina?
+2. Comandos: ¿están todos completos y son reproducibles?
+3. Explicaciones: añade una línea explicando QUÉ hace cada comando importante y POR QUÉ
+4. Flujo: ¿las transiciones entre secciones son lógicas?
+
+NO cambies el contenido técnico, solo la claridad y estructura.
+Writeup: [PEGAR WRITEUP]`
+        },
+        {
+          title: "Fase 4 — Generar el título y descripción",
+          type: "prompt",
+          content: `Para este writeup de [NOMBRE_MÁQUINA] ([PLATAFORMA], [DIFICULTAD]):
+Genera:
+1. Un título conciso que incluya el nombre de la máquina y la vulnerabilidad principal
+2. Una descripción de 2 líneas para la tarjeta del blog (máx 150 caracteres)
+3. 5-6 tags relevantes en minúsculas separados por comas
+4. Una frase "hook" de apertura para el writeup que enganche al lector`
+        }
+      ],
+      tips: [
+        "Documenta mientras hackeas, no después — el 80% de la calidad del writeup depende de las notas en bruto.",
+        "No dejes que la IA invente detalles técnicos — solo estructura y conecta lo que tú ya tienes.",
+        "Pide siempre a la IA que mantenga los comandos exactos sin modificarlos.",
+        "La IA es excelente para las transiciones narrativas ('después de obtener acceso...' etc.) pero tú decides el contenido técnico.",
+        "Revisa siempre el output de la IA antes de publicar — puede cambiar sutilmente el significado técnico.",
+        "Guarda tus prompts que funcionan bien — son más valiosos que los writeups."
+      ],
+      links: [
+        { label: "ChatGPT", url: "https://chat.openai.com", description: "Para generar y pulir la estructura." },
+        { label: "Claude", url: "https://claude.ai", description: "Para revisión de claridad y redacción técnica." },
+        { label: "Obsidian", url: "https://obsidian.md", description: "Para las notas en bruto durante el hacking." }
+      ]
+    }
+
+  };
+
+  /* =========================================================
+     TIPOS DE SECCIÓN
+  ========================================================= */
+  const TYPE_META = {
+    'prompts':  { color: '#a78bfa', bg: 'rgba(167,139,250,0.10)', border: 'rgba(167,139,250,0.3)', label: 'Prompts' },
+    'opinion':  { color: '#38bdf8', bg: 'rgba(56,189,248,0.10)',  border: 'rgba(56,189,248,0.3)',  label: 'Opinión' },
+    'links':    { color: '#22c55e', bg: 'rgba(34,197,94,0.10)',   border: 'rgba(34,197,94,0.3)',   label: 'Links'   },
+    'workflow': { color: '#fb923c', bg: 'rgba(251,146,60,0.10)',  border: 'rgba(251,146,60,0.3)',  label: 'Workflow'},
+    'tools':    { color: '#f472b6', bg: 'rgba(244,114,182,0.10)', border: 'rgba(244,114,182,0.3)', label: 'Tools'  },
+    'default':  { color: '#8b949e', bg: 'rgba(139,148,158,0.10)', border: 'rgba(139,148,158,0.3)', label: 'Recurso'},
+  };
+
+  /* =========================================================
+     INIT
+  ========================================================= */
+  document.addEventListener('DOMContentLoaded', async () => {
+
+    // Header
+    const hRes  = await fetch('header.html');
+    const hHtml = await hRes.text();
+    document.getElementById('header-container').innerHTML = hHtml;
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.classList.remove('nav-accent');
+      if (link.getAttribute('href').split('/').pop() === 'resources.html')
+        link.classList.add('nav-accent');
+    });
+
+    // Leer ?id=
+    const id = new URLSearchParams(window.location.search).get('id');
+    if (!id) { renderError('No resource specified.'); return; }
+
+    try {
+      const data = await fetch('resources.json').then(r => r.json());
+      const res  = data.find(r => r.id === id);
+      if (!res) { renderError('Resource not found.'); return; }
+      document.title = `${res.title} | diseo`;
+      renderArticle(res);
+    } catch {
+      renderError('Failed to load resource.');
+    }
+  });
+
+  /* =========================================================
+     RENDER PRINCIPAL
+  ========================================================= */
+  function renderArticle(r) {
+    const meta = RESOURCE_META[r.id] || {};
+    const tm   = TYPE_META[r.type] || TYPE_META.default;
+    const dateStr = r.date
+      ? new Date(r.date).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })
+      : '';
+
+    const tagsHtml = (r.tags || []).map(t =>
+      `<span class="ca-tag">#${t.toLowerCase()}</span>`
+    ).join('');
+
+    let n = 1;
+    const num = () => String(n++).padStart(2, '0');
+
+    /* ── Bloques por tipo de recurso ─────────────────────── */
+    let sectionsHtml = '';
+
+    /* Intro */
+    if (meta.intro) {
+      sectionsHtml += `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Introducción
+          </h2>
+          <p class="ca-body-text">${meta.intro}</p>
+        </section>`;
+    }
+
+    /* Prompts */
+    if (meta.prompts && meta.prompts.length) {
+      sectionsHtml += `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Prompts
+          </h2>
+          <div class="res-prompts-list">
+            ${meta.prompts.map((p, i) => `
+              <div class="res-prompt-card">
+                <div class="res-prompt-head">
+                  <span class="res-prompt-num">${String(i+1).padStart(2,'0')}</span>
+                  <div>
+                    <div class="res-prompt-title">${p.title}</div>
+                    <div class="res-prompt-usecase">${p.use_case}</div>
+                  </div>
+                  <button class="res-copy-btn" data-prompt="${encodeURIComponent(p.prompt)}" title="Copiar prompt">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg>
+                    <span>Copiar</span>
+                  </button>
+                </div>
+                <pre class="res-prompt-body"><code>${escapeHtml(p.prompt)}</code></pre>
+              </div>
+            `).join('')}
+          </div>
+        </section>`;
+    }
+
+    /* Secciones custom (workflow steps) */
+    if (meta.sections && meta.sections.length) {
+      sectionsHtml += `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Workflow paso a paso
+          </h2>
+          <div class="res-steps">
+            ${meta.sections.map((s, i) => {
+              const isPrompt  = s.type === 'prompt';
+              const isTip     = s.type === 'tip';
+              const stepClass = isPrompt ? 'res-step-prompt' : isTip ? 'res-step-tip' : 'res-step-default';
+              const copyBtn   = isPrompt
+                ? `<button class="res-copy-btn" data-prompt="${encodeURIComponent(s.content)}" title="Copiar prompt">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                      <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
+                    </svg><span>Copiar</span></button>` : '';
+              return `
+                <div class="res-step ${stepClass}">
+                  <div class="res-step-head">
+                    <span class="res-step-num">${String(i+1).padStart(2,'0')}</span>
+                    <span class="res-step-title">${s.title}</span>
+                    ${copyBtn}
+                  </div>
+                  ${isPrompt
+                    ? `<pre class="res-prompt-body"><code>${escapeHtml(s.content)}</code></pre>`
+                    : `<p class="res-step-content">${s.content}</p>`}
+                </div>`;
+            }).join('')}
+          </div>
+        </section>`;
+    }
+
+    /* Comparativa de modelos */
+    if (meta.models && meta.models.length) {
+      sectionsHtml += `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Comparativa de modelos
+          </h2>
+          <div class="res-models">
+            ${meta.models.map(m => `
+              <div class="res-model-card">
+                <div class="res-model-head">
+                  <span class="res-model-name">${m.name}</span>
+                  <div class="res-model-rating">
+                    <div class="res-rating-bar">
+                      <div class="res-rating-fill" style="width:${m.rating * 10}%"></div>
+                    </div>
+                    <span class="res-rating-num">${m.rating}<span style="color:var(--color-text-muted);font-size:.7rem;">/10</span></span>
+                  </div>
+                </div>
+                <div class="res-model-best">${m.best_for}</div>
+                <div class="res-model-cols">
+                  <div>
+                    <div class="res-model-col-label" style="color:#22c55e;">✓ Pros</div>
+                    <ul class="res-model-list">
+                      ${m.pros.map(p => `<li><span class="res-dot" style="background:#22c55e;flex-shrink:0;"></span>${p}</li>`).join('')}
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="res-model-col-label" style="color:#f87171;">✗ Contras</div>
+                    <ul class="res-model-list">
+                      ${m.cons.map(c => `<li><span class="res-dot" style="background:#f87171;flex-shrink:0;"></span>${c}</li>`).join('')}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </section>`;
+    }
+
+    /* Tips */
+    if (meta.tips && meta.tips.length) {
+      sectionsHtml += `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Consejos y trucos
+          </h2>
+          <ul class="ca-highlights">
+            ${meta.tips.map(t => `
+              <li class="ca-highlight-item">
+                <span class="ca-hl-dot" style="background:#a78bfa;box-shadow:0 0 6px rgba(167,139,250,0.5);"></span>
+                <span>${t}</span>
+              </li>`).join('')}
+          </ul>
+        </section>`;
+    }
+
+    /* Links */
+    if (meta.links && meta.links.length) {
+      sectionsHtml += `
+        <section class="ca-section">
+          <h2 class="ca-section-title">
+            <span class="ca-section-num">${num()}</span>Links útiles
+          </h2>
+          <div class="res-links-grid">
+            ${meta.links.map(l => `
+              <a href="${l.url}" target="_blank" class="res-link-card">
+                <div class="res-link-head">
+                  <span class="res-link-label">${l.label}</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                    <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                  </svg>
+                </div>
+                ${l.description ? `<p class="res-link-desc">${l.description}</p>` : ''}
+                <span class="res-link-url">${l.url.replace(/^https?:\/\//, '')}</span>
+              </a>
+            `).join('')}
+          </div>
+        </section>`;
+    }
+
+    /* Info técnica */
+    sectionsHtml += `
+      <section class="ca-section">
+        <h2 class="ca-section-title">
+          <span class="ca-section-num">${num()}</span>Información
+        </h2>
+        <div class="ca-info-grid">
+          <div class="ca-info-block">
+            <span class="ca-info-label">Tipo</span>
+            <span class="ca-info-val" style="color:${tm.color};">${tm.label}</span>
+          </div>
+          <div class="ca-info-block">
+            <span class="ca-info-label">Categoría</span>
+            <span class="ca-info-val">${r.category || '—'}</span>
+          </div>
+          ${dateStr ? `<div class="ca-info-block">
+            <span class="ca-info-label">Fecha</span>
+            <span class="ca-info-val">${dateStr}</span>
+          </div>` : ''}
+        </div>
+      </section>`;
+
+    /* ── HTML completo ─────────────────────────────────── */
+    document.getElementById('res-content').innerHTML = `
+
+      <a href="resources.html" class="ca-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Resources
+      </a>
+
+      <!-- Hero banner con color del tipo -->
+      <div class="res-hero" style="background:linear-gradient(135deg,${tm.bg} 0%,transparent 70%);border-color:${tm.border};">
+        <div class="res-hero-icon" style="background:${tm.bg};border:1px solid ${tm.border};color:${tm.color};">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <span class="res-hero-type" style="color:${tm.color};">${tm.label}</span>
+      </div>
+
+      <!-- Cabecera -->
+      <header class="ca-header">
+        <div class="ca-meta-row">
+          <span class="res-type-badge-lg" style="background:${tm.bg};color:${tm.color};border:1px solid ${tm.border};">
+            ${tm.label}
+          </span>
+          ${r.featured ? `<span class="res-featured-badge">
+            <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>Destacado</span>` : ''}
+          ${dateStr ? `<span class="ca-date">${dateStr}</span>` : ''}
+        </div>
+        <h1 class="ca-title">${r.title}</h1>
+        <p class="ca-provider" style="color:var(--color-text-muted);">${r.description}</p>
+        <div class="ca-tags">${tagsHtml}</div>
+      </header>
+
+      <div class="ca-divider"></div>
+
+      ${sectionsHtml}
+    `;
+
+    /* ── Eventos botones copiar ─────────────────────────── */
+    document.querySelectorAll('.res-copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const text = decodeURIComponent(btn.dataset.prompt);
+        try {
+          await navigator.clipboard.writeText(text);
+          const span = btn.querySelector('span');
+          span.textContent = '✓ Copiado';
+          btn.classList.add('copied');
+          setTimeout(() => { span.textContent = 'Copiar'; btn.classList.remove('copied'); }, 2000);
+        } catch { btn.querySelector('span').textContent = 'Error'; }
+      });
+    });
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function renderError(msg) {
+    document.getElementById('res-content').innerHTML =
+      `<p style="color:var(--color-text-muted);padding:4rem 0;text-align:center;font-size:0.9rem;">${msg}</p>`;
+  }
+
+  </script>
+</body>
+</html>

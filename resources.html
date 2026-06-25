@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | diseo</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/resources.css">
+  <script src="js/rate-limit.js"></script>
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div id="header-container"></div>
+
+  <main class="mx-auto w-full max-w-4xl px-4 py-8">
+    <section class="page-section">
+
+      <div class="page-hero">
+        <span class="section-label">// ai resources</span>
+        <h1 class="page-title">Resources</h1>
+        <p class="page-desc">
+          Prompts de IA para hacking, comparativas de modelos, workflows y links útiles
+          para sacarle el máximo partido a la inteligencia artificial en ciberseguridad.
+        </p>
+      </div>
+
+      <!-- Stats por tipo -->
+      <div id="res-stats" class="res-stats-row"></div>
+
+      <!-- Búsqueda -->
+      <div class="search-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input"
+          placeholder="Search prompts, IAs, workflows..."
+          class="search-input">
+      </div>
+
+      <!-- Tags -->
+      <div id="tags-container" class="tags-row"></div>
+
+      <!-- Grid de tarjetas -->
+      <div id="resources-grid" class="res-grid">
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+        <div class="loading-pulse"></div>
+      </div>
+
+      <!-- Paginación -->
+      <div id="pagination-container" class="pagination-row"></div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner mx-auto max-w-4xl px-4">
+      <span class="footer-logo">diseo<span style="color:var(--color-text-muted)">@</span>hacker</span>
+      <span class="footer-copy">Built with ♥ &amp; caffeine</span>
+    </div>
+  </footer>
+
+  <script src="js/resources.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => { initResources(); });
+  </script>
+</body>
+</html>

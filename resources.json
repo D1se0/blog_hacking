@@ -1,0 +1,32 @@
+[
+  {
+    "id": "chatgpt-hacking-prompts",
+    "title": "Prompts de IA para Hacking Ético",
+    "description": "Colección de prompts optimizados para ChatGPT, Claude y otros modelos para acelerar el flujo de trabajo en pentesting, análisis de vulnerabilidades y CTFs.",
+    "category": "Prompts",
+    "tags": ["prompts", "chatgpt", "claude", "pentesting", "ctf", "ai"],
+    "type": "prompts",
+    "date": "2026-05-12",
+    "featured": true
+  },
+  {
+    "id": "ia-comparison-2025",
+    "title": "Comparativa de IAs para Ciberseguridad 2025",
+    "description": "Análisis y opinión personal sobre ChatGPT, Claude, Gemini y Copilot aplicados a tareas de seguridad ofensiva. Cuál usar para cada situación.",
+    "category": "Opinión",
+    "tags": ["chatgpt", "claude", "gemini", "copilot", "comparativa", "opinion"],
+    "type": "opinion",
+    "date": "2026-04-20",
+    "featured": false
+  },
+  {
+    "id": "prompt-writeup-generator",
+    "title": "Generador de Writeups con IA",
+    "description": "Flujo de trabajo completo para generar writeups de calidad usando IA: desde la estructura hasta el lenguaje técnico. Prompts testados en CTFs reales.",
+    "category": "Prompts",
+    "tags": ["prompts", "writeup", "workflow", "ctf", "chatgpt", "automatizacion"],
+    "type": "prompts",
+    "date": "2026-03-08",
+    "featured": true
+  }
+]
