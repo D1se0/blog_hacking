@@ -1,22 +1,5 @@
 [
   {
-    "id": "example-bug",
-    "title": "SQL Injection en panel de autenticación",
-    "program": "Programa Privado — Empresa Anónima",
-    "severity": "Critical",
-    "cvss": 9.8,
-    "status": "resolved",
-    "date": "2025-03-14",
-    "type": "SQL Injection",
-    "url": "",
-    "bounty": "",
-    "tags": ["sqli", "authentication", "web", "critical"],
-    "description": "Inyección SQL en el endpoint de login que permitía bypassear la autenticación y extraer la base de datos completa de usuarios sin credenciales previas.",
-    "summary": "Bypass de autenticación mediante SQLi clásico en el parámetro username del formulario de login.",
-    "impact": "Acceso no autorizado a cuentas de usuario, extracción completa de la base de datos de credenciales.",
-    "affected_endpoint": "POST /api/v1/auth/login"
-  },
-  {
     "id": "race-condition-multiple-purchase",
     "title": "Race Condition permite compra múltiple debitando un solo precio",
     "program": "Securo — Empresa Anónima",
