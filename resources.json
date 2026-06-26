@@ -2,31 +2,41 @@
   {
     "id": "chatgpt-hacking-prompts",
     "title": "Prompts de IA para Hacking Ético",
-    "description": "Colección de prompts optimizados para ChatGPT, Claude y otros modelos para acelerar el flujo de trabajo en pentesting, análisis de vulnerabilidades y CTFs.",
+    "description": "Colección de prompts reales y optimizados para ChatGPT, Claude y otros modelos. Cómo formularlos para que no se pongan quisquillosos, trucos de contexto y los mejores modelos para cada tarea de pentesting.",
     "category": "Prompts",
-    "tags": ["prompts", "chatgpt", "claude", "pentesting", "ctf", "ai"],
+    "tags": ["prompts", "chatgpt", "claude", "pentesting", "ctf", "ai", "jailbreak-etico"],
     "type": "prompts",
-    "date": "2026-05-12",
+    "date": "2026-06-14",
     "featured": true
   },
   {
     "id": "ia-comparison-2025",
     "title": "Comparativa de IAs para Ciberseguridad 2025",
-    "description": "Análisis y opinión personal sobre ChatGPT, Claude, Gemini y Copilot aplicados a tareas de seguridad ofensiva. Cuál usar para cada situación.",
+    "description": "Análisis extenso y opinión personal sobre ChatGPT, Claude, Gemini, Copilot, Grok y DeepSeek aplicados a tareas reales de seguridad ofensiva. Benchmarks, limitaciones y cuál usar en cada situación.",
     "category": "Opinión",
-    "tags": ["chatgpt", "claude", "gemini", "copilot", "comparativa", "opinion"],
+    "tags": ["chatgpt", "claude", "gemini", "copilot", "grok", "deepseek", "comparativa", "opinion", "benchmark"],
     "type": "opinion",
-    "date": "2026-04-20",
+    "date": "2026-06-14",
     "featured": false
   },
   {
     "id": "prompt-writeup-generator",
     "title": "Generador de Writeups con IA",
-    "description": "Flujo de trabajo completo para generar writeups de calidad usando IA: desde la estructura hasta el lenguaje técnico. Prompts testados en CTFs reales.",
+    "description": "Los prompts exactos que uso para generar y mejorar mis writeups de CTF/HTB con IA. Dos flujos distintos: uno para la descripción y análisis de vulnerabilidades, otro para pulir el writeup técnico sin perder la esencia.",
     "category": "Prompts",
-    "tags": ["prompts", "writeup", "workflow", "ctf", "chatgpt", "automatizacion"],
-    "type": "prompts",
-    "date": "2026-03-08",
+    "tags": ["prompts", "writeup", "workflow", "ctf", "htb", "chatgpt", "automatizacion"],
+    "type": "workflow",
+    "date": "2026-06-14",
     "featured": true
+  },
+  {
+    "id": "ia-youtube-thumbnails",
+    "title": "IA para Miniaturas y Contenido de YouTube",
+    "description": "Prompts para crear miniaturas estilo propaganda vintage con tu cara, descripciones SEO optimizadas, etiquetas con 100% de puntuación SEO y textos para LinkedIn. Flujo completo para creadores de contenido sobre hacking.",
+    "category": "Prompts",
+    "tags": ["youtube", "thumbnails", "seo", "linkedin", "contenido", "prompts", "imagen", "ia"],
+    "type": "prompts",
+    "date": "2026-06-14",
+    "featured": false
   }
 ]
