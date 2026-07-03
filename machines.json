@@ -9182,5 +9182,23 @@
     "date": "2026-06-16",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "enigma",
+    "title": "Enigma HackTheBox (Easy)",
+    "description": "Writeup de Enigma",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "command_injection"
+    ],
+    "date": "2026-07-03",
+    "active": true,
+    "active_to_retire": false
   }
 ]
