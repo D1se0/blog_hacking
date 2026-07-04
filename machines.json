@@ -2423,5 +2423,26 @@
     "date": "2026-07-03",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "checkpoint",
+    "title": "Checkpoint HackTheBox (Intermediate)",
+    "description": "Writeup de Checkpoint",
+    "difficulty": "Intermediate",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ad",
+      "dc",
+      "bloodhound",
+      "dMSA",
+      "analisis_forense"
+    ],
+    "date": "2026-07-04",
+    "active": true,
+    "active_to_retire": false
   }
 ]
