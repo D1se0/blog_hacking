@@ -9221,5 +9221,25 @@
     "date": "2026-07-04",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "nimbus",
+    "title": "Nimbus HackTheBox (Hard)",
+    "description": "Writeup de Nimbus",
+    "difficulty": "Hard",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "aws",
+      "shellsock",
+      "rce",
+      "yaml"
+    ],
+    "date": "2026-07-05",
+    "active": true,
+    "active_to_retire": false
   }
 ]
