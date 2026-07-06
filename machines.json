@@ -9241,5 +9241,26 @@
     "date": "2026-07-05",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "makesense",
+    "title": "MakeSense HackTheBox (Intermediate)",
+    "description": "Writeup de MakeSense",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "xss",
+      "wordpress",
+      "ssrf",
+      "ocr",
+      "php"
+    ],
+    "date": "2026-07-06",
+    "active": true,
+    "active_to_retire": false
   }
 ]
