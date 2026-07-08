@@ -9262,5 +9262,26 @@
     "date": "2026-07-06",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "helix",
+    "title": "Helix HackTheBox (Intermediate)",
+    "description": "Writeup de Helix",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sql",
+      "rce",
+      "cve",
+      "cracking",
+      "servicios"
+    ],
+    "date": "2026-07-08",
+    "active": true,
+    "active_to_retire": false
   }
 ]
