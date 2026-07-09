@@ -9283,5 +9283,26 @@
     "date": "2026-07-08",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "orion",
+    "title": "Orion HackTheBox (Easy)",
+    "description": "Writeup de Orion",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "cve",
+      "rce",
+      "telnet",
+      "cracking",
+      "craftcms"
+    ],
+    "date": "2026-07-09",
+    "active": true,
+    "active_to_retire": false
   }
 ]
