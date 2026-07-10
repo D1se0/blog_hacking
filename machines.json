@@ -9302,7 +9302,7 @@
       "craftcms"
     ],
     "date": "2026-07-09",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   }
 ]
