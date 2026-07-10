@@ -9304,5 +9304,27 @@
     "date": "2026-07-09",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "abducted",
+    "title": "Abducted HackTheBox (Intermediate)",
+    "description": "Writeup de Abducted",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "cve",
+      "rce",
+      "smb",
+      "syslinks",
+      "rsa",
+      "cracking"
+    ],
+    "date": "2026-07-10",
+    "active": false,
+    "active_to_retire": false
   }
 ]
