@@ -9326,5 +9326,25 @@
     "date": "2026-07-10",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "nexus",
+    "title": "Nexus HackTheBox (Easy)",
+    "description": "Writeup de Nexus",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "cve",
+      "rce",
+      "git",
+      "path_traversal"
+    ],
+    "date": "2026-07-11",
+    "active": false,
+    "active_to_retire": false
   }
 ]
