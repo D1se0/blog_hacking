@@ -9346,5 +9346,27 @@
     "date": "2026-07-11",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "paperwork",
+    "title": "Paperwork HackTheBox (Easy)",
+    "description": "Writeup de Paperwork",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "printer",
+      "rce",
+      "command_injection",
+      "race_condition",
+      "pjl",
+      "jetDirect"
+    ],
+    "date": "2026-07-13",
+    "active": true,
+    "active_to_retire": false
   }
 ]
