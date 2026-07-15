@@ -9368,5 +9368,25 @@
     "date": "2026-07-13",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "fireflow",
+    "title": "Fireflow HackTheBox (Intermediate)",
+    "description": "Writeup de Fireflow",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "rce",
+      "cve",
+      "kubernetes",
+      "json"
+    ],
+    "date": "2026-07-15",
+    "active": false,
+    "active_to_retire": false
   }
 ]
