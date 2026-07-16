@@ -9388,5 +9388,27 @@
     "date": "2026-07-15",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "ghostlink",
+    "title": "Ghostlink HackTheBox (Hard)",
+    "description": "Writeup de Ghostlink",
+    "difficulty": "Hard",
+    "os": "Windows",
+    "type": "HTB",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "cve",
+      "rce",
+      "esc",
+      "cert",
+      "gogs",
+      "lfi"
+    ],
+    "date": "2026-07-16",
+    "active": false,
+    "active_to_retire": false
   }
 ]
