@@ -9469,5 +9469,25 @@
     "date": "2026-08-02",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "baluhome",
+    "title": "Baluhome Dockerlabs (Intermediate)",
+    "description": "Writeup de Baluhome",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "xss",
+      "bypass",
+      "rce",
+      "scripting"
+    ],
+    "date": "2026-08-02",
+    "active": false,
+    "active_to_retire": false
   }
 ]
