@@ -9449,5 +9449,25 @@
     "date": "2026-08-02",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "kmspwned",
+    "title": "Kmspwned Dockerlabs (Easy)",
+    "description": "Writeup de Kmspwned",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "sqli",
+      "suid",
+      "crontab",
+      "cracking"
+    ],
+    "date": "2026-08-02",
+    "active": false,
+    "active_to_retire": false
   }
 ]
