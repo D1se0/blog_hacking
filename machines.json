@@ -9431,5 +9431,23 @@
     "date": "2026-07-21",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "stored-xss-in-post-body",
+    "title": "Stored XSS in Post Body Other BBLabs (Easy)",
+    "description": "Writeup de Stored XSS in Post Body",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "BBLabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "xss",
+      "stored"
+    ],
+    "date": "2026-08-02",
+    "active": false,
+    "active_to_retire": false
   }
 ]
