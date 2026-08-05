@@ -9508,5 +9508,26 @@
     "date": "2026-08-05",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "gotham",
+    "title": "Gotham Dockerlabs (Easy)",
+    "description": "Writeup de Gotham",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "cracking",
+      "sudo",
+      "password",
+      "command_injection"
+    ],
+    "date": "2026-08-05",
+    "active": false,
+    "active_to_retire": false
   }
 ]
