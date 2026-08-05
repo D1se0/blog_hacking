@@ -9489,5 +9489,24 @@
     "date": "2026-08-02",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "apkadmin",
+    "title": "ApkAdmin Dockerlabs (Easy)",
+    "description": "Writeup de ApkAdmin",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "apk",
+      "reutilizacion",
+      "password"
+    ],
+    "date": "2026-08-05",
+    "active": false,
+    "active_to_retire": false
   }
 ]
