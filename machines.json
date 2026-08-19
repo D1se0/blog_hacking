@@ -1112,7 +1112,7 @@
       "tcpdump"
     ],
     "date": "2026-03-07",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
@@ -1191,7 +1191,7 @@
       "rce"
     ],
     "date": "2026-03-21",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
@@ -2201,7 +2201,7 @@
       "dns"
     ],
     "date": "2026-04-18",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
