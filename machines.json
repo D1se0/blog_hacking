@@ -186,7 +186,7 @@
       "rce"
     ],
     "date": "2025-08-09",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
@@ -446,7 +446,7 @@
       "ldap"
     ],
     "date": "2025-11-22",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
@@ -9281,7 +9281,7 @@
       "servicios"
     ],
     "date": "2026-07-08",
-    "active": true,
+    "active": false,
     "active_to_retire": false
   },
   {
