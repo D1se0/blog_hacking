@@ -9529,5 +9529,23 @@
     "date": "2026-08-05",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "reflected-xss-on-404-error-page",
+    "title": "Reflected XSS On 404 Error Page Other (Easy)",
+    "description": "Writeup de Reflected XSS On 404 Error Page",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "BBLabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "xss",
+      "404"
+    ],
+    "date": "2026-08-19",
+    "active": false,
+    "active_to_retire": false
   }
 ]
