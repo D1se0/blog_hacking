@@ -16,14 +16,13 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown-light.min.css">
 
   <!-- Highlight.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+  <link rel="stylesheet" href="css/blog.css">
   <link rel="stylesheet" href="css/view.css">
-
-  <script src="js/rate-limit.js"></script>
 </head>
 
 <body>
@@ -163,7 +162,6 @@ const mdRes = await fetch(mdFile, {
         fixImagePaths(folder);
         enableImageModal();
         document.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
-        addCopyButtons();
         generateTOC();
 
         /*
@@ -366,70 +364,7 @@ const mdRes = await fetch(mdFile, {
     }
 
     // Sidebar TOC
-    /* ─────────────────────────────────────────────────────────────────
-       COPY BUTTONS — Botón copiar en bloques de código
-    ───────────────────────────────────────────────────────────────── */
-    function addCopyButtons() {
-      contentDiv.querySelectorAll('pre').forEach(pre => {
-        const code = pre.querySelector('code');
-        if (!code) return;
-
-        // Ya tiene botón — evitar duplicar al llamar varias veces
-        if (pre.querySelector('.copy-btn')) return;
-
-        // Label del lenguaje (highlight.js añade class="language-xxx")
-        const langClass = [...code.classList].find(c => c.startsWith('language-'));
-        if (langClass) {
-          const lang = langClass.replace('language-', '');
-          const label = document.createElement('span');
-          label.className = 'lang-label';
-          label.textContent = lang;
-          pre.appendChild(label);
-        }
-
-        // Botón copiar
-        const btn = document.createElement('button');
-        btn.className = 'copy-btn';
-        btn.title = 'Copiar código';
-        btn.innerHTML = `
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-          </svg>
-          <span>Copiar</span>
-        `;
-
-        btn.addEventListener('click', async (e) => {
-          e.stopPropagation();
-          try {
-            await navigator.clipboard.writeText(code.innerText);
-            btn.classList.add('copied');
-            btn.querySelector('span').textContent = 'Copiado';
-            btn.querySelector('svg').innerHTML = `
-              <polyline points="20 6 9 17 4 12"
-                stroke="currentColor" stroke-width="2.5"
-                stroke-linecap="round" stroke-linejoin="round"/>
-            `;
-            setTimeout(() => {
-              btn.classList.remove('copied');
-              btn.querySelector('span').textContent = 'Copiar';
-              btn.querySelector('svg').innerHTML = `
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-              `;
-            }, 2000);
-          } catch {
-            btn.querySelector('span').textContent = 'Error';
-            setTimeout(() => { btn.querySelector('span').textContent = 'Copiar'; }, 2000);
-          }
-        });
-
-        pre.appendChild(btn);
-      });
-    }
-
-        function generateTOC() {
+    function generateTOC() {
       const headers = contentDiv.querySelectorAll("h1,h2");
       sidebar.innerHTML = "";
       headers.forEach((header, i) => {
@@ -859,7 +794,9 @@ const mdRes = await fetch(mdFile, {
 
         links.forEach(link => {
           link.classList.remove('nav-accent');
-          link.style.color = 'var(--color-text-muted)';
+          if (!link.classList.contains('nav-hw-link')) {
+            link.style.color = 'var(--color-text-muted)';
+          }
 
           const href = link.getAttribute('href') || '';
 

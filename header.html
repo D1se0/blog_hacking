@@ -1,8 +1,6 @@
 <!-- header.html -->
-
 <header class="header-wrapper">
   <nav class="header-nav mx-auto flex max-w-4xl items-center justify-between px-4">
-
     <!-- Logo -->
     <a href="index.html" class="header-logo flex items-center">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -13,7 +11,6 @@
       <span class="logo-main">diseo</span><span class="logo-at">@</span><span class="logo-main">hacker</span>
       <span class="terminal-cursor">_</span>
     </a>
-
     <!-- Desktop nav -->
     <ul class="header-desktop hidden items-center sm:flex">
       <li><a href="index.html" class="nav-link">Home</a></li>
@@ -22,18 +19,31 @@
       <li><a href="reflections.html" class="nav-link">Reflections</a></li>
       <li><a href="certificates.html" class="nav-link">Certs</a></li>
       <li><a href="enviroments.html" class="nav-link">Envs</a></li>
-      <li><a href="cheatsheet.html" class="nav-link">CheatSheet</a></li>
+      <li><a href="cheatsheet.html" class="nav-link">Cheatsheet</a></li>
       <li><a href="bugbounty.html" class="nav-link">BugBounty</a></li>
       <li><a href="resources.html" class="nav-link">Resources</a></li>
+      <li>
+        <a href="https://d1se0.github.io/hardwarehacking/" target="_blank" rel="noopener noreferrer"
+          class="nav-link nav-hw-link" title="Hardware Hacking Blog">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            style="display:inline;vertical-align:-1px;margin-right:3px;opacity:.8;">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/>
+            <line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/>
+            <line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/>
+          </svg>HW
+        </a>
+      </li>
     </ul>
-
     <!-- Hamburger (mobile) -->
     <button id="mobile-toggle" class="mobile-hamburger sm:hidden" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
-
   </nav>
-
   <!-- Mobile nav -->
   <div id="mobile-menu" class="hidden sm:hidden">
     <ul class="mobile-menu-list">
@@ -46,9 +56,24 @@
       <li><a href="cheatsheet.html" class="nav-link">CheatSheet</a></li>
       <li><a href="bugbounty.html" class="nav-link">BugBounty</a></li>
       <li><a href="resources.html" class="nav-link">Resources</a></li>
+      <li>
+        <a href="https://d1se0.github.io/hardwarehacking/" target="_blank" rel="noopener noreferrer"
+          class="nav-link nav-hw-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round"
+            style="display:inline;vertical-align:-1px;margin-right:5px;opacity:.8;">
+            <rect x="4" y="4" width="16" height="16" rx="2"/>
+            <rect x="9" y="9" width="6" height="6"/>
+            <line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+            <line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/>
+            <line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="15" x2="4" y2="15"/>
+            <line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="15" x2="22" y2="15"/>
+          </svg>Hardware Hacking
+        </a>
+      </li>
     </ul>
   </div>
-
   <script>
     // Mobile menu toggle — scoped inside header to avoid conflicts
     (function () {
@@ -60,7 +85,6 @@
         toggle.classList.toggle('open');
       });
     })();
-
     // Scroll shadow on header
     (function () {
       const nav = document.querySelector('.header-nav');
