@@ -2267,11 +2267,11 @@ body {
 
 .nav-link {
     position: relative;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 500;
     text-decoration: none;
     color: var(--color-text-muted);
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 0.5rem;
     border-radius: var(--radius-sm);
     transition: color var(--transition), background var(--transition);
     white-space: nowrap;
@@ -2306,6 +2306,27 @@ body {
 
 .nav-accent::after {
     width: 60% !important;
+}
+
+/* Hardware Hacking — enlace externo con estilo diferenciado */
+.nav-hw-link {
+    color: var(--color-accent-light) !important;
+    border: 1px solid rgba(220, 20, 60, 0.25);
+    border-radius: 6px !important;
+    padding: 0.2rem 0.55rem !important;
+    font-size: 0.76rem !important;
+    transition: color var(--transition), background var(--transition),
+                border-color var(--transition) !important;
+}
+
+.nav-hw-link:hover {
+    color: var(--color-accent) !important;
+    background: rgba(220, 20, 60, 0.08) !important;
+    border-color: rgba(220, 20, 60, 0.5) !important;
+}
+
+.nav-hw-link::after {
+    display: none !important;
 }
 
 /* Mobile hamburger */
@@ -3615,16 +3636,4 @@ a.group {
     border-color: var(--color-accent);
     color: var(--color-accent-light);
     background: var(--color-accent-dim);
-}
-
-.ca-cert-image-wrapper {
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.ca-cert-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
