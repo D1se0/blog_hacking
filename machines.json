@@ -9547,5 +9547,24 @@
     "date": "2026-08-19",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "pipepwned",
+    "title": "PipePwned Dockerlabs (Intermediate)",
+    "description": "Writeup de PipePwned",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ssti",
+      "python3",
+      "permisos"
+    ],
+    "date": "2026-09-11",
+    "active": false,
+    "active_to_retire": false
   }
 ]
