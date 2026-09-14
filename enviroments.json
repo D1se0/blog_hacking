@@ -39,5 +39,20 @@
       "nordico"
     ],
     "category": "linux"
+  },
+  {
+    "id": "whitehatso",
+    "title": "whitehatSO Environment (Ubuntu)",
+    "description": "Ubuntu 25.10 transformado en laboratorio de ethical hacking: bspwm, kitty rojo, polybar con módulo ATK y cero telemetría.",
+    "date": "2026-09-14",
+    "tags": [
+      "linux",
+      "setup",
+      "ubuntu",
+      "entorno",
+      "bspwm",
+      "whitehatso"
+    ],
+    "category": "linux"
   }
 ]
