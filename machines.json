@@ -9569,11 +9569,11 @@
   },
   {
     "id": "batflag",
-    "title": "BatFlag Other (Easy)",
+    "title": "BatFlag Atenea (Easy)",
     "description": "Writeup de BatFlag",
     "difficulty": "Easy",
     "os": "Linux",
-    "type": "Other",
+    "type": "Atenea",
     "skills": [
       "ctf",
       "writeup",
