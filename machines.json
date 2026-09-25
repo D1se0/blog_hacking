@@ -9566,5 +9566,25 @@
     "date": "2026-09-11",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "batflag",
+    "title": "BatFlag Other (Easy)",
+    "description": "Writeup de BatFlag",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Other",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "graphql",
+      "json",
+      "querys",
+      "fuzzing"
+    ],
+    "date": "2026-09-25",
+    "active": true,
+    "active_to_retire": false
   }
 ]
