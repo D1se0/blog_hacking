@@ -9586,5 +9586,24 @@
     "date": "2026-09-25",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "acme",
+    "title": "Acme Dockerlabs (Very Easy)",
+    "description": "Writeup de Acme",
+    "difficulty": "Very Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ssh",
+      "suid",
+      "sql"
+    ],
+    "date": "2026-09-29",
+    "active": false,
+    "active_to_retire": false
   }
 ]
