@@ -37,6 +37,7 @@ Sección dedicada a la teoría y referencia rápida:
 - 🔍 Enumeración
 - 💣 Explotación
 - 🔑 Escalada de privilegios
+- [Dark-Moon](https://github.com/ASCIT31/Dark-Moon): plataforma open source (GPL-3.0) de pentesting autónomo con IA, self-hosted, para practicar de forma legal en laboratorios como OWASP Juice Shop, DVWA, kubernetes-goat y Hack The Box; cubre web, API, Active Directory y Kubernetes.
 - 🛠️ Herramientas comunes (`nmap`, `burpsuite`, etc.)
 
 Diseñados para ser rápidos, claros y reutilizables.
