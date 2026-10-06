@@ -9605,5 +9605,25 @@
     "date": "2026-09-29",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "r-lyeh",
+    "title": "R'lyeh Other (Easy)",
+    "description": "Writeup de R'lyeh",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "Atenea",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "token",
+      "json",
+      "api"
+    ],
+    "date": "2026-10-06",
+    "active": true,
+    "active_to_retire": false
   }
 ]
