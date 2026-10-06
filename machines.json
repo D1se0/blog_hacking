@@ -9608,7 +9608,7 @@
   },
   {
     "id": "r-lyeh",
-    "title": "R'lyeh Other (Easy)",
+    "title": "R'lyeh Atenea (Easy)",
     "description": "Writeup de R'lyeh",
     "difficulty": "Easy",
     "os": "Windows",
@@ -9621,6 +9621,26 @@
       "token",
       "json",
       "api"
+    ],
+    "date": "2026-10-06",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "gr14l",
+    "title": "Gr14L Atenea (Intermediate)",
+    "description": "Writeup de Gr14L",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Atenea",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "token",
+      "reversing",
+      "binary"
     ],
     "date": "2026-10-06",
     "active": true,
