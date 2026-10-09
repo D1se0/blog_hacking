@@ -9645,5 +9645,57 @@
     "date": "2026-10-06",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "tattoo",
+    "title": "Tattoo Atenea (Easy)",
+    "description": "Writeup de Tattoo",
+    "difficulty": "Easy",
+    "os": "Windows",
+    "type": "Atenea",
+    "skills": [
+      "ctf",
+      "writeup",
+      "forense",
+      "ram",
+      "memoria"
+    ],
+    "date": "2026-10-09",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "johnnycab",
+    "title": "JohnnyCab Atenea (Easy)",
+    "description": "Writeup de JohnnyCab",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Atenea",
+    "skills": [
+      "ctf",
+      "writeup",
+      "forense",
+      "memoria"
+    ],
+    "date": "2026-10-09",
+    "active": true,
+    "active_to_retire": false
+  },
+  {
+    "id": "under-zer0",
+    "title": "Under Zer0 Atenea (Intermediate)",
+    "description": "Writeup de Under Zer0",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Atenea",
+    "skills": [
+      "ctf",
+      "writeup",
+      "forense",
+      "memoria"
+    ],
+    "date": "2026-10-09",
+    "active": true,
+    "active_to_retire": false
   }
 ]
