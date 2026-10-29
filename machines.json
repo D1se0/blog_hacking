@@ -9697,5 +9697,25 @@
     "date": "2026-10-09",
     "active": true,
     "active_to_retire": false
+  },
+  {
+    "id": "noctis",
+    "title": "Noctis Dockerlabs (Intermediate)",
+    "description": "Writeup de Noctis",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "images",
+      "ssti",
+      "suid"
+    ],
+    "date": "2026-10-29",
+    "active": false,
+    "active_to_retire": false
   }
 ]
