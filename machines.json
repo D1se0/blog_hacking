@@ -9717,5 +9717,179 @@
     "date": "2026-10-29",
     "active": false,
     "active_to_retire": false
+  },
+  {
+    "id": "analyst",
+    "title": "Analyst HackTheBox (Easy)",
+    "description": "Writeup de Analyst",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "pcap",
+      "wireshark",
+      "network"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "asturias",
+    "title": "Asturias HackTheBox (Intermediate)",
+    "description": "Writeup de Asturias",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "api",
+      "json",
+      "nodejs"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "decompile",
+    "title": "Decompile HackTheBox (Intermediate)",
+    "description": "Writeup de Decompile",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "apk",
+      "api.suid"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "file",
+    "title": "File Dockerlabs (Easy)",
+    "description": "Writeup de File",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ftp",
+      "cracking",
+      "esteganografia",
+      "python3"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "flynn",
+    "title": "Flynn Dockerlabs (Easy)",
+    "description": "Writeup de Flynn",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "ssh",
+      "sudo"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "hannah-coffee",
+    "title": "Hannah_Coffee Dockerlabs (Easy)",
+    "description": "Writeup de Hannah_Coffee",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "php",
+      "lfi",
+      "sudo",
+      "capabilities"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "stellarjwt",
+    "title": "Stellarjwt Dockerlabs (Easy)",
+    "description": "Writeup de Stellarjwt",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "jwt",
+      "osint",
+      "wordlist",
+      "sudo"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "toctou",
+    "title": "TocTou Dockerlabs (Intermediate)",
+    "description": "Writeup de TocTou",
+    "difficulty": "Intermediate",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "upload",
+      "path",
+      "bypass",
+      "magic_byte"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
+  },
+  {
+    "id": "tron-dockerlabs",
+    "title": "Tron Dockerlabs (Easy)",
+    "description": "Writeup de Tron",
+    "difficulty": "Easy",
+    "os": "Linux",
+    "type": "Dockerlabs",
+    "skills": [
+      "ctf",
+      "writeup",
+      "web",
+      "esteganografia",
+      "sudo",
+      "ssh"
+    ],
+    "date": "2026-10-31",
+    "active": false,
+    "active_to_retire": false
   }
 ]
